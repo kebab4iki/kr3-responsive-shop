@@ -1,173 +1,18 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="ru">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Магазин компьютерной техники shop roject" name="description"/>
-<title>
-   Заявка — shop roject
-  </title>
-<link href="css/style.css" rel="stylesheet"/>
-</head>
-<body>
-<header class="site-header" id="top">
-<div class="container site-header__inner">
-<a class="site-header__title" href="index.html">
-     shop roject
-    </a>
-<nav aria-label="Основная навигация" class="site-nav">
-<ul class="site-nav__list">
-<li class="site-nav__item">
-<a class="site-nav__link" href="index.html">
-        Главная
-       </a>
-</li>
-<li class="site-nav__item">
-<a class="site-nav__link" href="catalog.html">
-        Каталог
-       </a>
-</li>
-<li class="site-nav__item">
-<a class="site-nav__link" href="products.html">
-        Товары
-       </a>
-</li>
-<li class="site-nav__item">
-<a aria-current="page" class="site-nav__link site-nav__link--active" href="application.html">
-        Заявка
-       </a>
-</li>
-<li class="site-nav__item">
-<a class="site-nav__link" href="contacts.html">
-        Контакты
-       </a>
-</li>
-</ul>
-</nav>
-</div>
-</header>
-<main class="container">
-<nav aria-label="Хлебные крошки" class="breadcrumbs">
-<a href="index.html">
-     Главная
-    </a>
-    / Заявка
-   </nav>
-<section class="section application">
-<h1>
-     Оставить заявку
-    </h1>
-
-<form class="order-form" id="order-form">
-<label class="order-form__label" for="user-name">
-      Имя *
-     </label>
-<input class="order-form__input" id="user-name" minlength="2" name="name" placeholder="Ваше имя" required="" type="text"/>
-<label class="order-form__label" for="user-email">
-      Электронная почта *
-     </label>
-<input class="order-form__input" id="user-email" name="email" placeholder="example@mail.ru" required="" type="email"/>
-<label class="order-form__label" for="user-phone">
-      Телефон *
-     </label>
-<input class="order-form__input" id="user-phone" name="phone" pattern="[+0-9() -]{7,20}" placeholder="+7 999 123-45-67" required="" type="tel"/>
-<label class="order-form__label" for="order-product">
-      Товар
-     </label>
-<select class="order-form__input" id="order-product" name="product">
-<option value="">
-       Не выбран
-      </option>
-<option value="Ноутбук">
-       Ноутбук
-      </option>
-<option value="Наушники">
-       Наушники
-      </option>
-<option value="Клавиатура">
-       Клавиатура
-      </option>
-<option value="Мышь">
-       Мышь
-      </option>
-<option value="Монитор">
-       Монитор
-      </option>
-<option value="Колонки">
-       Колонки
-      </option>
-<option value="Веб-камера">
-       Веб-камера
-      </option>
-<option value="Флешка">
-       Флешка
-      </option>
-<option value="Принтер">
-       Принтер
-      </option>
-<option value="Планшет">
-       Планшет
-      </option>
-<option value="Роутер">
-       Роутер
-      </option>
-<option value="Микрофон">
-       Микрофон
-      </option>
-</select>
-<label class="order-form__label" for="order-date">
-      Удобная дата
-     </label>
-<input class="order-form__input" id="order-date" name="date" type="date"/>
-<label class="order-form__label" for="order-type">
-      Тип заявки
-     </label>
-<select class="order-form__input" id="order-type" name="type">
-<option>
-       Заказ товара
-      </option>
-<option>
-       Консультация
-      </option>
-</select>
-<label class="order-form__label" for="order-comment">
-      Комментарий
-     </label>
-<textarea class="order-form__input" id="order-comment" name="comment" rows="3"></textarea>
-<label class="order-form__check">
-<input name="agree" required="" type="checkbox"/>
-      Согласен на обработку данных *
-     </label>
-<button class="button button--primary" type="submit">
-      Отправить заявку
-     </button>
-</form>
-</section>
-<dialog aria-labelledby="dialog-title" aria-describedby="dialog-message" class="order-dialog" id="order-dialog">
-  <div class="order-dialog__content">
-    <div class="order-dialog__success" aria-hidden="true">✓</div>
-    <h2 id="dialog-title">Заявка оформлена!</h2>
-    <p class="order-dialog__message" id="dialog-message">Спасибо! Мы получили вашу заявку.</p>
-    <div class="order-dialog__summary" aria-label="Данные заявки">
-      <div class="order-dialog__row"><span>Имя</span><strong id="summary-name"></strong></div>
-      <div class="order-dialog__row"><span>Электронная почта</span><strong id="summary-email"></strong></div>
-      <div class="order-dialog__row"><span>Телефон</span><strong id="summary-phone"></strong></div>
-      <div class="order-dialog__row" id="summary-product-row"><span>Товар</span><strong id="summary-product"></strong></div>
-      <div class="order-dialog__row" id="summary-date-row"><span>Дата</span><strong id="summary-date"></strong></div>
-      <div class="order-dialog__row"><span>Тип заявки</span><strong id="summary-type"></strong></div>
-    </div>
-    <button class="button button--primary order-dialog__close" id="close-dialog" type="button">Отлично, закрыть</button>
-  </div>
-</dialog>
-</main>
-<footer class="site-footer">
-<div class="container">
-    © 2026 Учебный проект. Все права защищены.
-   </div>
-</footer>
-<a aria-label="Вернуться наверх" class="back-to-top" href="#top" title="Наверх">↑ Наверх</a>
-<script src="js/main.js">
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Corekit — учебный магазин техники и аксессуаров." />
+    <meta name="theme-color" content="#0c0b0f" />
+    <link rel="icon" href="./images/corekit-mark.png" type="image/png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <title>Заявка — Corekit</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Для работы магазина Corekit включите JavaScript.</noscript>
+    <script type="module" src="./src/main.jsx"></script>
+  </body>
 </html>
