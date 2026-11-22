@@ -25,16 +25,9 @@ img, video { display: block; max-width: 100%; height: auto; }
 .site-nav__list { display: flex; flex-direction: column; gap: .15rem; }
 
 .hero {
-  --hero-inset: clamp(1.05rem, 5.5vw, 2.55rem);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-areas: "headline" "visual" "content";
-  align-items: center;
+  --hero-inset: clamp(.9rem, 3.5vw, 2rem);
 }
-.hero__headline { padding: var(--hero-inset) var(--hero-inset) 0; }
-.hero__content { padding: 0 var(--hero-inset) var(--hero-inset); }
-.hero__lead { margin-top: .35rem; }
-.phone-stage { height: clamp(16rem, 81vw, 28rem); }
+.hero__art { aspect-ratio: 656 / 586; }
 .products-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(.8rem, 1.7vw, 1.35rem); }
 .catalog-layout, .product-detail, .contacts-grid, .order-form {
   display: grid;
@@ -64,6 +57,13 @@ img, video { display: block; max-width: 100%; height: auto; }
 }
 
 @media (min-width: 768px) {
+  .hero__art { aspect-ratio: 1280 / 600; }
+  .hero__footer {
+    position: absolute;
+    inset: auto 0 0;
+    padding-top: var(--hero-inset);
+    background: linear-gradient(transparent, #0e0a10);
+  }
   html { scroll-padding-top: 6rem; }
   .site-header { position: sticky; top: 0; z-index: 40; }
   .site-header__inner {
@@ -96,18 +96,6 @@ img, video { display: block; max-width: 100%; height: auto; }
 
 @media (min-width: 900px) {
   .page-main { padding-top: 1.55rem; }
-  .hero {
-    --hero-inset: clamp(1.8rem, 4.15vw, 4rem);
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
-    grid-template-rows: 57% 43%;
-    grid-template-areas: "headline visual" "content visual";
-  }
-  .hero__headline { align-self: end; padding-right: 0; }
-  .hero__content { align-self: start; padding-right: 0; }
-  .hero__lead { margin-top: 1.2rem; }
-  .hero h1 { font-size: clamp(3.75rem, 6.4vw, 6.5rem); }
-  .hero__visual { padding: .35rem .75rem 1rem 0; }
-  .phone-stage { height: clamp(25rem, 36vw, 34rem); }
   .product-detail { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
   .product-table { min-width: 0; }
 }

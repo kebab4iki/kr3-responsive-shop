@@ -23,10 +23,10 @@ if (!index || !script || !stylesheet || script.imports.length || script.dynamicI
 }
 
 const mime = {
-  jpg: 'image/jpeg', png: 'image/png', webp: 'image/webp', glb: 'model/gltf-binary',
+  jpg: 'image/jpeg', png: 'image/png', webp: 'image/webp', mp4: 'video/mp4',
 };
 const assets = {};
-for (const directory of ['images', 'models']) {
+for (const directory of ['images', 'media']) {
   const source = new URL(`public/${directory}/`, root);
   for (const filename of await readdir(source)) {
     const type = mime[filename.split('.').pop()];

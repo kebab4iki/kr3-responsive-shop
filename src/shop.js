@@ -1,13 +1,15 @@
 import originalProducts from './products.json';
 
+export const phoneFinishes = ['Black', 'Burgundy', 'Glacier', 'Silver'];
+
 export const phone = {
   id: 'iphone-18-pro',
   name: 'iPhone 18 Pro',
   category: 'Смартфоны',
-  summary: 'Burgundy · 256 ГБ',
-  description: 'iPhone 18 Pro в бордовом алюминиевом корпусе с дисплеем Super Retina XDR и системой камер Pro Fusion.',
+  summary: 'Четыре цвета · 256 ГБ',
+  description: 'iPhone 18 Pro с дисплеем Super Retina XDR и системой камер Pro Fusion. Алюминиевый корпус представлен в четырёх цветах.',
   specs: [
-    ['Цвет', 'Burgundy'],
+    ['Цвета', phoneFinishes.join(', ')],
     ['Память', '256 ГБ'],
     ['Дисплей', '6,3″ Super Retina XDR'],
     ['Процессор', 'A20 Pro'],
