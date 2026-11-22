@@ -39,7 +39,7 @@ export function PhoneHero() {
       <div className="hero__art">
         <picture className="hero__poster" aria-hidden="true">
           <source media={wideScreen} type="image/webp" sizes="(min-width: 1380px) 1280px, 93vw"
-            srcSet={`${imageUrl('iphone-lineup-960.webp')} 960w, ${imageUrl('iphone-lineup-1280.webp')} 1280w`} />
+            srcSet={`${imageUrl('iphone-lineup-960.webp')} 960w, ${imageUrl('iphone-lineup-1280.webp')} 1280w, ${imageUrl('iphone-lineup-1920.webp')} 1920w`} />
           <img src={imageUrl('iphone-lineup-656.webp')} alt=""
             srcSet={`${imageUrl('iphone-lineup-360.webp')} 360w, ${imageUrl('iphone-lineup-656.webp')} 656w`}
             sizes="93vw" width="656" height="586" fetchPriority={intro ? 'low' : 'high'}
@@ -51,7 +51,7 @@ export function PhoneHero() {
         {intro && (
           <video ref={video} className="hero__animation" aria-hidden="true"
             autoPlay muted playsInline preload="auto" disablePictureInPicture
-            src={assetUrl(`media/iphone-lineup-${wide ? 'desktop' : 'mobile'}.mp4`)}
+            src={assetUrl(`media/iphone-lineup-${wide ? 'desktop' : 'mobile'}-60.mp4`)}
             onEnded={showPoster} onError={showPoster} />
         )}
         <p className="hero__badge">Новинка</p>
