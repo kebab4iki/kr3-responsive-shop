@@ -8,6 +8,10 @@
 
 ## Запуск
 
+В архиве откройте `Corekit.html` двойным щелчком. Этот файл содержит сайт, изображения и 3D-модель. Его можно использовать без сервера и интернета.
+
+### Запуск исходников
+
 Нужен Node.js 20.19+ или 22.12+.
 
     npm ci
@@ -17,6 +21,8 @@
 
     npm run build
     npm run preview
+
+Чтобы собрать новый файл для открытия двойным щелчком, выполните `npm run build:standalone`. Результат появится в `standalone/Corekit.html`.
 
 Все страницы собираются в папку dist. У формы есть браузерная валидация и диалог с введёнными данными. Форма демонстрационная, данные остаются во вкладке.
 
@@ -73,6 +79,7 @@
     │   ├── main.jsx, pages.jsx, components.jsx
     │   ├── phone-hero.jsx, phone-canvas.jsx, phone-scene.js
     │   └── shop.js, products.json
+    ├── scripts/build-standalone.mjs
     ├── package.json, package-lock.json, vite.config.js
     ├── README.md
     └── .gitignore

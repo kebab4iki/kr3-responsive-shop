@@ -11,7 +11,18 @@
     <title>Товар — Corekit</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <section id="launch-hint" class="launch-hint" hidden>
+        <h1>Как открыть Corekit</h1>
+        <p>Из архива откройте файл Corekit.html.</p>
+        <p>Для запуска исходников выполните <code>npm ci</code>, затем <code>npm run dev</code> и откройте адрес из терминала.</p>
+      </section>
+    </div>
+    <script>
+      if (location.protocol === 'file:' && !document.documentElement.hasAttribute('data-corekit-standalone')) {
+        document.getElementById('launch-hint').hidden = false;
+      }
+    </script>
     <noscript>Для работы магазина Corekit включите JavaScript.</noscript>
     <script type="module" src="./src/main.jsx"></script>
   </body>

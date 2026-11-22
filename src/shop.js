@@ -32,20 +32,35 @@ export const categories = [
   { id: 'phones', name: 'Смартфоны', label: 'Смартфоны', featured: phone.id },
 ];
 
+export const standalone = document.documentElement.hasAttribute('data-corekit-standalone');
+
+export function assetUrl(path) {
+  return globalThis.corekitAssets?.[path] ?? `${import.meta.env.BASE_URL}${path}`;
+}
+
 export function imageUrl(filename) {
-  return `${import.meta.env.BASE_URL}images/${filename}`;
+  return assetUrl(`images/${filename}`);
+}
+
+export function pageUrl(page, params) {
+  const query = new URLSearchParams(params);
+  if (standalone) {
+    query.set('page', page);
+    return `?${query}`;
+  }
+  return `${page}.html${query.size ? `?${query}` : ''}`;
 }
 
 export function productUrl(product) {
-  return `product.html?id=${encodeURIComponent(product.id)}`;
+  return pageUrl('product', { id: product.id });
 }
 
 export function orderUrl(product) {
-  return `order.html?product=${encodeURIComponent(product.name)}`;
+  return pageUrl('order', { product: product.name });
 }
 
 export function filterUrl(category) {
-  return `catalog.html?category=${encodeURIComponent(category)}`;
+  return pageUrl('catalog', { category });
 }
 
 const rubles = new Intl.NumberFormat('ru-RU', {

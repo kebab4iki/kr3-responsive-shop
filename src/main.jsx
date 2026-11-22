@@ -1,20 +1,23 @@
 import { createRoot } from 'react-dom/client';
 import { Header, Footer, BackToTop } from './components';
 import { Home, Catalog, Product, Order, Contacts } from './pages';
+import { standalone } from './shop';
 
-const entry = window.location.pathname.split('/').pop()?.replace(/\.html$/, '') || 'index';
-const page = {
-  index: Home,
-  catalog: Catalog,
-  products: Catalog,
-  category: Catalog,
-  product: Product,
-  order: Order,
-  application: Order,
-  contacts: Contacts,
-};
-const Content = page[entry] ?? Home;
 const query = new URLSearchParams(window.location.search);
+const routes = {
+  index: [Home, 'Corekit — магазин техники'],
+  catalog: [Catalog, 'Каталог — Corekit'],
+  products: [Catalog, 'Все товары — Corekit'],
+  category: [Catalog, 'Категория — Corekit'],
+  product: [Product, 'Товар — Corekit'],
+  order: [Order, 'Заявка — Corekit'],
+  application: [Order, 'Заявка — Corekit'],
+  contacts: [Contacts, 'Контакты — Corekit'],
+};
+const requestedPage = standalone ? query.get('page') : window.location.pathname.split('/').pop()?.replace(/\.html$/, '');
+const entry = Object.hasOwn(routes, requestedPage) ? requestedPage : 'index';
+const [Content, title] = routes[entry];
+if (standalone) document.title = title;
 
 createRoot(document.getElementById('root')).render(
   <>
