@@ -4,6 +4,7 @@ import {
 } from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { assetUrl } from './shop';
 
 export const angles = [
   { label: 'Камеры', rotation: [0.12, -0.41, -0.21] },
@@ -58,7 +59,7 @@ export async function createPhoneScene() {
   }
 
   try {
-    const asset = await new GLTFLoader().loadAsync(`${import.meta.env.BASE_URL}models/iphone-18-pro-burgundy.glb`);
+    const asset = await new GLTFLoader().loadAsync(assetUrl('models/iphone-18-pro-burgundy.glb'));
     model = asset.scene;
     const center = new Box3().setFromObject(model).getCenter(new Vector3());
     model.position.sub(center);

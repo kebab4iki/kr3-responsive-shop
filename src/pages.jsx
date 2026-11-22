@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Breadcrumbs, ProductCard, ProductImage } from './components';
 import { PhoneHero } from './phone-hero';
 import {
-  categories, categoryFromQuery, filterUrl, formatPrice, orderUrl, phone, popular, products, productUrl,
+  categories, categoryFromQuery, filterUrl, formatPrice, orderUrl, pageUrl, phone, popular, products, productUrl,
 } from './shop';
 
 export function Home() {
@@ -12,7 +12,7 @@ export function Home() {
       <section className="section popular" id="popular" aria-labelledby="popular-title">
         <div className="section-heading">
           <h2 id="popular-title">Популярные товары</h2>
-          <a className="button button--outline" href="products.html">Все товары</a>
+          <a className="button button--outline" href={pageUrl('products')}>Все товары</a>
         </div>
         <div className="products-grid">
           {popular.map((product) => <ProductCard key={product.id} product={product} />)}
@@ -27,7 +27,7 @@ const maxPrice = Math.max(...products.map(({ price }) => price ?? 0));
 function CategoryLinks({ selected }) {
   return (
     <nav className="category-links" aria-label="Категории каталога">
-      <a href="catalog.html" aria-current={selected === 'all' ? 'page' : undefined}>Все категории</a>
+      <a href={pageUrl('catalog')} aria-current={selected === 'all' ? 'page' : undefined}>Все категории</a>
       {categories.map(({ id, name, label }) =>
         <a key={id} href={filterUrl(name)} aria-current={selected === name ? 'page' : undefined}>{label}</a>
       )}
@@ -50,7 +50,7 @@ export function Catalog({ entry, query }) {
 
   return (
     <>
-      <Breadcrumbs current={title} links={entry === 'catalog' ? [] : [['catalog.html', 'Каталог']]} />
+      <Breadcrumbs current={title} links={entry === 'catalog' ? [] : [[pageUrl('catalog'), 'Каталог']]} />
       <div className="page-heading">
         <h1>{title}</h1>
         <p>Подбери технику по названию, категории и цене.</p>
@@ -103,7 +103,7 @@ export function Product({ query }) {
 
   return (
     <>
-      <Breadcrumbs links={[[ 'catalog.html', 'Каталог' ]]} current={title} />
+      <Breadcrumbs links={[[pageUrl('catalog'), 'Каталог']]} current={title} />
       {product ? (
         <article className="section product-detail">
           <div className={`product-detail__visual product-card__visual--${product.id}`}>
@@ -131,7 +131,7 @@ export function Product({ query }) {
       ) : (
         <section className="section">
           <h1>{title}</h1>
-          <p><a className="button button--primary" href="products.html">Все товары</a></p>
+          <p><a className="button button--primary" href={pageUrl('products')}>Все товары</a></p>
         </section>
       )}
     </>
@@ -228,7 +228,7 @@ export function Contacts() {
         <section className="surface contact-panel">
           <h2>Обратная связь</h2>
           <p>Чтобы выбрать товар или задать вопрос о нём, заполни форму заявки.</p>
-          <a className="button button--primary" href="order.html">Перейти к форме</a>
+          <a className="button button--primary" href={pageUrl('order')}>Перейти к форме</a>
         </section>
       </div>
     </>

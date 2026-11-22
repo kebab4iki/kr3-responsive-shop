@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { formatPrice, imageUrl, orderUrl, productUrl } from './shop';
+import { formatPrice, imageUrl, orderUrl, pageUrl, productUrl } from './shop';
 
 const nav = [
   ['index', 'Главная'], ['catalog', 'Каталог'], ['products', 'Все товары'], ['contacts', 'Контакты'],
@@ -7,7 +7,7 @@ const nav = [
 
 export function Brand() {
   return (
-    <a className="brand" href="index.html" aria-label="Corekit — главная">
+    <a className="brand" href={pageUrl('index')} aria-label="Corekit — главная">
       <span className="brand__mark"><img src={imageUrl('corekit-mark.png')} alt="" width="36" height="36" /></span>
       <img className="brand__wordmark" src={imageUrl('corekit-wordmark.png')} alt="" width="112" height="16" />
     </a>
@@ -25,12 +25,12 @@ export function Header({ page }) {
           <ul className="site-nav__list">
             {nav.map(([id, label]) => (
               <li key={id}>
-                <a className="site-nav__link" href={`${id}.html`} aria-current={active === id ? 'page' : undefined}>{label}</a>
+                <a className="site-nav__link" href={pageUrl(id)} aria-current={active === id ? 'page' : undefined}>{label}</a>
               </li>
             ))}
           </ul>
         </nav>
-        <a className="button button--outline header-action" href="order.html"
+        <a className="button button--outline header-action" href={pageUrl('order')}
           aria-current={['order', 'application'].includes(page) ? 'page' : undefined}>
           Заявка
         </a>
@@ -45,7 +45,7 @@ export function Footer() {
       <div className="container site-footer__inner">
         <Brand />
         <p>© 2026 Corekit. Учебный проект.</p>
-        <a href="contacts.html">Контакты</a>
+        <a href={pageUrl('contacts')}>Контакты</a>
       </div>
     </footer>
   );
@@ -75,7 +75,7 @@ export function Breadcrumbs({ links = [], current }) {
   return (
     <nav className="breadcrumbs" aria-label="Хлебные крошки">
       <ol>
-        <li><a href="index.html">Главная</a></li>
+        <li><a href={pageUrl('index')}>Главная</a></li>
         {links.map(([href, label]) => <li key={href}><a href={href}>{label}</a></li>)}
         <li aria-current="page">{current}</li>
       </ol>
