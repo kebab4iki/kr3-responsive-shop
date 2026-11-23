@@ -30,7 +30,7 @@ const promos = [
     action: 'Оставить заявку', destination: 'application',
   },
 ];
-const slideNames = [iphone18Title, ...promos.map(({ name }) => name)];
+const slideCount = promos.length + 1;
 const slideInterval = 15000;
 const slideTransition = 600;
 
@@ -44,9 +44,6 @@ export function HomeShowcase() {
   const viewport = useRef(null);
   const currentSlide = useRef(null);
   const finishIntro = useCallback(() => setIntroComplete(true), []);
-  const showSlide = useCallback((next) => {
-    setSlides((current) => current.active === next ? current : { active: next, previous: current.active });
-  }, []);
 
   useLayoutEffect(() => {
     const slide = currentSlide.current;
@@ -73,7 +70,11 @@ export function HomeShowcase() {
     let timer;
     function schedule() {
       window.clearTimeout(timer);
-      if (!document.hidden) timer = window.setTimeout(() => showSlide((active + 1) % slideNames.length), slideInterval);
+      if (!document.hidden) {
+        timer = window.setTimeout(() => {
+          setSlides({ active: (active + 1) % slideCount, previous: active });
+        }, slideInterval);
+      }
     }
     schedule();
     document.addEventListener('visibilitychange', schedule);
@@ -81,7 +82,7 @@ export function HomeShowcase() {
       window.clearTimeout(timer);
       document.removeEventListener('visibilitychange', schedule);
     };
-  }, [active, contentFocused, dialogOpen, introComplete, paused, showSlide]);
+  }, [active, contentFocused, dialogOpen, introComplete, paused]);
 
   useEffect(() => {
     if (previous === null) return;
@@ -111,19 +112,11 @@ export function HomeShowcase() {
       </div>
       <div className="home-showcase__controls">
         {introComplete && (
-          <div className="home-showcase__navigation">
-            <div className="slide-dots slide-dots--showcase" role="group" aria-label="Баннеры главной">
-              {slideNames.map((name, index) => (
-                <button key={name} type="button" aria-controls="showcase-slide" aria-label={name}
-                  aria-pressed={active === index} onClick={() => showSlide(index)} />
-              ))}
-            </div>
-            <button className="home-showcase__toggle" type="button" aria-controls="showcase-slide"
-              aria-label={paused ? 'Возобновить смену баннеров' : 'Приостановить смену баннеров'}
-              onClick={() => setPaused((value) => !value)}>
-              <span aria-hidden="true">{paused ? '▶' : 'Ⅱ'}</span>
-            </button>
-          </div>
+          <button className="home-showcase__toggle" type="button" aria-controls="showcase-slide"
+            aria-label={paused ? 'Возобновить смену баннеров' : 'Приостановить смену баннеров'}
+            onClick={() => setPaused((value) => !value)}>
+            <span aria-hidden="true">{paused ? '▶' : 'Ⅱ'}</span>
+          </button>
         )}
       </div>
     </section>
