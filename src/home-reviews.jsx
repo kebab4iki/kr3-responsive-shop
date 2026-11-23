@@ -129,7 +129,6 @@ export function HomeReviews() {
                 <strong aria-hidden="true">{formattedAverage}</strong>
               </div>
             </div>
-            <p className="review-list__note">Ваши отзывы сохраняются в этом браузере.</p>
             <div className="review-list__scroll" ref={reviewList} role="region" aria-label="Список отзывов" tabIndex={0}>
               {allReviews.map(({ key, name, text, rating, createdAt }) => (
                 <article className="surface review-card" key={key}>
@@ -138,12 +137,12 @@ export function HomeReviews() {
                     <RatingStars rating={rating} />
                   </div>
                   <p>{text}</p>
-                  <div className="review-card__footer">
-                    {createdAt === undefined ? <span>Пример отзыва</span> : <>
+                  {createdAt !== undefined && (
+                    <div className="review-card__footer">
                       <time dateTime={new Date(createdAt).toISOString()}>{dateFormat.format(createdAt)}</time>
                       <button className="button button--quiet" type="button" onClick={() => saveReview(key)}>Удалить отзыв</button>
-                    </>}
-                  </div>
+                    </div>
+                  )}
                 </article>
               ))}
             </div>
