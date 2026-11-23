@@ -75,7 +75,7 @@ export function Footer() {
             </address>
           </section>
         </div>
-        <p className="site-footer__legal">© 2026 Corekit. Учебный проект.</p>
+        <p className="site-footer__legal">© 2026 Corekit. Все права защищены.</p>
       </div>
     </footer>
   );

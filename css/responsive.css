@@ -139,6 +139,8 @@ img, video { display: block; max-width: 100%; height: auto; }
 
 @media (min-width: 1120px) {
   .product-carousel__track { --carousel-visible: 5; }
+  .product-carousel__track > .product-card { scroll-snap-align: none; }
+  .product-carousel__track > .product-card:nth-child(5n + 1) { scroll-snap-align: start; }
 }
 
 @media (min-width: 1280px) {

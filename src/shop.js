@@ -24,9 +24,15 @@ export const phone = {
 };
 
 export const products = [...originalProducts, phone];
-export const popular = ['notebook', 'headphones', 'keyboard', 'monitor', 'mouse', 'kolonki']
+export const popular = [
+  'notebook', 'headphones', 'keyboard', 'monitor', 'mouse',
+  'kolonki', 'gamepad', 'power-bank', 'external-ssd', 'usb-hub',
+]
   .map((id) => products.find((product) => product.id === id));
-export const newArrivals = ['iphone-18-pro', 'tablet', 'webcam', 'microphone', 'printer', 'router', 'flash']
+export const newArrivals = [
+  'iphone-18-pro', 'tablet', 'webcam', 'microphone', 'printer',
+  'router', 'flash', 'smartwatch', 'wireless-earbuds', 'usb-charger',
+]
   .map((id) => products.find((product) => product.id === id));
 
 export const storeContact = {
