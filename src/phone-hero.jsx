@@ -30,7 +30,7 @@ const promos = [
     action: 'Оставить заявку', destination: 'application',
   },
 ];
-const slideCount = promos.length + 1;
+const slideNames = [iphone18Title, ...promos.map(({ name }) => name)];
 const slideInterval = 15000;
 const slideTransition = 600;
 
@@ -38,12 +38,14 @@ export function HomeShowcase() {
   const [slides, setSlides] = useState({ active: 0, previous: null });
   const { active, previous } = slides;
   const [introComplete, setIntroComplete] = useState(() => matchMedia(reducedMotion).matches);
-  const [paused, setPaused] = useState(false);
   const [contentFocused, setContentFocused] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
   const viewport = useRef(null);
   const currentSlide = useRef(null);
   const finishIntro = useCallback(() => setIntroComplete(true), []);
+  const showSlide = useCallback((next) => {
+    setSlides((current) => current.active === next ? current : { active: next, previous: current.active });
+  }, []);
 
   useLayoutEffect(() => {
     const slide = currentSlide.current;
@@ -65,15 +67,13 @@ export function HomeShowcase() {
   }, [introComplete]);
 
   useEffect(() => {
-    if (!introComplete || paused || contentFocused || dialogOpen) return;
+    if (!introComplete || contentFocused || dialogOpen) return;
 
     let timer;
     function schedule() {
       window.clearTimeout(timer);
       if (!document.hidden) {
-        timer = window.setTimeout(() => {
-          setSlides({ active: (active + 1) % slideCount, previous: active });
-        }, slideInterval);
+        timer = window.setTimeout(() => showSlide((active + 1) % slideNames.length), slideInterval);
       }
     }
     schedule();
@@ -82,7 +82,7 @@ export function HomeShowcase() {
       window.clearTimeout(timer);
       document.removeEventListener('visibilitychange', schedule);
     };
-  }, [active, contentFocused, dialogOpen, introComplete, paused]);
+  }, [active, contentFocused, dialogOpen, introComplete, showSlide]);
 
   useEffect(() => {
     if (previous === null) return;
@@ -112,11 +112,12 @@ export function HomeShowcase() {
       </div>
       <div className="home-showcase__controls">
         {introComplete && (
-          <button className="home-showcase__toggle" type="button" aria-controls="showcase-slide"
-            aria-label={paused ? 'Возобновить смену баннеров' : 'Приостановить смену баннеров'}
-            onClick={() => setPaused((value) => !value)}>
-            <span aria-hidden="true">{paused ? '▶' : 'Ⅱ'}</span>
-          </button>
+          <div className="slide-dots slide-dots--showcase" role="group" aria-label="Баннеры главной">
+            {slideNames.map((name, index) => (
+              <button key={name} type="button" aria-controls="showcase-slide" aria-label={name}
+                aria-pressed={active === index} onClick={() => showSlide(index)} />
+            ))}
+          </div>
         )}
       </div>
     </section>
