@@ -65,7 +65,7 @@ img, video { display: block; max-width: 100%; height: auto; }
     padding: 0;
     pointer-events: none;
   }
-  .slide-dots--showcase { pointer-events: auto; }
+  .home-showcase__navigation { pointer-events: auto; }
   .hero__art { height: var(--banner-height); aspect-ratio: auto; }
   .hero__footer {
     position: absolute;
@@ -150,6 +150,8 @@ img, video { display: block; max-width: 100%; height: auto; }
 @media (prefers-reduced-motion: reduce) {
   html, .product-carousel__track { scroll-behavior: auto; }
   .button { transition: none; }
-  .slide-dots--showcase { animation: none; }
+  .home-showcase__viewport { transition: none; }
+  .home-showcase__slide--leaving { visibility: hidden; }
+  .home-showcase__slide--entering, .home-showcase__navigation { animation: none; }
   .slide-dots button::before { transition: none; }
 }

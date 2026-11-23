@@ -1,40 +1,7 @@
 import originalProducts from './products.json';
 import { catalogProducts } from './catalog-data';
 
-export const phoneFinishes = ['Black', 'Burgundy', 'Glacier', 'Silver'];
-
-export const phone = {
-  id: 'iphone-18-pro',
-  name: 'iPhone 18 Pro',
-  category: 'Смартфоны',
-  summary: 'Четыре цвета · 256 ГБ',
-  description: 'iPhone 18 Pro с дисплеем Super Retina XDR и системой камер Pro Fusion. Алюминиевый корпус представлен в четырёх цветах.',
-  specs: [
-    ['Цвета', phoneFinishes.join(', ')],
-    ['Память', '256 ГБ'],
-    ['Дисплей', '6,3″ Super Retina XDR'],
-    ['Процессор', 'A20 Pro'],
-    ['Основная камера', '48 Мп Fusion, переменная диафрагма'],
-    ['Размеры', '150 × 71,9 × 8,75 мм'],
-    ['Вес', '211 г'],
-  ],
-  image: {
-    filename: 'iphone-burgundy-640.webp', width: 640, height: 640,
-    variants: [['iphone-burgundy-360.webp', 360], ['iphone-burgundy-640.webp', 640], ['iphone-burgundy-960.webp', 960]],
-  },
-};
-
-export const products = [...catalogProducts, ...originalProducts, phone];
-export const popular = [
-  'notebook', 'headphones', 'keyboard', 'monitor', 'mouse',
-  'kolonki', 'gamepad', 'power-bank', 'external-ssd', 'usb-hub',
-]
-  .map((id) => products.find((product) => product.id === id));
-export const newArrivals = [
-  'iphone-18-pro', 'tablet', 'webcam', 'microphone', 'printer',
-  'router', 'flash', 'smartwatch', 'wireless-earbuds', 'usb-charger',
-]
-  .map((id) => products.find((product) => product.id === id));
+export const products = [...catalogProducts, ...originalProducts];
 
 export const storeContact = {
   address: 'Пресненская наб., 2, ТРЦ Афимолл Сити, этаж 3',

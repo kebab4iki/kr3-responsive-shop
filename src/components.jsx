@@ -154,6 +154,17 @@ export function ProductGallery({ product }) {
   );
 }
 
+export function ProductBadges({ product }) {
+  if (!product.isHit && !product.isNew) return null;
+
+  return (
+    <ul className="product-badges" aria-label="Отметки товара">
+      {product.isHit && <li className="product-badge product-badge--hit">Хит</li>}
+      {product.isNew && <li className="product-badge product-badge--new">Новинка</li>}
+    </ul>
+  );
+}
+
 export function ProductCard({ product, kind, titleTag = 'h3' }) {
   const Title = titleTag;
   return (
@@ -161,6 +172,7 @@ export function ProductCard({ product, kind, titleTag = 'h3' }) {
       <a href={productUrl(product)} className={`product-card__visual product-card__visual--${product.id}${product.gallery?.length ? ' product-card__visual--photo' : ''}`}
         aria-label={`Подробнее о товаре «${product.name}»`}>
         <ProductImage product={product} kind={kind} decorative />
+        <ProductBadges product={product} />
       </a>
       <div className="product-card__body">
         <span className="product-card__category">{product.category}</span>
