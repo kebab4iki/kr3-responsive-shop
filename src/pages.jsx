@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Breadcrumbs, ProductCard, ProductImage } from './components';
-import { PhoneHero } from './phone-hero';
+import { HomeShowcase } from './phone-hero';
 import {
   categories, categoryFromQuery, filterUrl, formatPrice, orderUrl, pageUrl, phone, popular, products, productUrl,
 } from './shop';
@@ -8,17 +8,78 @@ import {
 export function Home() {
   return (
     <>
-      <PhoneHero />
-      <section className="section popular" id="popular" aria-labelledby="popular-title">
+      <HomeShowcase />
+      <SalesHits />
+    </>
+  );
+}
+
+function SalesHits() {
+  const track = useRef(null);
+  const [visibleCount, setVisibleCount] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const lastIndex = Math.max(0, popular.length - visibleCount);
+
+  function cardStep(element) {
+    const [first, second] = element.children;
+    return second ? second.getBoundingClientRect().left - first.getBoundingClientRect().left : 1;
+  }
+
+  function updateActive(element) {
+    setActiveIndex(Math.round(element.scrollLeft / cardStep(element)));
+  }
+
+  function goTo(index) {
+    const element = track.current;
+    const position = Math.min(lastIndex, Math.max(0, index));
+    element.scrollTo({ left: position * cardStep(element) });
+  }
+
+  useEffect(() => {
+    const element = track.current;
+    function measure() {
+      setVisibleCount(Number(getComputedStyle(element).getPropertyValue('--hits-visible')));
+      updateActive(element);
+    }
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    measure();
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section className="section popular" id="popular" aria-labelledby="popular-title">
+      <div className="container">
         <div className="section-heading">
-          <h2 id="popular-title">Популярные товары</h2>
-          <a className="button button--outline" href={pageUrl('products')}>Все товары</a>
+          <h2 id="popular-title">Хиты продаж</h2>
+          {lastIndex > 0 && (
+            <div className="slide-dots" role="group" aria-label="Позиции в ряду товаров">
+              {Array.from({ length: lastIndex + 1 }, (_, index) => (
+                <button key={index} type="button" aria-controls="popular-products"
+                  aria-label={visibleCount === 1
+                    ? `Показать товар «${popular[index].name}»`
+                    : `Показать товары с ${index + 1} по ${index + visibleCount}`}
+                  aria-pressed={Math.min(activeIndex, lastIndex) === index} onClick={() => goTo(index)} />
+              ))}
+            </div>
+          )}
         </div>
-        <div className="products-grid">
+        <div id="popular-products" className="popular__track" ref={track} tabIndex={0}
+          role="region" aria-label="Лента хитов продаж" onScroll={(event) => updateActive(event.currentTarget)}
+          onKeyDown={(event) => {
+            if (event.target !== event.currentTarget) return;
+            const positions = { ArrowLeft: activeIndex - 1, ArrowRight: activeIndex + 1, Home: 0, End: lastIndex };
+            if (!Object.hasOwn(positions, event.key)) return;
+            event.preventDefault();
+            goTo(positions[event.key]);
+          }}>
           {popular.map((product) => <ProductCard key={product.id} product={product} />)}
         </div>
-      </section>
-    </>
+        <div className="popular__footer">
+          <a className="button button--outline" href={pageUrl('products')}>Все товары</a>
+        </div>
+      </div>
+    </section>
   );
 }
 

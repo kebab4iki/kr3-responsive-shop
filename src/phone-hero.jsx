@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { assetUrl, imageUrl, orderUrl, phone, phoneFinishes, productUrl } from './shop';
+import { assetUrl, imageUrl, orderUrl, pageUrl, phone, phoneFinishes, productUrl } from './shop';
 
 const wideScreen = '(min-width: 768px)';
 const reducedMotion = '(prefers-reduced-motion: reduce)';
@@ -8,12 +8,81 @@ const posterSet = (widths) => widths.map((width) => `${posterUrl(width)} ${width
 const widePosters = posterSet([960, 1280, 1920, 2560]);
 const mobilePosters = posterSet([360, 656]);
 
-export function PhoneHero() {
+const promos = [
+  {
+    id: 'gta', name: 'GTA VI', title: 'Два героя, один штат, тысячи возможностей',
+    description: 'Игровая техника в Corekit',
+    details: 'Подбери монитор, наушники и другие аксессуары для своей игровой системы.',
+    action: 'Смотреть технику', destination: 'products',
+  },
+  {
+    id: 'gift', name: 'Подарочные карты', title: 'Подарочные карты',
+    description: 'Свобода выбора в одном подарке',
+    details: 'Оставь заявку, чтобы узнать об условиях покупки и использования подарочной карты Corekit.',
+    action: 'Оставить заявку', destination: 'application',
+  },
+  {
+    id: 'bork', name: 'BORK', title: 'Технологии как искусство',
+    description: 'Новинки для вас и вашего дома',
+    details: 'Оставь заявку, чтобы уточнить ассортимент техники BORK для дома.',
+    action: 'Оставить заявку', destination: 'application',
+  },
+];
+const slideNames = [phone.name, ...promos.map(({ name }) => name)];
+
+export function HomeShowcase() {
+  const [active, setActive] = useState(0);
+  const [introComplete, setIntroComplete] = useState(() => matchMedia(reducedMotion).matches);
+  const finishIntro = useCallback(() => setIntroComplete(true), []);
+  const promo = promos[active - 1];
+  const dialog = useRef(null);
+
+  return (
+    <section className="home-showcase" aria-label="Новости Corekit">
+      <div id="showcase-slide" key={active} className="home-showcase__slide">
+        {promo ? (
+          <div className={`promo promo--${promo.id}`}>
+            <img className="promo__background" src={imageUrl(`home-promo-${promo.id}.webp`)} alt="" />
+            <div className="promo__inner container">
+              <div className="promo__copy">
+                {promo.id === 'bork' && <img className="promo__logo" src={imageUrl('home-promo-bork-logo.webp')}
+                  width="427" height="79" alt="BORK" />}
+                <h1>{promo.title}</h1>
+                <p>{promo.description}</p>
+                <button className="button button--primary" type="button" onClick={() => dialog.current.showModal()}>
+                  Подробнее
+                </button>
+              </div>
+            </div>
+            <dialog className="order-dialog promo__dialog" ref={dialog} aria-labelledby="promo-title">
+              <h2 id="promo-title">{promo.name}</h2>
+              <p>{promo.details}</p>
+              <form method="dialog">
+                <a className="button button--primary" href={pageUrl(promo.destination)}>{promo.action}</a>
+                <button className="button button--outline" type="submit">Закрыть</button>
+              </form>
+            </dialog>
+          </div>
+        ) : <PhoneHero intro={!introComplete} showPoster={finishIntro} />}
+      </div>
+      <div className="home-showcase__controls">
+        {introComplete && (
+          <div className="slide-dots slide-dots--showcase" role="group" aria-label="Баннеры главной">
+            {slideNames.map((name, index) => (
+              <button key={name} type="button" aria-controls="showcase-slide" aria-label={name}
+                aria-pressed={active === index} onClick={() => setActive(index)} />
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function PhoneHero({ intro, showPoster }) {
   const [wide] = useState(() => matchMedia(wideScreen).matches);
-  const [intro, setIntro] = useState(() => !matchMedia(reducedMotion).matches);
   const [posterReady, setPosterReady] = useState(false);
   const video = useRef(null);
-  const showPoster = useCallback(() => setIntro(false), []);
 
   useEffect(() => {
     if (!intro) return;
@@ -23,30 +92,43 @@ export function PhoneHero() {
     const stopForPreference = (event) => { if (event.matches) showPoster(); };
     const startDeadline = window.setTimeout(showPoster, 6500);
     const clearDeadline = () => window.clearTimeout(startDeadline);
+    let stallDeadline;
+    function clearStallDeadline() {
+      window.clearTimeout(stallDeadline);
+    }
+    function watchStall() {
+      clearStallDeadline();
+      stallDeadline = window.setTimeout(showPoster, 3500);
+    }
 
     motion.addEventListener('change', stopForPreference);
     width.addEventListener('change', showPoster);
     player.addEventListener('playing', clearDeadline, { once: true });
+    player.addEventListener('playing', clearStallDeadline);
+    player.addEventListener('waiting', watchStall);
     if (motion.matches || width.matches !== wide) showPoster();
     else player.play().catch(showPoster);
 
     return () => {
       clearDeadline();
+      clearStallDeadline();
       motion.removeEventListener('change', stopForPreference);
       width.removeEventListener('change', showPoster);
       player.removeEventListener('playing', clearDeadline);
+      player.removeEventListener('playing', clearStallDeadline);
+      player.removeEventListener('waiting', watchStall);
     };
   }, [intro, showPoster, wide]);
 
   return (
-    <section className="hero" aria-labelledby="hero-title">
+    <div className="hero">
       <div className="hero__art">
         <picture className="hero__poster" aria-hidden="true">
-          <source media={wideScreen} type="image/webp" sizes="(min-width: 1380px) 1280px, 93vw"
+          <source media={wideScreen} type="image/webp" sizes="100vw"
             srcSet={widePosters} />
           <img src={posterUrl(656)} alt=""
             srcSet={mobilePosters}
-            sizes="93vw" width="656" height="586" fetchPriority={intro ? 'low' : 'high'}
+            sizes="100vw" width="656" height="586" fetchPriority={intro ? 'low' : 'high'}
             onError={() => setPosterReady(false)} onLoad={() => setPosterReady(true)} />
         </picture>
         <h1 id="hero-title" className={!intro && !posterReady ? 'hero__title hero__title--visible' : 'hero__title'}>
@@ -61,12 +143,14 @@ export function PhoneHero() {
         <p className="hero__badge">Новинка</p>
       </div>
       <div className="hero__footer">
-        <p className="hero__finishes">{phoneFinishes.join(' · ')}</p>
-        <div className="hero__actions">
-          <a className="button button--primary" href={orderUrl(phone)}>Оформить заказ</a>
-          <a className="button button--outline" href={productUrl(phone)}>Подробнее</a>
+        <div className="hero__footer-inner container">
+          <p className="hero__finishes">{phoneFinishes.join(' · ')}</p>
+          <div className="hero__actions">
+            <a className="button button--primary" href={orderUrl(phone)}>Оформить заказ</a>
+            <a className="button button--outline" href={productUrl(phone)}>Подробнее</a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
