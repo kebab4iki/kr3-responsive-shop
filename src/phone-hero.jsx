@@ -3,6 +3,10 @@ import { assetUrl, imageUrl, orderUrl, phone, phoneFinishes, productUrl } from '
 
 const wideScreen = '(min-width: 768px)';
 const reducedMotion = '(prefers-reduced-motion: reduce)';
+const posterUrl = (width) => imageUrl(`iphone-lineup-studio-${width}.webp`);
+const posterSet = (widths) => widths.map((width) => `${posterUrl(width)} ${width}w`).join(', ');
+const widePosters = posterSet([960, 1280, 1920, 2560]);
+const mobilePosters = posterSet([360, 656]);
 
 export function PhoneHero() {
   const [wide] = useState(() => matchMedia(wideScreen).matches);
@@ -39,9 +43,9 @@ export function PhoneHero() {
       <div className="hero__art">
         <picture className="hero__poster" aria-hidden="true">
           <source media={wideScreen} type="image/webp" sizes="(min-width: 1380px) 1280px, 93vw"
-            srcSet={`${imageUrl('iphone-lineup-960.webp')} 960w, ${imageUrl('iphone-lineup-1280.webp')} 1280w, ${imageUrl('iphone-lineup-1920.webp')} 1920w`} />
-          <img src={imageUrl('iphone-lineup-656.webp')} alt=""
-            srcSet={`${imageUrl('iphone-lineup-360.webp')} 360w, ${imageUrl('iphone-lineup-656.webp')} 656w`}
+            srcSet={widePosters} />
+          <img src={posterUrl(656)} alt=""
+            srcSet={mobilePosters}
             sizes="93vw" width="656" height="586" fetchPriority={intro ? 'low' : 'high'}
             onError={() => setPosterReady(false)} onLoad={() => setPosterReady(true)} />
         </picture>
@@ -51,7 +55,7 @@ export function PhoneHero() {
         {intro && (
           <video ref={video} className="hero__animation" aria-hidden="true"
             autoPlay muted playsInline preload="auto" disablePictureInPicture
-            src={assetUrl(`media/iphone-lineup-${wide ? 'desktop' : 'mobile'}-60.mp4`)}
+            src={assetUrl(`media/iphone-lineup-${wide ? 'desktop' : 'mobile'}-studio60.mp4`)}
             onEnded={showPoster} onError={showPoster} />
         )}
         <p className="hero__badge">Новинка</p>
