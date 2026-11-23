@@ -22,7 +22,7 @@ if (standalone) document.title = title;
 createRoot(document.getElementById('root')).render(
   <>
     <Header page={entry} />
-    <main id="main" className="container page-main" tabIndex={-1}>
+    <main id="main" className={entry === 'index' ? 'page-main page-main--home' : 'container page-main'} tabIndex={-1}>
       <Content entry={entry} query={query} />
     </main>
     <Footer />
