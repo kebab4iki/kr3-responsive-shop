@@ -111,7 +111,13 @@ const cardSizes = '(min-width: 1380px) 310px, (min-width: 1024px) 23vw, (min-wid
 const catalogSizes = '(min-width: 1380px) 240px, (min-width: 1280px) 18vw, (min-width: 1024px) 27vw, (min-width: 640px) 34vw, 69vw';
 const detailSizes = '(min-width: 1380px) 475px, (min-width: 900px) 34vw, 69vw';
 
-export function ProductImage({ product, image = product.image, kind = 'card', eager = false, decorative = false }) {
+function showLoadedPhoto({ currentTarget: photo }) {
+  const show = () => photo.setAttribute('data-photo-ready', '');
+  if (photo.decode && photo.naturalWidth) photo.decode().then(show, show);
+  else show();
+}
+
+export function ProductImage({ product, image = product.image, kind = 'card', eager = false, decorative = false, fadeIn = false }) {
   if (!image) return <span className="product-placeholder" aria-hidden="true">▧</span>;
   const sizes = kind === 'detail' ? detailSizes : kind === 'catalog' ? catalogSizes : cardSizes;
   const srcset = image.variants?.map(([file, width]) => `${imageUrl(file)} ${width}w`).join(', ');
@@ -119,7 +125,8 @@ export function ProductImage({ product, image = product.image, kind = 'card', ea
     <picture>
       {srcset && <source type="image/webp" srcSet={srcset} sizes={sizes} />}
       <img src={imageUrl(image.filename)} alt={decorative ? '' : image.alt ?? product.name}
-        width={image.width} height={image.height} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+        width={image.width} height={image.height} loading={eager ? 'eager' : 'lazy'} decoding="async"
+        data-fade-in={fadeIn ? '' : undefined} onLoad={fadeIn ? showLoadedPhoto : undefined} onError={fadeIn ? showLoadedPhoto : undefined} />
     </picture>
   );
 }
@@ -159,13 +166,13 @@ export function ProductBadges({ product }) {
   );
 }
 
-export function ProductCard({ product, kind, titleTag = 'h3' }) {
+export function ProductCard({ product, kind, titleTag = 'h3', fadePhoto = false }) {
   const Title = titleTag;
   return (
     <article className="product-card">
       <a href={productUrl(product)} className={`product-card__visual product-card__visual--${product.id}${product.gallery?.length ? ' product-card__visual--photo' : ''}`}
         aria-label={`Подробнее о товаре «${product.name}»`}>
-        <ProductImage product={product} kind={kind} decorative />
+        <ProductImage product={product} kind={kind} decorative fadeIn={fadePhoto} />
         <ProductBadges product={product} />
       </a>
       <div className="product-card__body">

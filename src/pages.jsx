@@ -117,12 +117,12 @@ export function Catalog({ query }) {
   );
 }
 
-function CatalogGrid({ items, emptyMessage }) {
+function CatalogGrid({ items, emptyMessage, fadePhotos = false }) {
   return (
     <section aria-label="Список товаров">
       {items.length ? (
         <div className="products-grid products-grid--catalog">
-          {items.map((product) => <ProductCard key={product.id} product={product} kind="catalog" titleTag="h2" />)}
+          {items.map((product) => <ProductCard key={product.id} product={product} kind="catalog" titleTag="h2" fadePhoto={fadePhotos} />)}
         </div>
       ) : <p className="surface empty-state">{emptyMessage}</p>}
     </section>
@@ -192,7 +192,7 @@ export function AllProducts({ query }) {
         </aside>
         <div className="catalog-results">
           <p className="count" role="status">Найдено товаров: {filtered.length}</p>
-          <CatalogGrid items={filtered} emptyMessage="По выбранным параметрам товары не найдены." />
+          <CatalogGrid items={filtered} emptyMessage="По выбранным параметрам товары не найдены." fadePhotos />
         </div>
       </div>
     </>
