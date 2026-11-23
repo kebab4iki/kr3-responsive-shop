@@ -121,11 +121,11 @@ export function ProductImage({ product, kind = 'card', eager = false, decorative
   const image = product.image;
   if (!image) return <span className="product-placeholder" aria-hidden="true">▧</span>;
   const sizes = kind === 'detail' ? detailSizes : kind === 'catalog' ? catalogSizes : cardSizes;
-  const srcset = image.variants.map(([file, width]) => `${imageUrl(file)} ${width}w`).join(', ');
+  const srcset = image.variants?.map(([file, width]) => `${imageUrl(file)} ${width}w`).join(', ');
   return (
     <picture>
-      <source type="image/webp" srcSet={srcset} sizes={sizes} />
-      <img src={imageUrl(image.filename)} alt={decorative ? '' : product.name}
+      {srcset && <source type="image/webp" srcSet={srcset} sizes={sizes} />}
+      <img src={imageUrl(image.filename)} alt={decorative ? '' : image.alt ?? product.name}
         width={image.width} height={image.height} loading={eager ? 'eager' : 'lazy'} decoding="async" />
     </picture>
   );
@@ -135,7 +135,7 @@ export function ProductCard({ product, kind, titleTag = 'h3' }) {
   const Title = titleTag;
   return (
     <article className="product-card">
-      <a href={productUrl(product)} className={`product-card__visual product-card__visual--${product.id}`}
+      <a href={productUrl(product)} className={`product-card__visual product-card__visual--${product.id}${product.image?.credit ? ' product-card__visual--photo' : ''}`}
         aria-label={`Подробнее о товаре «${product.name}»`}>
         <ProductImage product={product} kind={kind} decorative />
       </a>

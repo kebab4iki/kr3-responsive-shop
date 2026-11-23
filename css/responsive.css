@@ -27,7 +27,7 @@ img, video { display: block; max-width: 100%; height: auto; }
 
 .hero__art { aspect-ratio: 656 / 586; }
 .products-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(.8rem, 1.7vw, 1.35rem); }
-.catalog-layout, .product-detail, .contacts-grid, .order-form {
+.catalog-layout, .contacts-grid, .order-form {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: clamp(.9rem, 2.4vw, 1.65rem);
@@ -35,8 +35,6 @@ img, video { display: block; max-width: 100%; height: auto; }
 .catalog-filters { order: -1; }
 .field :is(input, select, textarea) { min-height: 2.75rem; }
 .field textarea { min-height: 7.5rem; }
-.table-wrapper { max-width: 100%; min-width: 0; overflow-x: auto; overscroll-behavior-x: contain; }
-.product-table { min-width: 31rem; }
 .order-dialog { width: min(calc(100% - 2rem), 34rem); max-height: calc(100dvh - 2rem); overflow: auto; }
 .site-footer__inner {
   padding-block: clamp(1.75rem, 4.5vw, 3.6rem) 4.25rem;
@@ -53,6 +51,7 @@ img, video { display: block; max-width: 100%; height: auto; }
 
 @media (min-width: 640px) {
   .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .contacts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -122,8 +121,8 @@ img, video { display: block; max-width: 100%; height: auto; }
 @media (min-width: 900px) {
   .page-main { padding-top: 1.55rem; }
   .page-main--home { padding-top: 0; }
-  .product-detail { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
-  .product-table { min-width: 0; }
+  .product-overview { grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); align-items: center; }
+  .product-description { grid-template-columns: minmax(0, 1fr) minmax(0, 1.65fr); align-items: start; }
 }
 
 @media (min-width: 960px) {
@@ -131,6 +130,7 @@ img, video { display: block; max-width: 100%; height: auto; }
 }
 
 @media (min-width: 1024px) {
+  .category-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .products-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .catalog-layout { grid-template-columns: minmax(13rem, 16rem) minmax(0, 1fr); align-items: start; }
   .catalog-filters { order: initial; position: sticky; top: 6rem; }
