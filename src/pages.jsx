@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { Breadcrumbs, ProductCard, ProductGallery } from './components';
-import { catalogProducts, categories, categoriesById, demoCategoryIds, findCategory } from './catalog-data';
+import { Breadcrumbs, ProductBadges, ProductCard, ProductGallery } from './components';
+import {
+  catalogProducts, categories, categoriesById, colorOptions, demoCategoryIds, featuredPhone, findCategory, newArrivals, popular,
+} from './catalog-data';
+import { iphone18Title } from './iphone-18-pro';
 import { HomeShowcase } from './phone-hero';
 import {
-  categoryUrl, formatPrice, imageUrl, newArrivals, orderUrl, pageUrl,
-  phone, popular, products, productUrl, storeContact,
+  categoryUrl, formatPrice, imageUrl, orderUrl, pageUrl, products, productUrl, storeContact,
 } from './shop';
 
 export function Home() {
@@ -193,6 +195,27 @@ export function AllProducts({ query }) {
   );
 }
 
+function ProductColors({ product }) {
+  const options = colorOptions(product);
+  if (options.length < 2) return null;
+
+  return (
+    <nav className="product-colors" aria-labelledby="product-color-heading">
+      <p id="product-color-heading">Цвет</p>
+      <ul>
+        {options.map((option) => (
+          <li key={option.id}>
+            <a href={productUrl(option)} aria-current={option.id === product.id ? 'page' : undefined}>
+              <span className="product-colors__swatch" style={{ backgroundColor: option.color.swatch }} aria-hidden="true" />
+              {option.color.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
 export function Product({ query }) {
   const product = products.find(({ id }) => id === query.get('id'));
   const title = product?.name ?? 'Товар не найден';
@@ -210,6 +233,8 @@ export function Product({ query }) {
               {category && <a className="category-label" href={categoryUrl(category.id)}>{category.name}</a>}
               <h1>{product.name}</h1>
               <p className="product-page__summary">{product.summary}</p>
+              <ProductBadges product={product} />
+              <ProductColors product={product} />
               <dl className="product-facts">
                 {product.specs.slice(0, 3).map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
               </dl>
@@ -259,7 +284,9 @@ const summaryFields = [
 export function Order({ query }) {
   const [summary, setSummary] = useState(null);
   const dialog = useRef(null);
-  const selected = products.find(({ id, name }) => [id, name].includes(query.get('product')));
+  const requestedProduct = query.get('product');
+  const selected = requestedProduct === iphone18Title ? featuredPhone
+    : products.find(({ id, name }) => id === requestedProduct || name === requestedProduct);
   useEffect(() => {
     if (summary && !dialog.current.open) dialog.current.showModal();
   }, [summary]);

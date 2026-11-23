@@ -1,5 +1,7 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { assetUrl, imageUrl, orderUrl, pageUrl, phone, phoneFinishes, productUrl } from './shop';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { featuredPhone } from './catalog-data';
+import { iphone18Finishes, iphone18Title } from './iphone-18-pro';
+import { assetUrl, imageUrl, orderUrl, pageUrl, productUrl } from './shop';
 
 const wideScreen = '(min-width: 768px)';
 const reducedMotion = '(prefers-reduced-motion: reduce)';
@@ -28,54 +30,134 @@ const promos = [
     action: 'Оставить заявку', destination: 'application',
   },
 ];
-const slideNames = [phone.name, ...promos.map(({ name }) => name)];
+const slideNames = [iphone18Title, ...promos.map(({ name }) => name)];
+const slideInterval = 15000;
+const slideTransition = 600;
 
 export function HomeShowcase() {
-  const [active, setActive] = useState(0);
+  const [slides, setSlides] = useState({ active: 0, previous: null });
+  const { active, previous } = slides;
   const [introComplete, setIntroComplete] = useState(() => matchMedia(reducedMotion).matches);
+  const [paused, setPaused] = useState(false);
+  const [contentFocused, setContentFocused] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const viewport = useRef(null);
+  const currentSlide = useRef(null);
   const finishIntro = useCallback(() => setIntroComplete(true), []);
-  const promo = promos[active - 1];
-  const dialog = useRef(null);
+  const showSlide = useCallback((next) => {
+    setSlides((current) => current.active === next ? current : { active: next, previous: current.active });
+  }, []);
+
+  useLayoutEffect(() => {
+    const slide = currentSlide.current;
+    const stage = viewport.current;
+    const fit = () => { stage.style.setProperty('--showcase-height', `${slide.offsetHeight}px`); };
+    const observer = new ResizeObserver(fit);
+    fit();
+    observer.observe(slide);
+    return () => observer.disconnect();
+  }, [active]);
+
+  useEffect(() => {
+    if (!introComplete) return;
+    for (const { id } of promos) {
+      const background = new Image();
+      background.fetchPriority = 'low';
+      background.src = imageUrl(`home-promo-${id}.webp`);
+    }
+  }, [introComplete]);
+
+  useEffect(() => {
+    if (!introComplete || paused || contentFocused || dialogOpen) return;
+
+    let timer;
+    function schedule() {
+      window.clearTimeout(timer);
+      if (!document.hidden) timer = window.setTimeout(() => showSlide((active + 1) % slideNames.length), slideInterval);
+    }
+    schedule();
+    document.addEventListener('visibilitychange', schedule);
+    return () => {
+      window.clearTimeout(timer);
+      document.removeEventListener('visibilitychange', schedule);
+    };
+  }, [active, contentFocused, dialogOpen, introComplete, paused, showSlide]);
+
+  useEffect(() => {
+    if (previous === null) return;
+    const timer = window.setTimeout(() => {
+      setSlides((current) => current === slides ? { active, previous: null } : current);
+    }, slideTransition);
+    return () => window.clearTimeout(timer);
+  }, [active, previous, slides]);
 
   return (
-    <section className="home-showcase" aria-label="Новости Corekit">
-      <div id="showcase-slide" key={active} className="home-showcase__slide">
-        {promo ? (
-          <div className={`promo promo--${promo.id}`}>
-            <img className="promo__background" src={imageUrl(`home-promo-${promo.id}.webp`)} alt="" />
-            <div className="promo__inner container">
-              <div className="promo__copy">
-                {promo.id === 'bork' && <img className="promo__logo" src={imageUrl('home-promo-bork-logo.webp')}
-                  width="427" height="79" alt="BORK" />}
-                <h1>{promo.title}</h1>
-                <p>{promo.description}</p>
-                <button className="button button--primary" type="button" onClick={() => dialog.current.showModal()}>
-                  Подробнее
-                </button>
-              </div>
+    <section className="home-showcase" style={{ '--showcase-transition': `${slideTransition}ms` }} aria-label="Новости Corekit">
+      <div id="showcase-slide" className="home-showcase__viewport" ref={viewport}
+        onFocus={() => setContentFocused(true)} onBlur={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget)) setContentFocused(false);
+        }}>
+        {(previous === null ? [active] : [previous, active]).map((index) => {
+          const current = index === active;
+          const transitionClass = current ? (previous === null ? '' : ' home-showcase__slide--entering') : ' home-showcase__slide--leaving';
+          return (
+            <div key={index} className={`home-showcase__slide${transitionClass}`} ref={current ? currentSlide : undefined}
+              aria-hidden={!current || undefined} inert={!current}>
+              {index === 0 ? <PhoneHero intro={!introComplete} showPoster={finishIntro} />
+                : <PromoSlide promo={promos[index - 1]} onDialogChange={setDialogOpen} />}
             </div>
-            <dialog className="order-dialog promo__dialog" ref={dialog} aria-labelledby="promo-title">
-              <h2 id="promo-title">{promo.name}</h2>
-              <p>{promo.details}</p>
-              <form method="dialog">
-                <a className="button button--primary" href={pageUrl(promo.destination)}>{promo.action}</a>
-                <button className="button button--outline" type="submit">Закрыть</button>
-              </form>
-            </dialog>
-          </div>
-        ) : <PhoneHero intro={!introComplete} showPoster={finishIntro} />}
+          );
+        })}
       </div>
       <div className="home-showcase__controls">
         {introComplete && (
-          <div className="slide-dots slide-dots--showcase" role="group" aria-label="Баннеры главной">
-            {slideNames.map((name, index) => (
-              <button key={name} type="button" aria-controls="showcase-slide" aria-label={name}
-                aria-pressed={active === index} onClick={() => setActive(index)} />
-            ))}
+          <div className="home-showcase__navigation">
+            <div className="slide-dots slide-dots--showcase" role="group" aria-label="Баннеры главной">
+              {slideNames.map((name, index) => (
+                <button key={name} type="button" aria-controls="showcase-slide" aria-label={name}
+                  aria-pressed={active === index} onClick={() => showSlide(index)} />
+              ))}
+            </div>
+            <button className="home-showcase__toggle" type="button" aria-controls="showcase-slide"
+              aria-label={paused ? 'Возобновить смену баннеров' : 'Приостановить смену баннеров'}
+              onClick={() => setPaused((value) => !value)}>
+              <span aria-hidden="true">{paused ? '▶' : 'Ⅱ'}</span>
+            </button>
           </div>
         )}
       </div>
     </section>
+  );
+}
+
+function PromoSlide({ promo, onDialogChange }) {
+  const dialog = useRef(null);
+  const titleId = `promo-title-${promo.id}`;
+
+  return (
+    <div className={`promo promo--${promo.id}`}>
+      <img className="promo__background" src={imageUrl(`home-promo-${promo.id}.webp`)} alt="" />
+      <div className="promo__inner container">
+        <div className="promo__copy">
+          {promo.id === 'bork' && <img className="promo__logo" src={imageUrl('home-promo-bork-logo.webp')}
+            width="427" height="79" alt="BORK" />}
+          <h1>{promo.title}</h1>
+          <p>{promo.description}</p>
+          <button className="button button--primary" type="button" onClick={() => {
+            dialog.current.showModal();
+            onDialogChange(true);
+          }}>Подробнее</button>
+        </div>
+      </div>
+      <dialog className="order-dialog promo__dialog" ref={dialog} aria-labelledby={titleId} onClose={() => onDialogChange(false)}>
+        <h2 id={titleId}>{promo.name}</h2>
+        <p>{promo.details}</p>
+        <form method="dialog">
+          <a className="button button--primary" href={pageUrl(promo.destination)}>{promo.action}</a>
+          <button className="button button--outline" type="submit">Закрыть</button>
+        </form>
+      </dialog>
+    </div>
   );
 }
 
@@ -132,7 +214,7 @@ function PhoneHero({ intro, showPoster }) {
             onError={() => setPosterReady(false)} onLoad={() => setPosterReady(true)} />
         </picture>
         <h1 id="hero-title" className={!intro && !posterReady ? 'hero__title hero__title--visible' : 'hero__title'}>
-          iPhone 18 Pro
+          {iphone18Title}
         </h1>
         {intro && (
           <video ref={video} className="hero__animation" aria-hidden="true"
@@ -144,10 +226,10 @@ function PhoneHero({ intro, showPoster }) {
       </div>
       <div className="hero__footer">
         <div className="hero__footer-inner container">
-          <p className="hero__finishes">{phoneFinishes.join(' · ')}</p>
+          <p className="hero__finishes">{iphone18Finishes.join(' · ')}</p>
           <div className="hero__actions">
-            <a className="button button--primary" href={orderUrl(phone)}>Оформить заказ</a>
-            <a className="button button--outline" href={productUrl(phone)}>Подробнее</a>
+            <a className="button button--primary" href={orderUrl(featuredPhone)}>Оформить заказ</a>
+            <a className="button button--outline" href={productUrl(featuredPhone)}>Подробнее</a>
           </div>
         </div>
       </div>

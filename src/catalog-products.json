@@ -2,6 +2,8 @@
   {
     "id": "apple-iphone-15-blue",
     "categoryId": "phones",
+    "colorGroup": "iphone-15-128",
+    "color": { "label": "Голубой", "swatch": "#d5e5eb" },
     "name": "Apple iPhone 15 128 ГБ, голубой",
     "summary": "6,1″ OLED · A16 Bionic",
     "price": 61990,
@@ -53,6 +55,8 @@
   {
     "id": "apple-iphone-15-pink",
     "categoryId": "phones",
+    "colorGroup": "iphone-15-128",
+    "color": { "label": "Розовый", "swatch": "#f2c8d1" },
     "name": "Apple iPhone 15 128 ГБ, розовый",
     "summary": "6,1″ OLED · камера 48 Мп",
     "price": 60999,
