@@ -39,9 +39,7 @@ img, video { display: block; max-width: 100%; height: auto; }
 .product-table { min-width: 31rem; }
 .order-dialog { width: min(calc(100% - 2rem), 34rem); max-height: calc(100dvh - 2rem); overflow: auto; }
 .site-footer__inner {
-  display: grid;
-  gap: .75rem;
-  padding-block: 1.25rem 5rem;
+  padding-block: clamp(1.75rem, 4.5vw, 3.6rem) 4.25rem;
 }
 .back-to-top {
   position: fixed;
@@ -50,7 +48,7 @@ img, video { display: block; max-width: 100%; height: auto; }
 }
 
 @media (min-width: 480px) {
-  .popular__track { --hits-visible: 2; }
+  .product-carousel__track { --carousel-visible: 2; }
 }
 
 @media (min-width: 640px) {
@@ -92,7 +90,7 @@ img, video { display: block; max-width: 100%; height: auto; }
   .promo__inner { display: flex; align-items: center; height: 100%; padding: 0 0 3.75rem clamp(1rem, 3vw, 3rem); }
   .promo__copy { max-width: min(35rem, 48%); }
   .promo--gift .promo__copy { max-width: min(25rem, 36%); }
-  .popular__track { --hits-visible: 3; }
+  .product-carousel__track { --carousel-visible: 3; }
   html { scroll-padding-top: 6rem; }
   .site-header { position: sticky; top: 0; z-index: 40; }
   .site-header__inner {
@@ -113,12 +111,10 @@ img, video { display: block; max-width: 100%; height: auto; }
   .order-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .order-form__wide { grid-column: 1 / -1; }
   .order-dialog dl div { grid-template-columns: 1fr minmax(0, 1.5fr); gap: .75rem; }
-  .site-footer__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: 1.25rem 2.35rem;
-    padding-inline-end: 3.25rem;
+  .site-footer__inner { padding-bottom: 1.65rem; }
+  .site-footer__columns {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .72fr) minmax(0, 1.3fr);
+    gap: clamp(1.4rem, 4.6vw, 4.4rem);
   }
   .back-to-top { right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); }
 }
@@ -131,7 +127,7 @@ img, video { display: block; max-width: 100%; height: auto; }
 }
 
 @media (min-width: 960px) {
-  .popular__track { --hits-visible: 4; }
+  .product-carousel__track { --carousel-visible: 4; }
 }
 
 @media (min-width: 1024px) {
@@ -142,7 +138,7 @@ img, video { display: block; max-width: 100%; height: auto; }
 }
 
 @media (min-width: 1120px) {
-  .popular__track { --hits-visible: 5; }
+  .product-carousel__track { --carousel-visible: 5; }
 }
 
 @media (min-width: 1280px) {
@@ -150,7 +146,7 @@ img, video { display: block; max-width: 100%; height: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html, .popular__track { scroll-behavior: auto; }
+  html, .product-carousel__track { scroll-behavior: auto; }
   .button { transition: none; }
   .slide-dots--showcase { animation: none; }
   .slide-dots button::before { transition: none; }

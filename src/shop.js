@@ -26,6 +26,16 @@ export const phone = {
 export const products = [...originalProducts, phone];
 export const popular = ['notebook', 'headphones', 'keyboard', 'monitor', 'mouse', 'kolonki']
   .map((id) => products.find((product) => product.id === id));
+export const newArrivals = ['iphone-18-pro', 'tablet', 'webcam', 'microphone', 'printer', 'router', 'flash']
+  .map((id) => products.find((product) => product.id === id));
+
+export const storeContact = {
+  address: 'Пресненская наб., 2, ТРЦ Афимолл Сити, этаж 3',
+  hours: '10:00–22:00',
+  phone: '+7 (900) 000-00-00',
+  phoneHref: 'tel:+79000000000',
+  email: 'info@example.com',
+};
 
 export const categories = [
   { id: 'computers', name: 'Компьютеры', label: 'Компьютерная техника', featured: 'notebook' },

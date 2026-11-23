@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { formatPrice, imageUrl, orderUrl, pageUrl, productUrl } from './shop';
+import { formatPrice, imageUrl, orderUrl, pageUrl, productUrl, storeContact } from './shop';
 
 const nav = [
   ['index', 'Главная'], ['catalog', 'Каталог'], ['products', 'Все товары'], ['contacts', 'Контакты'],
@@ -40,12 +40,42 @@ export function Header({ page }) {
 }
 
 export function Footer() {
+  const contacts = [
+    ['⌖', 'Адрес', storeContact.address],
+    ['☎︎', 'Телефон', <a href={storeContact.phoneHref}>{storeContact.phone}</a>],
+    ['◷', 'Режим работы', storeContact.hours],
+    ['✉︎', 'Почта', <a href={`mailto:${storeContact.email}`}>{storeContact.email}</a>],
+  ];
+
   return (
     <footer className="site-footer">
       <div className="container site-footer__inner">
-        <Brand />
-        <p>© 2026 Corekit. Учебный проект.</p>
-        <a href={pageUrl('contacts')}>Контакты</a>
+        <div className="site-footer__columns">
+          <div className="site-footer__about">
+            <Brand />
+            <p>Магазин техники и аксессуаров для работы, учёбы и дома.</p>
+          </div>
+          <nav aria-labelledby="footer-links">
+            <h2 id="footer-links">Разделы</h2>
+            <ul className="site-footer__links">
+              {nav.map(([id, label]) => <li key={id}><a href={pageUrl(id)}>{label}</a></li>)}
+            </ul>
+          </nav>
+          <section aria-labelledby="footer-contacts">
+            <h2 id="footer-contacts">Адрес и связь</h2>
+            <address className="site-footer__contacts">
+              <dl>
+                {contacts.map(([icon, label, content]) => (
+                  <div key={label} className="site-footer__contact">
+                    <dt><span className="site-footer__icon" aria-hidden="true">{icon}</span>{label}</dt>
+                    <dd>{content}</dd>
+                  </div>
+                ))}
+              </dl>
+            </address>
+          </section>
+        </div>
+        <p className="site-footer__legal">© 2026 Corekit. Учебный проект.</p>
       </div>
     </footer>
   );

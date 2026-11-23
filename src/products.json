@@ -277,7 +277,17 @@
         "Тип товара",
         "Веб-камера"
       ]
-    ]
+    ],
+    "image": {
+      "filename": "webcam-512.webp",
+      "width": 512,
+      "height": 512,
+      "variants": [
+        ["webcam-192.webp", 192],
+        ["webcam-384.webp", 384],
+        ["webcam-512.webp", 512]
+      ]
+    }
   },
   {
     "id": "flash",
@@ -299,7 +309,17 @@
         "Тип товара",
         "Флешка"
       ]
-    ]
+    ],
+    "image": {
+      "filename": "flash-512.webp",
+      "width": 512,
+      "height": 512,
+      "variants": [
+        ["flash-192.webp", 192],
+        ["flash-384.webp", 384],
+        ["flash-512.webp", 512]
+      ]
+    }
   },
   {
     "id": "printer",
@@ -321,7 +341,17 @@
         "Тип товара",
         "Принтер"
       ]
-    ]
+    ],
+    "image": {
+      "filename": "printer-512.webp",
+      "width": 512,
+      "height": 512,
+      "variants": [
+        ["printer-192.webp", 192],
+        ["printer-384.webp", 384],
+        ["printer-512.webp", 512]
+      ]
+    }
   },
   {
     "id": "tablet",
@@ -343,7 +373,17 @@
         "Тип товара",
         "Планшет"
       ]
-    ]
+    ],
+    "image": {
+      "filename": "tablet-512.webp",
+      "width": 512,
+      "height": 512,
+      "variants": [
+        ["tablet-192.webp", 192],
+        ["tablet-384.webp", 384],
+        ["tablet-512.webp", 512]
+      ]
+    }
   },
   {
     "id": "router",
@@ -365,7 +405,17 @@
         "Тип товара",
         "Роутер"
       ]
-    ]
+    ],
+    "image": {
+      "filename": "router-512.webp",
+      "width": 512,
+      "height": 512,
+      "variants": [
+        ["router-192.webp", 192],
+        ["router-384.webp", 384],
+        ["router-512.webp", 512]
+      ]
+    }
   },
   {
     "id": "microphone",
@@ -387,6 +437,16 @@
         "Тип товара",
         "Микрофон"
       ]
-    ]
+    ],
+    "image": {
+      "filename": "microphone-512.webp",
+      "width": 512,
+      "height": 512,
+      "variants": [
+        ["microphone-192.webp", 192],
+        ["microphone-384.webp", 384],
+        ["microphone-512.webp", 512]
+      ]
+    }
   }
 ]
