@@ -34,7 +34,7 @@ export function useScrollReveal() {
     const nodes = root.querySelectorAll(targets);
     const revealed = new WeakSet();
     const observer = new IntersectionObserver(reveal, { rootMargin: '14px 0px' });
-    const catalogObserver = new IntersectionObserver(reveal, { rootMargin: '72px 0px 192px' });
+    const catalogObserver = new IntersectionObserver(reveal, { rootMargin: '0px 0px -48px' });
 
     function reveal(entries, source) {
       let delay = 0;
