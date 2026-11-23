@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { formatPrice, imageUrl, orderUrl, pageUrl, productUrl, storeContact } from './shop';
 
 const nav = [
@@ -14,28 +14,30 @@ export function Brand() {
   );
 }
 
-export function Header({ page }) {
+export function Header({ page, compact }) {
   const active = page === 'category' ? 'catalog' : page === 'product' ? 'products' : page;
   return (
-    <header className="site-header" id="top">
-      <a className="skip-link" href="#main">Перейти к содержанию</a>
-      <div className="container site-header__inner">
-        <Brand />
-        <nav className="site-nav" aria-label="Основная навигация">
-          <ul className="site-nav__list">
-            {nav.map(([id, label]) => (
-              <li key={id}>
-                <a className="site-nav__link" href={pageUrl(id)} aria-current={active === id ? 'page' : undefined}>{label}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <a className="button button--outline header-action" href={pageUrl('order')}
-          aria-current={['order', 'application'].includes(page) ? 'page' : undefined}>
-          Заявка
-        </a>
-      </div>
-    </header>
+    <div className="site-header-slot">
+      <header className={`site-header${compact ? ' site-header--compact' : ''}`} id="top">
+        <a className="skip-link" href="#main">Перейти к содержанию</a>
+        <div className="container site-header__inner">
+          <Brand />
+          <nav className="site-nav" aria-label="Основная навигация">
+            <ul className="site-nav__list">
+              {nav.map(([id, label]) => (
+                <li key={id}>
+                  <a className="site-nav__link" href={pageUrl(id)} aria-current={active === id ? 'page' : undefined}>{label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <a className="button button--outline header-action" href={pageUrl('order')}
+            aria-current={['order', 'application'].includes(page) ? 'page' : undefined}>
+            Заявка
+          </a>
+        </div>
+      </header>
+    </div>
   );
 }
 
@@ -81,24 +83,16 @@ export function Footer() {
   );
 }
 
-export function BackToTop() {
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const update = () => setVisible(window.scrollY > 450);
-    window.addEventListener('scroll', update, { passive: true });
-    update();
-    return () => window.removeEventListener('scroll', update);
-  }, []);
-
-  return visible ? (
-    <button className="back-to-top" type="button" aria-label="Вернуться наверх"
+export function BackToTop({ visible }) {
+  return (
+    <button className="back-to-top" type="button" aria-label="Вернуться наверх" disabled={!visible}
       onClick={() => {
-        document.querySelector('.brand')?.focus({ preventScroll: true });
+        document.querySelector('.site-header .brand')?.focus({ preventScroll: true });
         window.scrollTo({ top: 0 });
       }}>
       <span aria-hidden="true">↑</span>
     </button>
-  ) : null;
+  );
 }
 
 export function Breadcrumbs({ links = [], current }) {
