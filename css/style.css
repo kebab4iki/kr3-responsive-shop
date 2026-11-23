@@ -722,7 +722,8 @@ button { cursor: pointer; }
   .page-main { animation: page-enter .28s ease-out; }
   :root:active-view-transition .page-main { animation: none; }
 
-  .scroll-reveal { animation: scroll-reveal .56s var(--motion-ease) var(--reveal-delay, 0ms) backwards; }
+  .reveal-pending { opacity: 0; }
+  .scroll-reveal { animation: scroll-reveal .36s ease-out var(--reveal-delay, 0ms) backwards; }
 
   .site-header { transition: background-color .28s, border-color .28s, box-shadow .28s; }
   .site-header__inner { transition: padding .3s var(--motion-ease), row-gap .3s var(--motion-ease); }
@@ -745,11 +746,10 @@ button { cursor: pointer; }
 
   @media (hover: hover) and (pointer: fine) {
     .category-tile:hover, .products-grid .product-card:hover {
-      transform: translateY(-4px);
       box-shadow: 0 .75rem 1.45rem #0006;
     }
     .product-card:hover .product-card__visual img,
-    .category-tile:hover .category-tile__art { scale: 1.06; }
+    .category-tile:hover .category-tile__art { scale: 1.05; }
     .product-gallery__thumbs button:hover, .product-colors a:hover { transform: translateY(-2px); }
     .button:not(:disabled):hover { transform: translateY(-2px); box-shadow: 0 .35rem .9rem #0005; }
     .back-to-top:enabled:hover { translate: 0 -.2rem; }
@@ -760,7 +760,6 @@ button { cursor: pointer; }
 
 @keyframes page-enter { from { opacity: .55; } }
 @keyframes scroll-reveal {
-  from { opacity: .16; translate: 0 1.1rem; }
-  72% { opacity: 1; }
+  from { opacity: 0; translate: 0 .6rem; }
   to { opacity: 1; translate: 0 0; }
 }
