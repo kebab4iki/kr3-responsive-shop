@@ -159,10 +159,6 @@ img, video { display: block; max-width: 100%; height: auto; }
 
 @media (prefers-reduced-motion: reduce) {
   html, .product-carousel__track { scroll-behavior: auto; }
-  .button { transition: none; }
-  .button:not(:disabled):hover, .button:not(:disabled):active { transform: none; }
-  .product-card:hover .product-card__visual img,
-  .category-tile:hover .category-tile__art { scale: none; }
   .home-showcase__viewport { transition: none; }
   .home-showcase__slide--leaving { visibility: hidden; }
   .home-showcase__slide--entering, .slide-dots--showcase { animation: none; }

@@ -130,7 +130,6 @@ button { cursor: pointer; }
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  transition: background-color .2s, border-color .2s, color .2s, transform .2s;
 }
 .button--primary { color: #1a0b12; background: #f7e8ed; }
 .button--primary:hover { color: #14090e; background: #ffbcca; }
@@ -138,7 +137,6 @@ button { cursor: pointer; }
 .button--outline:hover { color: #fff1f4; background: #32232c; border-color: #a27382; }
 .button--quiet { color: #f8e7ed; background: #2b232a; border-color: #3b303a; }
 .button--quiet:hover { color: #fff; background: #442b35; border-color: #a27382; }
-.button:active { transform: translateY(1px); }
 
 .home-showcase {
   --hero-inset: clamp(1rem, 3.65vw, 3.25rem);
@@ -506,11 +504,13 @@ button { cursor: pointer; }
 }
 .category-tile:hover { border-color: #a46e83; color: #fff3fa; }
 .category-tile h2 {
+  position: relative;
   display: flex;
   align-items: center;
   min-height: 3.55rem;
   padding: .75rem clamp(.65rem, 1.2vw, 1rem);
   border-top: 1px solid #493646;
+  background: inherit;
   font-size: clamp(.95rem, 1.55vw, 1.22rem);
   line-height: 1.2;
 }
@@ -710,10 +710,9 @@ button { cursor: pointer; }
 
 @media (hover: hover) and (pointer: fine) {
   .surface:hover { border-color: #5f4959; }
-  .button:not(:disabled):hover { transform: translateY(-2px); }
-  .button:not(:disabled):active { transform: translateY(1px); }
-  .product-card:hover .product-card__visual img,
-  .category-tile:hover .category-tile__art { scale: 1.035; }
+  .product-card:hover, .category-tile:hover { border-color: #a46e83; background-color: #231a24; }
+  .home-faq__item:hover { border-color: #805568; background-color: #211922; }
+  .product-gallery__thumbs button:not([aria-pressed="true"]):hover { border-color: #ad7188; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -723,21 +722,45 @@ button { cursor: pointer; }
   .page-main { animation: page-enter .28s ease-out; }
   :root:active-view-transition .page-main { animation: none; }
 
-  .scroll-reveal { animation: scroll-reveal .44s var(--motion-ease); }
-  .scroll-reveal:focus-within { animation: none; }
+  .scroll-reveal { animation: scroll-reveal .56s var(--motion-ease) var(--reveal-delay, 0ms) backwards; }
 
   .site-header { transition: background-color .28s, border-color .28s, box-shadow .28s; }
   .site-header__inner { transition: padding .3s var(--motion-ease), row-gap .3s var(--motion-ease); }
   .site-header .brand__mark { transition: scale .3s var(--motion-ease), box-shadow .3s; }
-  .site-nav__list, .site-nav__link, .home-faq__item, .surface, .product-card, .category-tile {
-    transition: color .2s, background-color .2s, border-color .2s;
+  .site-nav__list, .home-faq__item, .surface {
+    transition: background-color .22s, border-color .22s;
   }
-  .product-card__visual img, .category-tile__art { transition: scale .32s var(--motion-ease); }
+  .site-nav__link, .home-faq__item summary, .breadcrumbs a, .site-footer a, .product-card__body a:not(.button), .product-overview__spec-link {
+    transition: color .22s, background-color .22s, text-decoration-color .22s;
+  }
+  .button, .product-gallery__thumbs button, .product-colors a, .product-card, .category-tile {
+    transition: transform .28s var(--motion-ease), box-shadow .28s var(--motion-ease),
+      color .22s, background-color .22s, border-color .22s;
+  }
+  .product-card__visual img, .category-tile__art { transition: scale .48s var(--motion-ease); }
   .back-to-top {
     transition: opacity .24s, translate .28s var(--motion-ease), scale .28s var(--motion-ease), background-color .2s, visibility 0s;
   }
   .back-to-top:disabled { translate: 0 .65rem; scale: .88; transition-delay: 0s, 0s, 0s, 0s, .28s; }
+
+  @media (hover: hover) and (pointer: fine) {
+    .category-tile:hover, .products-grid .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 .75rem 1.45rem #0006;
+    }
+    .product-card:hover .product-card__visual img,
+    .category-tile:hover .category-tile__art { scale: 1.06; }
+    .product-gallery__thumbs button:hover, .product-colors a:hover { transform: translateY(-2px); }
+    .button:not(:disabled):hover { transform: translateY(-2px); box-shadow: 0 .35rem .9rem #0005; }
+    .back-to-top:enabled:hover { translate: 0 -.2rem; }
+  }
+
+  .button:not(:disabled):active { transform: translateY(1px); box-shadow: none; }
 }
 
 @keyframes page-enter { from { opacity: .55; } }
-@keyframes scroll-reveal { from { opacity: .65; translate: 0 .8rem; } }
+@keyframes scroll-reveal {
+  from { opacity: .16; translate: 0 1.1rem; }
+  72% { opacity: 1; }
+  to { opacity: 1; translate: 0 0; }
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Header, Footer, BackToTop } from './components';
 import { Home, Catalog, Category, AllProducts, Product, Order, Contacts } from './pages';
+import { useScrollReveal } from './scroll-reveal';
 import { standalone } from './shop';
 
 const query = new URLSearchParams(window.location.search);
@@ -20,12 +21,10 @@ const entry = Object.hasOwn(routes, requestedPage) ? requestedPage : 'index';
 const [Content, title] = routes[entry];
 if (standalone) document.title = title;
 
-const revealTargets = '.product-carousel > .container, .home-reviews__layout, .home-faq__item, '
-  + '.category-tile, .products-grid .product-card, .product-description > *, .contact-panel, .site-footer__columns';
-
 function Site({ children }) {
   const [compact, setCompact] = useState(false);
   const [showTop, setShowTop] = useState(false);
+  useScrollReveal();
 
   useEffect(() => {
     function updateChrome() {
@@ -35,23 +34,6 @@ function Site({ children }) {
     updateChrome();
     window.addEventListener('scroll', updateChrome, { passive: true });
     return () => window.removeEventListener('scroll', updateChrome);
-  }, []);
-
-  useEffect(() => {
-    if (!('IntersectionObserver' in window)) return;
-    const margin = 24;
-    const observer = new IntersectionObserver((entries) => {
-      for (const { target, isIntersecting } of entries) {
-        if (!isIntersecting) continue;
-        observer.unobserve(target);
-        target.classList.add('scroll-reveal');
-      }
-    }, { rootMargin: `0px 0px -${margin}px` });
-
-    for (const target of document.querySelectorAll(revealTargets)) {
-      if (target.getBoundingClientRect().top >= window.innerHeight - margin) observer.observe(target);
-    }
-    return () => observer.disconnect();
   }, []);
 
   return (
