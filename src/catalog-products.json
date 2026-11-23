@@ -3,338 +3,268 @@
     "id": "apple-iphone-15-blue",
     "categoryId": "phones",
     "name": "Apple iPhone 15 128 ГБ, голубой",
-    "summary": "Голубой · OLED 6,1″",
-    "price": 58990,
-    "description": "Голубой iPhone с OLED-экраном, чипом A16 Bionic и накопителем на 128 ГБ. Основная камера на 48 Мп дополняется сверхширокоугольной камерой. Для зарядки и передачи данных используется USB‑C.",
+    "summary": "6,1″ OLED · A16 Bionic",
+    "price": 61990,
+    "description": "Голубой iPhone 15 сочетает экран Super Retina XDR, 128 ГБ памяти и две задние камеры. Основной модуль снимает с разрешением 48 Мп, второй помогает захватить более широкий план.",
     "specs": [
       [
         "Дисплей",
-        "6,1″ OLED, 2556 × 1179"
+        "6,1″, 2556 × 1179, Super Retina XDR, 60 Гц"
       ],
       [
         "Процессор",
-        "A16 Bionic"
+        "Apple A16 Bionic, 6 x 3,46 ГГц"
       ],
       [
-        "Память",
-        "128 ГБ"
+        "Память (ОЗУ/ПЗУ)",
+        "6 ГБ / 128 ГБ"
       ],
       [
-        "Задние камеры",
-        "48 Мп + 12 Мп"
+        "Камера",
+        "48+12 Мп"
       ],
       [
-        "Разъём",
-        "USB‑C"
+        "Связь",
+        "3G, 4G, 5G, eSIM, Nano-SIM"
       ],
       [
-        "Вес",
-        "171 г"
+        "Питание",
+        "3349 мА·ч (Li-Ion)"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Appzone",
-      "url": "https://appzone.store/catalog/iphone/iphone-15/apple-iphone-15-128-gb-blue/"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-euro/111831"
-    },
     "image": {
       "filename": "apple-iphone-15-blue.webp",
-      "width": 720,
-      "height": 960,
-      "alt": "Apple iPhone 15 128 ГБ, голубой",
-      "credit": {
-        "author": "メイド理世",
-        "url": "https://commons.wikimedia.org/wiki/File:Back_view_of_iPhone_15_blue.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 1088,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-iphone-15-blue-2.webp",
+        "width": 545,
+        "height": 1100
+      },
+      {
+        "filename": "apple-iphone-15-blue-3.webp",
+        "width": 483,
+        "height": 671
       }
-    }
+    ]
   },
   {
     "id": "apple-iphone-15-pink",
     "categoryId": "phones",
     "name": "Apple iPhone 15 128 ГБ, розовый",
-    "summary": "OLED 6,1″ · A16 Bionic",
+    "summary": "6,1″ OLED · камера 48 Мп",
     "price": 60999,
-    "description": "iPhone 15 в розовом корпусе с алюминиевой рамкой. Дисплей поддерживает Dynamic Island. К основной камере на 48 Мп добавлен сверхширокоугольный модуль.",
+    "description": "Розовый iPhone 15 с компактным экраном Super Retina XDR. Встроенной памяти объёмом 128 ГБ достаточно для приложений, фотографий и музыки.",
     "specs": [
       [
         "Дисплей",
-        "6,1″ OLED, 2556 × 1179"
+        "6,1″, 2556 × 1179, Super Retina XDR, 60 Гц"
       ],
       [
         "Процессор",
-        "A16 Bionic"
+        "Apple A16 Bionic, 6 x 3,46 ГГц"
       ],
       [
-        "Память",
-        "128 ГБ"
+        "Память (ОЗУ/ПЗУ)",
+        "6 ГБ / 128 ГБ"
       ],
       [
-        "Задние камеры",
-        "48 Мп + 12 Мп"
+        "Камера",
+        "48+12 Мп"
       ],
       [
-        "Разъём",
-        "USB‑C"
+        "Связь",
+        "3G, 4G, 5G, eSIM, Nano-SIM"
       ],
       [
-        "Цвет",
-        "Розовый"
+        "Питание",
+        "3349 мА·ч (Li-Ion)"
       ]
     ],
-    "priceSource": {
-      "date": "12.11.2026",
-      "name": "Клуб DNS",
-      "url": "https://club.dns-shop.ru/discussions/t-78-smartfonyi/645521-hochu-priobresti-danyii-telefon/"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-euro/111831"
-    },
     "image": {
       "filename": "apple-iphone-15-pink.webp",
-      "width": 720,
-      "height": 960,
-      "alt": "Apple iPhone 15 128 ГБ, розовый",
-      "credit": {
-        "author": "メイド理世",
-        "url": "https://commons.wikimedia.org/wiki/File:Apple_iPhone_15_Pink_-_back_view_(November_1,_2024).jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 1089,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-iphone-15-pink-2.webp",
+        "width": 545,
+        "height": 1100
+      },
+      {
+        "filename": "apple-iphone-15-pink-3.webp",
+        "width": 495,
+        "height": 676
       }
-    }
-  },
-  {
-    "id": "apple-iphone-16-ultramarine",
-    "categoryId": "phones",
-    "name": "Apple iPhone 16 128 ГБ, ультрамарин",
-    "summary": "OLED 6,1″ · Apple A18",
-    "price": 61990,
-    "description": "iPhone 16 с процессором Apple A18 и 128 ГБ памяти. Две задние камеры позволяют выбирать между обычным и сверхшироким углом съёмки.",
-    "specs": [
-      [
-        "Дисплей",
-        "6,1″ OLED, 2556 × 1179"
-      ],
-      [
-        "Процессор",
-        "Apple A18"
-      ],
-      [
-        "Память",
-        "128 ГБ"
-      ],
-      [
-        "Задние камеры",
-        "48 Мп + 12 Мп"
-      ],
-      [
-        "Разъём",
-        "USB‑C"
-      ],
-      [
-        "Цвет",
-        "Ultramarine"
-      ]
-    ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Hi Store",
-      "url": "https://msk.hi-stores.ru/catalog/smartphones/128gb/"
-    },
-    "specSource": {
-      "name": "DNS",
-      "url": "https://www.dns-shop.ru/product/6c00456c6f27d0a4/61-smartfon-apple-iphone-16-128-gb-goluboj/"
-    },
-    "image": {
-      "filename": "apple-iphone-16-ultramarine.webp",
-      "width": 540,
-      "height": 960,
-      "alt": "Apple iPhone 16 128 ГБ, ультрамарин",
-      "credit": {
-        "author": "Kyu3a",
-        "url": "https://commons.wikimedia.org/wiki/File:Back_of_iPhone_16_Blue_model.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
-      }
-    }
-  },
-  {
-    "id": "apple-watch-ultra-2",
-    "categoryId": "watches",
-    "name": "Apple Watch Ultra 2 49 мм",
-    "summary": "Натуральный титан · GPS",
-    "price": 62100,
-    "description": "Часы в титановом корпусе с двухчастотным GPS и дисплеем Retina, который может оставаться включённым. Боковую кнопку действия можно настроить на запуск тренировки или другой поддерживаемой функции.",
-    "specs": [
-      [
-        "Корпус",
-        "49 мм, титан"
-      ],
-      [
-        "Процессор",
-        "Apple S9 SiP"
-      ],
-      [
-        "Дисплей",
-        "Всегда включённый Retina LTPO OLED"
-      ],
-      [
-        "Автономность",
-        "До 36 часов при обычном использовании"
-      ],
-      [
-        "Навигация",
-        "Двухчастотный GPS"
-      ]
-    ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Qubtech",
-      "url": "https://qubtech.ru/catalog/apple/apple-watch-ultra-2--natural-std-222534"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-euro/111832"
-    },
-    "image": {
-      "filename": "apple-watch-ultra-2.webp",
-      "width": 810,
-      "height": 960,
-      "alt": "Apple Watch Ultra 2 49 мм",
-      "credit": {
-        "author": "Pangalau",
-        "url": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Ultra_2.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
-      }
-    }
-  },
-  {
-    "id": "apple-iphone-16-pro-white",
-    "categoryId": "phones",
-    "name": "Apple iPhone 16 Pro 128 ГБ, белый титан",
-    "summary": "OLED 6,3″ · A18 Pro",
-    "price": 83680,
-    "description": "iPhone 16 Pro с титановым корпусом и экраном с частотой обновления до 120 Гц. У задней камеры есть отдельный телеобъектив с пятикратным оптическим приближением. Сбоку расположена кнопка управления камерой.",
-    "specs": [
-      [
-        "Дисплей",
-        "6,3″ OLED, 2622 × 1206"
-      ],
-      [
-        "Процессор",
-        "A18 Pro"
-      ],
-      [
-        "Память",
-        "128 ГБ"
-      ],
-      [
-        "Разъём",
-        "USB‑C"
-      ],
-      [
-        "Цвет",
-        "Белый титан"
-      ]
-    ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Price.ru",
-      "url": "https://price.ru/mobilnye-telefony/apple-iphone-16-pro-128gb-white-titanium/",
-      "note": "Минимальная цена в подборке"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-us/121031"
-    },
-    "image": {
-      "filename": "apple-iphone-16-pro-white.webp",
-      "width": 720,
-      "height": 960,
-      "alt": "Apple iPhone 16 Pro 128 ГБ, белый титан",
-      "credit": {
-        "author": "メイド理世",
-        "url": "https://commons.wikimedia.org/wiki/File:Back_view_of_iPhone_16_Pro_White_Titanium.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
-      }
-    }
+    ]
   },
   {
     "id": "apple-iphone-15-plus",
     "categoryId": "phones",
     "name": "Apple iPhone 15 Plus 128 ГБ, зелёный",
-    "summary": "OLED 6,7″ · A16 Bionic",
+    "summary": "6,7″ OLED · A16 Bionic",
     "price": 58990,
-    "description": "iPhone 15 Plus с крупным экраном Super Retina XDR и 128 ГБ встроенной памяти. Основная камера на 48 Мп поддерживает съёмку с двукратным приближением. Для зарядки предусмотрен USB‑C.",
+    "description": "Зелёный iPhone 15 Plus получил экран 6,7″ и чип A16 Bionic. Две задние камеры позволяют выбрать обычный ракурс или захватить больше пространства.",
     "specs": [
       [
         "Дисплей",
-        "6,7″ OLED, 2796 × 1290"
+        "6,7″, 2796 × 1290, Super Retina XDR, 60 Гц"
       ],
       [
         "Процессор",
-        "A16 Bionic"
+        "Apple A16 Bionic, 6 x 3,46 ГГц"
       ],
       [
-        "Память",
-        "128 ГБ"
+        "Память (ОЗУ/ПЗУ)",
+        "6 ГБ / 128 ГБ"
       ],
       [
-        "Задние камеры",
-        "48 Мп + 12 Мп"
+        "Камера",
+        "48+12 Мп"
       ],
       [
-        "Цвет",
-        "Зелёный"
+        "Связь",
+        "3G, 4G, 5G, eSIM, Nano-SIM"
+      ],
+      [
+        "Питание",
+        "4383 мА·ч (Li-Ion)"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "iProfiShop через Stok",
-      "url": "https://stok.io/apple/ru/ryazan/iphone/15-plus/128gb/green"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-us/111830"
-    },
     "image": {
       "filename": "apple-iphone-15-plus.webp",
-      "width": 721,
-      "height": 960,
-      "alt": "Apple iPhone 15 Plus 128 ГБ, зелёный",
-      "credit": {
-        "author": "Ka Kit Pang",
-        "url": "https://commons.wikimedia.org/wiki/File:IPhone_15_Plus.jpeg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 1083,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-iphone-15-plus-2.webp",
+        "width": 540,
+        "height": 1100
+      },
+      {
+        "filename": "apple-iphone-15-plus-3.webp",
+        "width": 541,
+        "height": 1100
       }
-    }
+    ]
+  },
+  {
+    "id": "apple-iphone-14-red",
+    "categoryId": "phones",
+    "name": "Apple iPhone 14 128 ГБ, красный",
+    "summary": "6,1″ OLED · A15 Bionic",
+    "price": 38400,
+    "description": "Красный iPhone 14 с экраном Super Retina XDR и накопителем на 128 ГБ. У обеих задних камер разрешение 12 Мп.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,1″, 2532 × 1170, Super Retina XDR, 60 Гц"
+      ],
+      [
+        "Процессор",
+        "Apple A15 Bionic, 6 x 3,23 ГГц"
+      ],
+      [
+        "Память (ОЗУ/ПЗУ)",
+        "6 ГБ / 128 ГБ"
+      ],
+      [
+        "Камера",
+        "12+12 Мп"
+      ],
+      [
+        "Связь",
+        "3G, 4G, 5G, eSIM, Nano-SIM"
+      ],
+      [
+        "Питание",
+        "3279 мА·ч (Li-Ion)"
+      ]
+    ],
+    "image": {
+      "filename": "apple-iphone-14-red.webp",
+      "width": 1100,
+      "height": 1097
+    },
+    "gallery": [
+      {
+        "filename": "apple-iphone-14-red-2.webp",
+        "width": 548,
+        "height": 1100
+      },
+      {
+        "filename": "apple-iphone-14-red-3.webp",
+        "width": 556,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "apple-iphone-16-ultramarine",
+    "categoryId": "phones",
+    "name": "Apple iPhone 16 128 ГБ, голубой",
+    "summary": "6,1″ OLED · Apple A18",
+    "price": 62400,
+    "description": "iPhone 16 в голубой расцветке с чипом A18 и экраном Super Retina XDR. Задний блок совмещает основную камеру на 48 Мп и сверхширокоугольную на 12 Мп.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,1″, 2556 × 1179, Super Retina XDR, 60 Гц"
+      ],
+      [
+        "Процессор",
+        "Apple A18, 6 x 3,78 ГГц"
+      ],
+      [
+        "Память (ОЗУ/ПЗУ)",
+        "8 ГБ / 128 ГБ"
+      ],
+      [
+        "Камера",
+        "48+12 Мп"
+      ],
+      [
+        "Связь",
+        "3G, 4G, 5G, Nano-SIM"
+      ],
+      [
+        "Питание",
+        "3561 мА·ч (Li-Ion)"
+      ]
+    ],
+    "image": {
+      "filename": "apple-iphone-16-ultramarine.webp",
+      "width": 895,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-iphone-16-ultramarine-2.webp",
+        "width": 543,
+        "height": 1100
+      },
+      {
+        "filename": "apple-iphone-16-ultramarine-3.webp",
+        "width": 1048,
+        "height": 1100
+      }
+    ]
   },
   {
     "id": "apple-iphone-16e-black",
     "categoryId": "phones",
     "name": "Apple iPhone 16e 128 ГБ, чёрный",
-    "summary": "OLED 6,1″ · Apple A18",
+    "summary": "6,1″ OLED · 128 ГБ",
     "price": 45399,
-    "description": "Компактная модель серии iPhone 16 с чипом A18, модемом Apple C1 и экраном Super Retina XDR с диагональю 6,1″. На задней панели установлена камера Fusion на 48 Мп.",
+    "description": "Чёрный iPhone 16e оснащён чипом A18 и экраном 6,1″. Основная камера на 48 Мп справляется с повседневной съёмкой, а фотографии и приложения хранятся во встроенной памяти объёмом 128 ГБ.",
     "specs": [
       [
         "Дисплей",
-        "6,1″ OLED, 2532 × 1170"
+        "6,1″, 2532 × 1170, Super Retina XDR"
       ],
       [
         "Процессор",
@@ -347,980 +277,3396 @@
       [
         "Основная камера",
         "48 Мп"
-      ],
-      [
-        "Зарядка",
-        "USB‑C, Qi"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Ниндзя",
-      "url": "https://nnj.moscow/t/iphone-16e-128-black"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-us/122208"
-    },
     "image": {
       "filename": "apple-iphone-16e-black.webp",
-      "width": 720,
-      "height": 960,
-      "alt": "Apple iPhone 16e 128 ГБ, чёрный",
-      "credit": {
-        "author": "茅野ふたば",
-        "url": "https://commons.wikimedia.org/wiki/File:IPhone_16e_black_rear_view.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 907,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-iphone-16e-black-2.webp",
+        "width": 547,
+        "height": 1100
+      },
+      {
+        "filename": "apple-iphone-16e-black-3.webp",
+        "width": 468,
+        "height": 1100
       }
-    }
+    ]
+  },
+  {
+    "id": "apple-iphone-16-pro-white",
+    "categoryId": "phones",
+    "name": "Apple iPhone 16 Pro 128 ГБ, белый",
+    "summary": "6,3″ OLED до 120 Гц · A18 Pro",
+    "price": 83680,
+    "description": "iPhone 16 Pro в белом цвете оснащён экраном с частотой обновления до 120 Гц. Система из трёх задних камер подходит для широких планов, портретов и съёмки с приближением.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,3″, 2622 × 1206, Super Retina XDR, 120 Гц"
+      ],
+      [
+        "Процессор",
+        "Apple A18 Pro, 6 x 3,89 ГГц"
+      ],
+      [
+        "Память (ОЗУ/ПЗУ)",
+        "8 ГБ / 128 ГБ"
+      ],
+      [
+        "Камера",
+        "48+48+12 Мп"
+      ],
+      [
+        "Связь",
+        "3G, 4G, 5G, Nano-SIM"
+      ],
+      [
+        "Питание",
+        "3582 мА·ч (Li-Ion)"
+      ]
+    ],
+    "image": {
+      "filename": "apple-iphone-16-pro-white.webp",
+      "width": 889,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-iphone-16-pro-white-2.webp",
+        "width": 536,
+        "height": 1100
+      },
+      {
+        "filename": "apple-iphone-16-pro-white-3.webp",
+        "width": 1052,
+        "height": 1100
+      }
+    ]
   },
   {
     "id": "apple-iphone-17-lavender",
     "categoryId": "phones",
-    "name": "Apple iPhone 17 256 ГБ, лавандовый",
-    "summary": "OLED 6,3″ · ProMotion до 120 Гц",
+    "name": "Apple iPhone 17 256 ГБ, фиолетовый",
+    "summary": "6,3″ OLED до 120 Гц · A19",
     "price": 75450,
-    "description": "iPhone 17 оснащён экраном Super Retina XDR с адаптивной частотой обновления и чипом Apple A19. У основной и сверхширокоугольной задних камер по 48 Мп.",
+    "description": "Фиолетовый iPhone 17 с 256 ГБ памяти. Экран Super Retina XDR работает на частоте до 120 Гц, у обеих задних камер разрешение 48 Мп.",
     "specs": [
       [
         "Дисплей",
-        "6,3″ OLED, до 120 Гц"
+        "6,3″, 2622 × 1206, Super Retina XDR, 120 Гц"
       ],
       [
         "Процессор",
-        "Apple A19"
+        "Apple A19, 6"
       ],
       [
-        "Память",
-        "256 ГБ"
+        "Память (ОЗУ/ПЗУ)",
+        "8 ГБ / 256 ГБ"
       ],
       [
-        "Задние камеры",
-        "48 Мп + 48 Мп"
+        "Камера",
+        "48+48 Мп"
       ],
       [
-        "Разъём",
-        "USB‑C"
+        "Связь",
+        "3G, 4G, 5G, eSIM, Nano-SIM"
+      ],
+      [
+        "Питание",
+        "3692 мА·ч (Li-Ion)"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Orderit.ru через Price.ru",
-      "url": "https://price.ru/mobilnye-telefony/apple-iphone-17-256gb-lavender/"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-us/125089"
-    },
     "image": {
       "filename": "apple-iphone-17-lavender.webp",
-      "width": 688,
-      "height": 960,
-      "alt": "Apple iPhone 17 256 ГБ, лавандовый",
-      "credit": {
-        "author": "AzureSaturn",
-        "url": "https://commons.wikimedia.org/wiki/File:IPhone_17_(Lavender)_-_Backside.jpg",
-        "license": "CC0",
-        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 624,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-iphone-17-lavender-2.webp",
+        "width": 536,
+        "height": 1100
+      },
+      {
+        "filename": "apple-iphone-17-lavender-3.webp",
+        "width": 874,
+        "height": 1100
       }
-    }
+    ]
   },
   {
     "id": "apple-iphone-17-pro-max-orange",
     "categoryId": "phones",
     "name": "Apple iPhone 17 Pro Max 256 ГБ, оранжевый",
-    "summary": "OLED 6,9″ · Apple A19 Pro",
-    "price": 95650,
-    "description": "Смартфон с большим экраном Super Retina XDR и чипом A19 Pro. Камеры включают основной, сверхширокоугольный и телефотомодуль. В этой конфигурации доступно 256 ГБ встроенной памяти.",
+    "summary": "6,9″ OLED до 120 Гц · A19 Pro",
+    "price": 104880,
+    "description": "Оранжевый iPhone 17 Pro Max с большим экраном 6,9″ и чипом A19 Pro. Сзади установлены три камеры по 48 Мп, а встроенный накопитель рассчитан на 256 ГБ.",
     "specs": [
       [
         "Дисплей",
-        "6,9″ OLED, до 120 Гц"
+        "6,9″, 2868 × 1320, Super Retina XDR, 120 Гц"
       ],
       [
         "Процессор",
-        "Apple A19 Pro"
+        "Apple A19 Pro, 6"
       ],
       [
-        "Память",
-        "256 ГБ"
+        "Память (ОЗУ/ПЗУ)",
+        "12 ГБ / 256 ГБ"
       ],
       [
-        "Разъём",
-        "USB‑C"
+        "Камера",
+        "48+48+48 Мп"
       ],
       [
-        "Цвет",
-        "Cosmic Orange"
+        "Связь",
+        "3G, 4G, 5G, eSIM"
+      ],
+      [
+        "Питание",
+        "5088 мА·ч (Li-Ion)"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Price.ru",
-      "url": "https://price.ru/mobilnye-telefony/apple-iphone-17-pro-max-256gb-cosmic-orange/",
-      "note": "Минимальная цена в подборке"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-us/125091"
-    },
     "image": {
       "filename": "apple-iphone-17-pro-max-orange.webp",
-      "width": 960,
-      "height": 720,
-      "alt": "Apple iPhone 17 Pro Max 256 ГБ, оранжевый",
-      "credit": {
-        "author": "Kyu3a",
-        "url": "https://commons.wikimedia.org/wiki/File:IPhone_17_Pro_Max_(Cosmic_Orange)_-_7.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 854,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-iphone-17-pro-max-orange-2.webp",
+        "width": 536,
+        "height": 1100
+      },
+      {
+        "filename": "apple-iphone-17-pro-max-orange-3.webp",
+        "width": 877,
+        "height": 1100
       }
-    }
-  },
-  {
-    "id": "apple-iphone-14-red",
-    "categoryId": "phones",
-    "name": "Apple iPhone 14 128 ГБ, красный",
-    "summary": "OLED 6,1″ · A15 Bionic",
-    "price": 38400,
-    "description": "Красный iPhone 14 с OLED-дисплеем и 128 ГБ памяти. Две задние камеры позволяют переключаться между обычным и сверхшироким углом съёмки. Для проводной зарядки используется Lightning.",
-    "specs": [
-      [
-        "Дисплей",
-        "6,1″ OLED, 2532 × 1170"
-      ],
-      [
-        "Процессор",
-        "A15 Bionic"
-      ],
-      [
-        "Память",
-        "128 ГБ"
-      ],
-      [
-        "Задние камеры",
-        "12 Мп + 12 Мп"
-      ],
-      [
-        "Разъём",
-        "Lightning"
-      ]
-    ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Мегабайт через Stok",
-      "url": "https://stok.io/apple/ru/moscow/iphone/14/2022/128gb/red"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-us/111850"
-    },
-    "image": {
-      "filename": "apple-iphone-14-red.webp",
-      "width": 570,
-      "height": 960,
-      "alt": "Apple iPhone 14 128 ГБ, красный",
-      "credit": {
-        "author": "Hajoon0102",
-        "url": "https://commons.wikimedia.org/wiki/File:IPhone_14_Product_Red.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
-      }
-    }
-  },
-  {
-    "id": "apple-ipad-air-m1",
-    "categoryId": "phones",
-    "name": "Apple iPad Air (M1, 2022) 64 ГБ Wi‑Fi",
-    "summary": "Liquid Retina 10,9″ · Apple M1",
-    "price": 47280,
-    "description": "Планшет пятого поколения на чипе Apple M1 с экраном Liquid Retina и Touch ID в верхней кнопке. Поддерживает Apple Pencil второго поколения. Клавиатура, показанная на фото, приобретается отдельно.",
-    "specs": [
-      [
-        "Дисплей",
-        "10,9″, 2360 × 1640"
-      ],
-      [
-        "Процессор",
-        "Apple M1"
-      ],
-      [
-        "Память",
-        "64 ГБ"
-      ],
-      [
-        "Беспроводная связь",
-        "Wi‑Fi 6, Bluetooth 5.0"
-      ],
-      [
-        "Разъём",
-        "USB‑C"
-      ]
-    ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Onliners",
-      "url": "https://onliners.ru/plansheti/planshety-apple-ipad/ipad-air/ipad-air-5-2022/"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-us/111887"
-    },
-    "image": {
-      "filename": "apple-ipad-air-m1.webp",
-      "width": 960,
-      "height": 719,
-      "alt": "Apple iPad Air (M1, 2022) 64 ГБ Wi‑Fi",
-      "credit": {
-        "author": "Captainmorlypogi1959",
-        "url": "https://commons.wikimedia.org/wiki/File:IPad_Air_5th_Generation_2024.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
-      }
-    }
+    ]
   },
   {
     "id": "samsung-galaxy-s24-ultra-black",
     "categoryId": "phones",
-    "name": "Samsung Galaxy S24 Ultra 256 ГБ, чёрный титан",
-    "summary": "AMOLED 6,8″ · S Pen",
-    "price": 72990,
-    "description": "Смартфон с большим экраном и встроенным стилусом S Pen. Четыре задние камеры включают основной модуль на 200 Мп и два телеобъектива с разными фокусными расстояниями.",
+    "name": "Samsung Galaxy S24 Ultra 256 ГБ, чёрный",
+    "summary": "6,8″ Dynamic AMOLED 2X · 120 Гц",
+    "price": 72457,
+    "description": "Чёрный Galaxy S24 Ultra с чипом Snapdragon 8 Gen 3 for Galaxy и 12 ГБ оперативной памяти. Основная камера на 200 Мп дополняется сверхширокоугольной камерой и двумя телеобъективами.",
     "specs": [
       [
         "Дисплей",
-        "6,8″ Dynamic AMOLED 2X, 3120 × 1440"
+        "6,8″, 3120 × 1440, Dynamic AMOLED 2X, 120 Гц"
       ],
       [
-        "Накопитель",
-        "256 ГБ"
+        "Процессор",
+        "Qualcomm Snapdragon 8 Gen 3 for Galaxy, 8 x 3,39 ГГц"
       ],
       [
-        "Оперативная память",
-        "12 ГБ"
+        "Память (ОЗУ/ПЗУ)",
+        "12 ГБ / 256 ГБ"
       ],
       [
-        "Задние камеры",
-        "200 Мп + 50 Мп + 12 Мп + 10 Мп"
+        "Камера",
+        "200+50+12+10 Мп"
       ],
       [
-        "Аккумулятор",
-        "5000 мА·ч"
+        "Связь",
+        "3G, 4G, 5G, eSIM, Nano-SIM"
+      ],
+      [
+        "Питание",
+        "5000 мА·ч (Li-Ion)"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "MiPort",
-      "url": "https://msk.miport.ru/smartphones/smartphone-samsung/samsung-galaxy-s24-ultra-5g/"
-    },
-    "specSource": {
-      "name": "Samsung",
-      "url": "https://www.samsung.com/ru/smartphones/galaxy-s/galaxy-s24-ultra-titanium-black-256gb-sm-s928bzkgcau/buy/"
-    },
     "image": {
       "filename": "samsung-galaxy-s24-ultra-black.webp",
-      "width": 720,
-      "height": 960,
-      "alt": "Samsung Galaxy S24 Ultra 256 ГБ, чёрный титан",
-      "credit": {
-        "author": "メイド理世",
-        "url": "https://commons.wikimedia.org/wiki/File:Back_view_of_Samsung_Galaxy_S24_Ultra_Black.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 1085,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "samsung-galaxy-s24-ultra-black-2.webp",
+        "width": 543,
+        "height": 1100
+      },
+      {
+        "filename": "samsung-galaxy-s24-ultra-black-3.webp",
+        "width": 552,
+        "height": 1100
       }
-    }
+    ]
   },
   {
     "id": "samsung-galaxy-s25-ultra-silverblue",
     "categoryId": "phones",
-    "name": "Samsung Galaxy S25 Ultra 256 ГБ, синий титан",
-    "summary": "AMOLED 6,9″ · S Pen",
+    "name": "Samsung Galaxy S25 Ultra 256 ГБ, синий",
+    "summary": "6,9″ Dynamic AMOLED 2X · 120 Гц",
     "price": 69490,
-    "description": "Galaxy S25 Ultra с экраном 6,9″ и частотой обновления до 120 Гц. Встроенный S Pen подходит для рукописных заметок, а блок камер включает сверхширокоугольный и два телеобъектива.",
+    "description": "Синий Galaxy S25 Ultra с экраном 6,9″ и процессором Snapdragon 8 Elite for Galaxy. Накопитель в этой конфигурации вмещает 256 ГБ.",
     "specs": [
       [
         "Дисплей",
-        "6,9″ Dynamic AMOLED 2X, до 120 Гц"
+        "6,9″, 3120 × 1440, Dynamic AMOLED 2X, 120 Гц"
       ],
       [
-        "Накопитель",
-        "256 ГБ"
+        "Процессор",
+        "Qualcomm Snapdragon 8 Elite for Galaxy, 8 x 4,47 ГГц"
       ],
       [
-        "Оперативная память",
-        "12 ГБ"
+        "Память (ОЗУ/ПЗУ)",
+        "12 ГБ / 256 ГБ"
       ],
       [
-        "Задние камеры",
-        "200 Мп + 50 Мп + 50 Мп + 10 Мп"
+        "Камера",
+        "200+50+50+10 Мп"
       ],
       [
-        "Аккумулятор",
-        "5000 мА·ч"
+        "Связь",
+        "3G, 4G, 5G, eSIM, Nano-SIM"
+      ],
+      [
+        "Питание",
+        "5000 мА·ч (Li-Ion)"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "MiPort",
-      "url": "https://msk.miport.ru/smartphones/smartphone-samsung/samsung-galaxy-s25-ultra-5g/"
-    },
-    "specSource": {
-      "name": "Samsung",
-      "url": "https://www.samsung.com/nz/smartphones/galaxy-s25-ultra/specs/"
-    },
     "image": {
       "filename": "samsung-galaxy-s25-ultra-silverblue.webp",
-      "width": 720,
-      "height": 960,
-      "alt": "Samsung Galaxy S25 Ultra 256 ГБ, синий титан",
-      "credit": {
-        "author": "Alvis Jean",
-        "url": "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_S25_Ultra_Titanium_Silverblue.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 1100,
+      "height": 1073
+    },
+    "gallery": [
+      {
+        "filename": "samsung-galaxy-s25-ultra-silverblue-2.webp",
+        "width": 537,
+        "height": 1100
+      },
+      {
+        "filename": "samsung-galaxy-s25-ultra-silverblue-3.webp",
+        "width": 543,
+        "height": 1100
       }
-    }
+    ]
   },
   {
-    "id": "apple-airpods-max-lightning",
-    "categoryId": "headphones",
-    "name": "Apple AirPods Max (Lightning), серый космос",
-    "summary": "Полноразмерные · активное шумоподавление",
-    "price": 36900,
-    "description": "Полноразмерные беспроводные наушники с переключением между активным шумоподавлением и режимом прозрачности. За громкость и управлением воспроизведением отвечает колесико Digital Crown. Эта версия заряжается через Lightning.",
+    "id": "apple-ipad-air-m1",
+    "categoryId": "phones",
+    "name": "Apple iPad Air (5‑го поколения) Wi‑Fi 64 ГБ, синий",
+    "summary": "10,9″ IPS · Apple M1",
+    "price": 45220,
+    "description": "Синий iPad Air пятого поколения с чипом M1 и IPS-экраном. Планшет подключается к Wi‑Fi 6 и оснащён 64 ГБ встроенной памяти.",
     "specs": [
       [
-        "Подключение",
-        "Bluetooth 5.0"
+        "Дисплей",
+        "2360 × 1640, IPS, 60 Гц"
       ],
       [
-        "Автономность",
-        "До 20 часов"
+        "Процессор",
+        "Apple M1, 8 × 3,2 ГГц"
       ],
       [
-        "Зарядка",
-        "Lightning"
+        "Память (ОЗУ/ПЗУ)",
+        "8 ГБ/64 ГБ"
       ],
       [
-        "Цвет",
-        "Серый космос"
+        "Связь",
+        "Wi-Fi 4 (802.11n), 5 (802.11ac), 6 (802.11ax)"
       ],
       [
-        "Вес",
-        "384,8 г"
+        "Питание",
+        "7606 мА·ч"
+      ],
+      [
+        "ОС",
+        "iPadOS 15"
       ]
     ],
-    "priceSource": {
-      "date": "17.11.2026",
-      "name": "AppMiStore через Stok",
-      "url": "https://stok.io/o/jhsf8k"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-ie/111858"
-    },
     "image": {
-      "filename": "apple-airpods-max-lightning.webp",
-      "width": 960,
-      "height": 686,
-      "alt": "Apple AirPods Max (Lightning), серый космос",
-      "credit": {
-        "author": "SimonWaldherr",
-        "url": "https://commons.wikimedia.org/wiki/File:Apple_AirPods_Max.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "filename": "apple-ipad-air-m1.webp",
+      "width": 813,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-ipad-air-m1-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "apple-ipad-air-m1-3.webp",
+        "width": 1100,
+        "height": 1100
       }
-    }
+    ]
   },
   {
     "id": "apple-macbook-air-m2",
     "categoryId": "laptops",
-    "name": "Apple MacBook Air 13″ (M2, 2022)",
-    "summary": "Starlight · 8 ГБ / SSD 256 ГБ",
-    "price": 80990,
-    "description": "Компактный ноутбук на чипе Apple M2. В конфигурации MLY13 установлены 8 ГБ объединённой памяти и SSD на 256 ГБ. Экран 13,6″ с разрешением 2560 × 1664 и клавиатура с Touch ID подходят для повседневной работы.",
+    "name": "Apple MacBook Air 13,6″ (M2, 2022) MLY13, Starlight",
+    "summary": "Apple M2 · 8 ГБ / SSD 256 ГБ",
+    "price": 82900,
+    "description": "MacBook Air в цвете Starlight с чипом M2, 8 ГБ оперативной памяти и SSD на 256 ГБ. В комплекте с этой конфигурацией установлена macOS.",
     "specs": [
+      [
+        "Экран",
+        "13,6″"
+      ],
       [
         "Процессор",
         "Apple M2, 8 ядер"
       ],
       [
-        "Экран",
-        "13,6″, 2560 × 1664"
-      ],
-      [
         "Память",
-        "8 ГБ"
+        "8 ГБ / SSD 256 ГБ"
       ],
       [
-        "Накопитель",
-        "SSD 256 ГБ"
+        "Графика",
+        "Apple M2, 8 ядер"
       ],
       [
         "Операционная система",
         "macOS"
-      ],
-      [
-        "Цвет",
-        "Starlight"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "iProfiShop через Stok",
-      "url": "https://stok.io/apple/ru/moscow/macbook/air/2022/m2/13/8gb/256gb/starlight"
-    },
-    "specSource": {
-      "name": "DNS",
-      "url": "https://www.dns-shop.ru/product/75c9fd276551ed20/136-noutbuk-apple-macbook-air-2022-mly13-m2-8-core8192ssd-256gpu-m2-8-coremac-osstarlight-bez-gravirovki-5060044/"
-    },
     "image": {
       "filename": "apple-macbook-air-m2.webp",
-      "width": 960,
-      "height": 960,
-      "alt": "Apple MacBook Air 13″ (M2, 2022)",
-      "credit": {
-        "author": "KKPCW（Kyu3）",
-        "url": "https://commons.wikimedia.org/wiki/File:M2_Macbook_Air_Starlight_model.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 1100,
+      "height": 845
+    },
+    "gallery": [
+      {
+        "filename": "apple-macbook-air-m2-2.webp",
+        "width": 1100,
+        "height": 845
+      },
+      {
+        "filename": "apple-macbook-air-m2-3.webp",
+        "width": 1100,
+        "height": 845
       }
-    }
+    ]
   },
   {
-    "id": "apple-magsafe-charger",
-    "categoryId": "power",
-    "name": "Apple MagSafe Charger 15 Вт",
-    "summary": "A2140 · магнитная зарядка",
-    "price": 2990,
-    "description": "Зарядная площадка Apple первого поколения примагничивается к совместимому iPhone. Для мощности до 15 Вт ей требуется подходящий сетевой адаптер USB‑C от 20 Вт.",
+    "id": "apple-macbook-air-m3",
+    "categoryId": "laptops",
+    "name": "Apple MacBook Air 13,6″ (M3, 2024), чёрный",
+    "summary": "Apple M3 · 8 ГБ / SSD 512 ГБ",
+    "price": 87540,
+    "description": "MacBook Air 2024 года с чипом M3 и SSD на 512 ГБ. Экран с разрешением 2560 × 1664 подходит для работы с текстом, фотографиями и видео.",
     "specs": [
       [
-        "Модель",
-        "A2140"
+        "Экран",
+        "13,6″ (2560 × 1664)"
       ],
       [
-        "Мощность",
-        "До 15 Вт"
+        "Процессор",
+        "Apple M3 (4 + 4)"
       ],
       [
-        "Подключение",
-        "USB‑C"
+        "Память",
+        "ОЗУ/8 ГБ, SSD/512 ГБ"
       ],
       [
-        "Крепление",
-        "Магнитное MagSafe"
+        "ОС",
+        "macOS"
       ],
       [
-        "Цвет",
-        "Белый"
+        "Вес",
+        "1,24 кг"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Хатико через Цена7",
-      "url": "https://cena7.ru/product/apple-magsafe-charger"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-ca/105047"
-    },
     "image": {
-      "filename": "apple-magsafe-charger.webp",
-      "width": 960,
-      "height": 720,
-      "alt": "Apple MagSafe Charger 15 Вт",
-      "credit": {
-        "author": "James Tamim",
-        "url": "https://commons.wikimedia.org/wiki/File:MagSafe_and_USB-C_Cable_Charger_for_iPhone.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "filename": "apple-macbook-air-m3.webp",
+      "width": 1100,
+      "height": 733
+    },
+    "gallery": [
+      {
+        "filename": "apple-macbook-air-m3-2.webp",
+        "width": 1100,
+        "height": 733
+      },
+      {
+        "filename": "apple-macbook-air-m3-3.webp",
+        "width": 1100,
+        "height": 733
       }
-    }
+    ]
   },
   {
-    "id": "hp-laserjet-pro-p1102w",
-    "categoryId": "printers",
-    "name": "HP LaserJet Pro P1102w",
-    "summary": "Лазерная печать A4 · с пробегом",
-    "price": 9500,
-    "description": "Монохромный лазерный принтер для документов формата A4. Печатает до 18 страниц A4 в минуту и подключается через USB или Wi‑Fi. Цена относится к предложению на принтер с пробегом.",
+    "id": "lenovo-ideapad-slim-3-15abr8",
+    "categoryId": "laptops",
+    "name": "Lenovo IdeaPad Slim 3 15ABR8, серый",
+    "summary": "Ryzen 7 7730U · 16 ГБ / SSD 512 ГБ",
+    "price": 49571,
+    "description": "Серый IdeaPad Slim 3 с IPS-экраном 15,6″ и процессором Ryzen 7. Эта конфигурация оснащена 16 ГБ оперативной памяти и поставляется без операционной системы.",
     "specs": [
       [
-        "Печать",
-        "Чёрно-белая лазерная"
+        "Экран",
+        "15,6″ (1920 × 1080) IPS"
       ],
       [
-        "Формат",
-        "A4"
+        "Процессор",
+        "AMD Ryzen 7 7730U (8 x 2 ГГц)"
       ],
       [
-        "Скорость A4",
-        "До 18 стр/мин"
+        "Память",
+        "ОЗУ/16 ГБ, SSD/512 ГБ"
       ],
       [
-        "Подключение",
-        "USB 2.0, Wi‑Fi 802.11b/g"
+        "ОС",
+        "без ОС"
+      ],
+      [
+        "Вес",
+        "1,62 кг"
+      ],
+      [
+        "Ёмкость аккумулятора",
+        "47 Вт*ч"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Принт Маркет",
-      "url": "https://print-market.net/printery-mfu-skanery/s-probegom-b-u/hp-3/printer-hp-laserjet-pro-p1102w/",
-      "note": "Принтер с пробегом, под заказ"
-    },
-    "specSource": {
-      "name": "HP",
-      "url": "https://support.hp.com/emea_middle_east-en/product/product-specs/hp-laserjet-pro-p1102-printer-series/model/5149432"
-    },
     "image": {
-      "filename": "hp-laserjet-pro-p1102w.webp",
-      "width": 960,
-      "height": 720,
-      "alt": "HP LaserJet Pro P1102w",
-      "credit": {
-        "author": "MSDN.WhiteKnight",
-        "url": "https://commons.wikimedia.org/wiki/File:HP_LaserJet_P1102w.jpg",
-        "license": "CC0",
-        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "filename": "lenovo-ideapad-slim-3-15abr8.webp",
+      "width": 799,
+      "height": 667
+    },
+    "gallery": [
+      {
+        "filename": "lenovo-ideapad-slim-3-15abr8-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "lenovo-ideapad-slim-3-15abr8-3.webp",
+        "width": 1100,
+        "height": 1100
       }
-    }
+    ]
+  },
+  {
+    "id": "asus-vivobook-x1504va-bq5738",
+    "categoryId": "laptops",
+    "name": "ASUS Vivobook X1504VA-BQ5738, серебристый",
+    "summary": "Core 5 120U · 8 ГБ / SSD 512 ГБ",
+    "price": 51626,
+    "description": "Серебристый Vivobook с экраном Full HD, процессором Intel Core 5 120U и SSD на 512 ГБ. Операционная система в этой конфигурации не установлена.",
+    "specs": [
+      [
+        "Экран",
+        "15,6″ (1920 × 1080) IPS"
+      ],
+      [
+        "Процессор",
+        "Intel Core 5 120U (2 x 1,4 ГГц + 8 x 0,9 ГГц)"
+      ],
+      [
+        "Память",
+        "ОЗУ/8 ГБ, SSD/512 ГБ"
+      ],
+      [
+        "ОС",
+        "без ОС"
+      ],
+      [
+        "Вес",
+        "1,7 кг"
+      ],
+      [
+        "Ёмкость аккумулятора",
+        "42 Вт*ч"
+      ]
+    ],
+    "image": {
+      "filename": "asus-vivobook-x1504va-bq5738.webp",
+      "width": 1100,
+      "height": 580
+    },
+    "gallery": [
+      {
+        "filename": "asus-vivobook-x1504va-bq5738-2.webp",
+        "width": 1100,
+        "height": 745
+      },
+      {
+        "filename": "asus-vivobook-x1504va-bq5738-3.webp",
+        "width": 1100,
+        "height": 746
+      }
+    ]
+  },
+  {
+    "id": "huawei-matebook-d15-bod-wdi9",
+    "categoryId": "laptops",
+    "name": "HUAWEI MateBook D 15 BOD-WDI9, Space Grey",
+    "summary": "Core i3‑1115G4 · 8 ГБ / SSD 256 ГБ",
+    "price": 36490,
+    "description": "MateBook D 15 в цвете Space Grey с IPS-экраном 15,6″. В конфигурации BOD‑WDI9 установлены SSD на 256 ГБ и Windows 11 Home Single Language.",
+    "specs": [
+      [
+        "Экран",
+        "15,6″ (1920 × 1080) IPS"
+      ],
+      [
+        "Процессор",
+        "Intel Core i3-1115G4 (2 x 3 ГГц)"
+      ],
+      [
+        "Память",
+        "ОЗУ/8 ГБ, SSD/256 ГБ"
+      ],
+      [
+        "ОС",
+        "Windows 11 Home Single Language"
+      ],
+      [
+        "Вес",
+        "1,56 кг"
+      ],
+      [
+        "Ёмкость аккумулятора",
+        "42 Вт*ч"
+      ]
+    ],
+    "image": {
+      "filename": "huawei-matebook-d15-bod-wdi9.webp",
+      "width": 1100,
+      "height": 849
+    },
+    "gallery": [
+      {
+        "filename": "huawei-matebook-d15-bod-wdi9-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "huawei-matebook-d15-bod-wdi9-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "acer-aspire-5-a515-58m-53e8",
+    "categoryId": "laptops",
+    "name": "Acer Aspire 5 A515-58M-53E8, серый",
+    "summary": "Core i5‑13420H · 16 ГБ / SSD 512 ГБ",
+    "price": 66700,
+    "description": "Серый Aspire 5 с Full HD-экраном и 16 ГБ оперативной памяти. Для файлов и приложений предусмотрен SSD на 512 ГБ, операционная система — Windows 11 Home.",
+    "specs": [
+      [
+        "Экран",
+        "15,6″ (1920 × 1080) IPS"
+      ],
+      [
+        "Процессор",
+        "Intel Core i5-13420H (4 x 2,1 ГГц + 4 x 1,5 ГГц)"
+      ],
+      [
+        "Память",
+        "ОЗУ/16 ГБ, SSD/512 ГБ"
+      ],
+      [
+        "ОС",
+        "Windows 11 Home"
+      ],
+      [
+        "Вес",
+        "1,8 кг"
+      ],
+      [
+        "Ёмкость аккумулятора",
+        "50 Вт*ч"
+      ]
+    ],
+    "image": {
+      "filename": "acer-aspire-5-a515-58m-53e8.webp",
+      "width": 1100,
+      "height": 844
+    },
+    "gallery": [
+      {
+        "filename": "acer-aspire-5-a515-58m-53e8-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "acer-aspire-5-a515-58m-53e8-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
   },
   {
     "id": "apple-studio-display-2022",
     "categoryId": "monitors",
-    "name": "Apple Studio Display 27″ (2022)",
-    "summary": "Retina 5K · стандартное стекло",
-    "price": 199990,
-    "description": "Внешний 27-дюймовый монитор для Mac с панелью 5K. В этом варианте используется стандартное стекло и подставка с регулировкой наклона. Экран работает с разрешением 5120 × 2880 и частотой 60 Гц.",
+    "name": "Apple Studio Display 27″ VESA, серебристый",
+    "summary": "27″ 5K · крепление VESA",
+    "price": 243990,
+    "description": "Серебристый монитор Studio Display с панелью 5K и яркостью до 600 кд/м². Версия MMYQ3 комплектуется креплением VESA.",
     "specs": [
       [
         "Диагональ",
         "27″"
       ],
       [
-        "Разрешение",
+        "Разрешение экрана",
         "5120 × 2880"
       ],
       [
-        "Частота",
+        "Частота обновления экрана",
         "60 Гц"
       ],
       [
-        "Тип панели",
+        "Тип матрицы",
         "IPS"
       ],
       [
-        "Стекло",
-        "Стандартное"
-      ],
-      [
-        "Подставка",
-        "С регулировкой наклона"
+        "Крепление",
+        "Адаптер VESA (MMYQ3)"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Save & Sale",
-      "url": "https://savensale.ru/monitor-apple-studio-display-standard-glass-tilt-adjustable-stand/"
-    },
-    "specSource": {
-      "name": "DNS",
-      "url": "https://www.dns-shop.ru/product/ed8bbb85d2c5ed20/27-monitor-apple-studio-display-serebristyj/"
-    },
     "image": {
       "filename": "apple-studio-display-2022.webp",
-      "width": 960,
-      "height": 747,
-      "alt": "Apple Studio Display 27″ (2022)",
-      "credit": {
-        "author": "KKPCW",
-        "url": "https://commons.wikimedia.org/wiki/File:Studio_Display_(2022).jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 1100,
+      "height": 636
+    },
+    "gallery": [
+      {
+        "filename": "apple-studio-display-2022-2.webp",
+        "width": 1000,
+        "height": 591
+      },
+      {
+        "filename": "apple-studio-display-2022-3.webp",
+        "width": 404,
+        "height": 705
       }
-    }
+    ]
+  },
+  {
+    "id": "dell-g2723h",
+    "categoryId": "monitors",
+    "name": "Dell G2723H 27″, чёрный",
+    "summary": "27″ Full HD · до 280 Гц",
+    "price": 28792,
+    "description": "Игровой монитор Dell с панелью IPS и высокой частотой обновления. К нему можно подключить компьютер через DisplayPort, а консоль или другой источник — через HDMI.",
+    "specs": [
+      [
+        "Диагональ",
+        "27″"
+      ],
+      [
+        "Разрешение экрана",
+        "1920 × 1080"
+      ],
+      [
+        "Частота обновления экрана",
+        "До 280 Гц"
+      ],
+      [
+        "Тип матрицы",
+        "IPS"
+      ],
+      [
+        "Входы",
+        "DisplayPort 1.4, 2 × HDMI 2.0"
+      ]
+    ],
+    "image": {
+      "filename": "dell-g2723h.webp",
+      "width": 1100,
+      "height": 860
+    },
+    "gallery": [
+      {
+        "filename": "dell-g2723h-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "dell-g2723h-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "asus-proart-pa278qv",
+    "categoryId": "monitors",
+    "name": "ASUS ProArt PA278QV 27″, чёрный",
+    "summary": "27″ QHD · IPS · 75 Гц",
+    "price": 26990,
+    "description": "ProArt PA278QV с разрешением 2560 × 1440 удобен для работы с изображениями и несколькими окнами. В наборе входов есть DisplayPort, HDMI и DVI‑D.",
+    "specs": [
+      [
+        "Диагональ",
+        "27″"
+      ],
+      [
+        "Разрешение экрана",
+        "2560 × 1440"
+      ],
+      [
+        "Частота обновления экрана",
+        "75 Гц"
+      ],
+      [
+        "Тип матрицы",
+        "IPS"
+      ]
+    ],
+    "image": {
+      "filename": "asus-proart-pa278qv.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "asus-proart-pa278qv-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "asus-proart-pa278qv-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "lg-27up850n-w",
+    "categoryId": "monitors",
+    "name": "LG 27UP850N-W 27″, белый",
+    "summary": "27″ 4K · IPS · USB‑C",
+    "price": 51880,
+    "description": "Белый монитор LG с разрешением 3840 × 2160. Подключение через USB‑C удобно для совместимого ноутбука, а HDMI и DisplayPort позволяют подключить другие источники.",
+    "specs": [
+      [
+        "Диагональ",
+        "27″"
+      ],
+      [
+        "Разрешение экрана",
+        "3840 × 2160"
+      ],
+      [
+        "Частота обновления экрана",
+        "60 Гц"
+      ],
+      [
+        "Тип матрицы",
+        "IPS"
+      ]
+    ],
+    "image": {
+      "filename": "lg-27up850n-w.webp",
+      "width": 1100,
+      "height": 906
+    },
+    "gallery": [
+      {
+        "filename": "lg-27up850n-w-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "lg-27up850n-w-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "aoc-24g2sp",
+    "categoryId": "monitors",
+    "name": "AOC 24G2SP 23,8″, чёрный",
+    "summary": "23,8″ Full HD · IPS · 165 Гц",
+    "price": 11399,
+    "description": "Игровой AOC с IPS-панелью Full HD и частотой 165 Гц. Поддержка Adaptive‑Sync помогает сделать движение плавнее в совместимых играх.",
+    "specs": [
+      [
+        "Диагональ",
+        "23,8″"
+      ],
+      [
+        "Разрешение экрана",
+        "1920 × 1080"
+      ],
+      [
+        "Частота обновления экрана",
+        "165 Гц"
+      ],
+      [
+        "Тип матрицы",
+        "IPS"
+      ]
+    ],
+    "image": {
+      "filename": "aoc-24g2sp.webp",
+      "width": 1100,
+      "height": 969
+    },
+    "gallery": [
+      {
+        "filename": "aoc-24g2sp-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "aoc-24g2sp-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "samsung-odyssey-g5-s27cg550ei",
+    "categoryId": "monitors",
+    "name": "Samsung Odyssey G5 G55C S27CG550EI 27″, чёрный",
+    "summary": "27″ QHD · VA · 165 Гц",
+    "price": 16479,
+    "description": "Изогнутый Samsung Odyssey G5 с панелью VA и разрешением QHD. Частота 165 Гц подходит для динамичных игр, а кривизна 1000R обрамляет поле зрения.",
+    "specs": [
+      [
+        "Диагональ",
+        "27″"
+      ],
+      [
+        "Разрешение экрана",
+        "2560 × 1440"
+      ],
+      [
+        "Частота обновления экрана",
+        "165 Гц"
+      ],
+      [
+        "Тип матрицы",
+        "VA"
+      ],
+      [
+        "Радиус кривизны",
+        "1000R"
+      ]
+    ],
+    "image": {
+      "filename": "samsung-odyssey-g5-s27cg550ei.webp",
+      "width": 1100,
+      "height": 859
+    },
+    "gallery": [
+      {
+        "filename": "samsung-odyssey-g5-s27cg550ei-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "samsung-odyssey-g5-s27cg550ei-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "apple-watch-ultra-2",
+    "categoryId": "watches",
+    "name": "Apple Watch Ultra 2 49 мм, чёрный корпус, чёрный ремешок",
+    "summary": "49 мм · OLED · чёрный ремешок",
+    "price": 64000,
+    "description": "Apple Watch Ultra 2 в чёрном корпусе с чёрным ремешком. У часов экран OLED, беспроводная связь по Bluetooth и Wi‑Fi, а корпус защищён от пыли по стандарту IP6X.",
+    "specs": [
+      [
+        "Экран",
+        "1,9″ OLED, 502 × 410"
+      ],
+      [
+        "Корпус",
+        "49 мм, чёрный"
+      ],
+      [
+        "Ремешок",
+        "Чёрный"
+      ],
+      [
+        "Степень защиты",
+        "IP6X"
+      ],
+      [
+        "Беспроводная связь",
+        "Bluetooth, NFC, Wi-Fi"
+      ],
+      [
+        "Совместимость",
+        "iOS 17 и выше"
+      ]
+    ],
+    "image": {
+      "filename": "apple-watch-ultra-2.webp",
+      "width": 705,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-watch-ultra-2-2.webp",
+        "width": 421,
+        "height": 1100
+      },
+      {
+        "filename": "apple-watch-ultra-2-3.webp",
+        "width": 949,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "apple-watch-series-10-42",
+    "categoryId": "watches",
+    "name": "Apple Watch Series 10 42 мм, коралловый ремешок",
+    "summary": "42 мм · OLED · коралловый ремешок",
+    "price": 36999,
+    "description": "Apple Watch Series 10 с коралловым ремешком и экраном OLED диагональю 1,77″. Часы показывают уведомления, отслеживают пульс и помогают наблюдать за качеством сна.",
+    "specs": [
+      [
+        "Экран",
+        "1,77″ OLED, 374 × 446"
+      ],
+      [
+        "Время работы",
+        "36 ч"
+      ],
+      [
+        "Измерения",
+        "продолжительность и качество сна, пульс, уровень кислорода в крови, ЭКГ"
+      ],
+      [
+        "Навигация",
+        "BeiDou, Galileo, GPS, ГЛОНАСС"
+      ],
+      [
+        "Степень защиты",
+        "IP6X"
+      ],
+      [
+        "Беспроводная связь",
+        "Bluetooth, Wi-Fi"
+      ],
+      [
+        "Ремешок",
+        "Коралловый"
+      ]
+    ],
+    "image": {
+      "filename": "apple-watch-series-10-42.webp",
+      "width": 577,
+      "height": 820
+    },
+    "gallery": [
+      {
+        "filename": "apple-watch-series-10-42-2.webp",
+        "width": 496,
+        "height": 739
+      },
+      {
+        "filename": "apple-watch-series-10-42-3.webp",
+        "width": 715,
+        "height": 820
+      }
+    ]
+  },
+  {
+    "id": "apple-watch-se-2022-40",
+    "categoryId": "watches",
+    "name": "Apple Watch SE 2022 40 мм, Starlight",
+    "summary": "40 мм · OLED · Starlight",
+    "price": 26850,
+    "description": "Apple Watch SE 2022 в расцветке Starlight с 40-миллиметровым корпусом. Модель подсчитывает шаги, отслеживает сон и записывает маршрут с помощью спутниковой навигации.",
+    "specs": [
+      [
+        "Экран",
+        "1,57″ OLED, 394 × 324"
+      ],
+      [
+        "Измерения",
+        "количество шагов, потраченные калории, продолжительность и качество сна, пройденное расстояние"
+      ],
+      [
+        "Навигация",
+        "Galileo, GPS, QZSS, ГЛОНАСС"
+      ],
+      [
+        "Беспроводная связь",
+        "Bluetooth, NFC, Wi-Fi"
+      ],
+      [
+        "Цвет",
+        "Starlight"
+      ]
+    ],
+    "image": {
+      "filename": "apple-watch-se-2022-40.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-watch-se-2022-40-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "apple-watch-se-2022-40-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "samsung-galaxy-watch7-44",
+    "categoryId": "watches",
+    "name": "Samsung Galaxy Watch7 44 мм, серебристые",
+    "summary": "44 мм · Super AMOLED · IP68",
+    "price": 14990,
+    "description": "Серебристые Galaxy Watch7 с экраном Super AMOLED и защитой корпуса IP68. Часы поддерживают спутниковую навигацию и измеряют показатели физической активности.",
+    "specs": [
+      [
+        "Экран",
+        "1,47″ Super AMOLED, 480 × 480"
+      ],
+      [
+        "Измерения",
+        "артериальное давление, биоимпедансный анализ (БИА), количество шагов, потраченные калории"
+      ],
+      [
+        "Навигация",
+        "BeiDou, Galileo, GPS, ГЛОНАСС"
+      ],
+      [
+        "Степень защиты",
+        "IP68"
+      ],
+      [
+        "Беспроводная связь",
+        "Bluetooth, NFC, Wi-Fi"
+      ],
+      [
+        "Корпус",
+        "Серебристый"
+      ],
+      [
+        "Ремешок",
+        "Серебристый"
+      ]
+    ],
+    "image": {
+      "filename": "samsung-galaxy-watch7-44.webp",
+      "width": 657,
+      "height": 725
+    },
+    "gallery": [
+      {
+        "filename": "samsung-galaxy-watch7-44-2.webp",
+        "width": 594,
+        "height": 736
+      },
+      {
+        "filename": "samsung-galaxy-watch7-44-3.webp",
+        "width": 631,
+        "height": 726
+      }
+    ]
+  },
+  {
+    "id": "garmin-venu-3",
+    "categoryId": "watches",
+    "name": "Garmin Venu 3, серебристый корпус, белый ремешок",
+    "summary": "AMOLED 1,4″ · GPS · белый ремешок",
+    "price": 65999,
+    "description": "Garmin Venu 3 с серебристым корпусом и белым ремешком подходит для тренировок и повседневной активности. Есть спутниковая навигация, измерение пульса и отслеживание сна.",
+    "specs": [
+      [
+        "Экран",
+        "1,4″ AMOLED, 454 × 454"
+      ],
+      [
+        "Время работы",
+        "624 ч"
+      ],
+      [
+        "Измерения",
+        "потраченные калории, продолжительность и качество сна, пройденное расстояние, пульс"
+      ],
+      [
+        "Навигация",
+        "Galileo, GPS, ГЛОНАСС"
+      ],
+      [
+        "Беспроводная связь",
+        "ANT+, Bluetooth, NFC, Wi-Fi"
+      ],
+      [
+        "Корпус",
+        "Серебристый"
+      ],
+      [
+        "Ремешок",
+        "Белый"
+      ]
+    ],
+    "image": {
+      "filename": "garmin-venu-3.webp",
+      "width": 728,
+      "height": 790
+    },
+    "gallery": [
+      {
+        "filename": "garmin-venu-3-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "garmin-venu-3-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "amazfit-balance-a2287",
+    "categoryId": "watches",
+    "name": "Amazfit Balance A2287, серый корпус, чёрный ремешок",
+    "summary": "AMOLED 1,5″ · GPS · чёрный ремешок",
+    "price": 22490,
+    "description": "Amazfit Balance с серым корпусом, чёрным ремешком и круглым AMOLED-дисплеем. Часы поддерживают GPS и собирают данные о пульсе, сне и активности.",
+    "specs": [
+      [
+        "Экран",
+        "1,5″ AMOLED, 480 × 480"
+      ],
+      [
+        "Время работы",
+        "600 ч"
+      ],
+      [
+        "Измерения",
+        "биоимпедансный анализ (БИА), продолжительность и качество сна, пульс, уровень кислорода в крови"
+      ],
+      [
+        "Навигация",
+        "BeiDou, Galileo, GPS, ГЛОНАСС"
+      ],
+      [
+        "Беспроводная связь",
+        "Bluetooth, Wi-Fi"
+      ],
+      [
+        "Корпус",
+        "Серый"
+      ],
+      [
+        "Ремешок",
+        "Чёрный"
+      ]
+    ],
+    "image": {
+      "filename": "amazfit-balance-a2287.webp",
+      "width": 848,
+      "height": 816
+    },
+    "gallery": [
+      {
+        "filename": "amazfit-balance-a2287-2.webp",
+        "width": 656,
+        "height": 848
+      },
+      {
+        "filename": "amazfit-balance-a2287-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "apple-airpods-max-lightning",
+    "categoryId": "headphones",
+    "name": "Apple AirPods Max (2020), серые",
+    "summary": "Bluetooth 5.0 · до 20 ч",
+    "price": 37990,
+    "description": "Серые полноразмерные наушники AirPods Max 2020 года с активным шумоподавлением. Подключаются по Bluetooth и работают до 20 часов от заряда.",
+    "specs": [
+      [
+        "Тип конструкции",
+        "охватывающие"
+      ],
+      [
+        "Тип соединения",
+        "Bluetooth 5.0"
+      ],
+      [
+        "Активное шумоподавление",
+        "есть"
+      ],
+      [
+        "Время работы",
+        "до 20 ч"
+      ],
+      [
+        "Диапазон частот",
+        "8 Гц - 20000 Гц"
+      ],
+      [
+        "Сопротивление",
+        "32Ω"
+      ]
+    ],
+    "image": {
+      "filename": "apple-airpods-max-lightning.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-airpods-max-lightning-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "apple-airpods-max-lightning-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
   },
   {
     "id": "apple-airpods-pro-2-lightning",
     "categoryId": "headphones",
-    "name": "Apple AirPods Pro 2",
-    "summary": "Активное шумоподавление · кейс Lightning",
-    "price": 19000,
-    "description": "Внутриканальные наушники второго поколения с чипом H2. В шумной обстановке можно включить шумоподавление, а с режимом прозрачности остаются слышны окружающие звуки. Кейс заряжается через Lightning, MagSafe или Qi.",
+    "name": "Apple AirPods Pro 2 (2022), белые",
+    "summary": "Внутриканальные · до 6 ч",
+    "price": 15990,
+    "description": "Белые AirPods Pro второго поколения в версии 2022 года. Поддерживают активное шумоподавление, Bluetooth 5.3 и беспроводную зарядку кейса.",
     "specs": [
       [
-        "Подключение",
+        "Тип конструкции",
+        "внутриканальные"
+      ],
+      [
+        "Тип соединения",
         "Bluetooth 5.3"
       ],
       [
-        "Шумоподавление",
-        "Активное"
+        "Активное шумоподавление",
+        "есть"
       ],
       [
-        "Чип",
-        "Apple H2"
+        "Время работы",
+        "до 6 ч"
       ],
       [
-        "Зарядка кейса",
-        "Lightning, MagSafe, Qi"
+        "Беспроводная зарядка",
+        "есть"
       ],
       [
-        "Время прослушивания",
-        "До 6 часов"
-      ],
-      [
-        "Защита",
+        "Степень пылевлагозащиты",
         "IPX4"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Скайнет",
-      "url": "https://skynet-service.ru/product/besprovodnaya-garnitura-apple-airpods-pro-2-s-futlyarom-dlya-zaryadki-magsafe-lightning-a2698-a2699-a2700-yaponiya-17526"
-    },
-    "specSource": {
-      "name": "Apple",
-      "url": "https://support.apple.com/en-gb/111851"
-    },
     "image": {
       "filename": "apple-airpods-pro-2-lightning.webp",
-      "width": 960,
-      "height": 720,
-      "alt": "Apple AirPods Pro 2",
-      "credit": {
-        "author": "Hajoon0102",
-        "url": "https://commons.wikimedia.org/wiki/File:AirPods_Pro_(2nd_generation).jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-airpods-pro-2-lightning-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "apple-airpods-pro-2-lightning-3.webp",
+        "width": 1100,
+        "height": 1100
       }
-    }
+    ]
+  },
+  {
+    "id": "sony-wh-1000xm5",
+    "categoryId": "headphones",
+    "name": "Sony WH-1000XM5, чёрные",
+    "summary": "Беспроводные и проводные · до 40 ч",
+    "price": 25490,
+    "description": "Чёрные Sony WH‑1000XM5 подключаются по Bluetooth или аудиокабелю. Активное шумоподавление помогает приглушить окружающие звуки во время работы и поездок.",
+    "specs": [
+      [
+        "Тип конструкции",
+        "охватывающие"
+      ],
+      [
+        "Тип соединения",
+        "проводной, Bluetooth 5.2, кабель 1,5 м"
+      ],
+      [
+        "Активное шумоподавление",
+        "есть"
+      ],
+      [
+        "Время работы",
+        "до 40 ч"
+      ],
+      [
+        "Диапазон частот",
+        "20 Гц - 40000 Гц"
+      ],
+      [
+        "Сопротивление",
+        "48Ω"
+      ]
+    ],
+    "image": {
+      "filename": "sony-wh-1000xm5.webp",
+      "width": 1100,
+      "height": 1099
+    },
+    "gallery": [
+      {
+        "filename": "sony-wh-1000xm5-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "sony-wh-1000xm5-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "bose-quietcomfort-2023",
+    "categoryId": "headphones",
+    "name": "Bose QuietComfort 2023, чёрные",
+    "summary": "Bluetooth 5.1 · до 24 ч",
+    "price": 19990,
+    "description": "Полноразмерные Bose QuietComfort с активным шумоподавлением. В беспроводном режиме работают до 24 часов, для проводного подключения предусмотрен кабель.",
+    "specs": [
+      [
+        "Тип конструкции",
+        "охватывающие"
+      ],
+      [
+        "Тип соединения",
+        "проводной, Bluetooth 5.1, кабель 1,2 м"
+      ],
+      [
+        "Активное шумоподавление",
+        "есть"
+      ],
+      [
+        "Время работы",
+        "до 24 ч"
+      ],
+      [
+        "Диапазон частот",
+        "20 Гц - 20000 Гц"
+      ]
+    ],
+    "image": {
+      "filename": "bose-quietcomfort-2023.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "bose-quietcomfort-2023-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "bose-quietcomfort-2023-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "sennheiser-momentum-4",
+    "categoryId": "headphones",
+    "name": "Sennheiser Momentum 4 Wireless, чёрные",
+    "summary": "Bluetooth 5.2 · до 60 ч",
+    "price": 20990,
+    "description": "Чёрные Sennheiser Momentum 4 поддерживают подключение по Bluetooth и кабелю. Предусмотрено активное шумоподавление, заявленное время работы — до 60 часов.",
+    "specs": [
+      [
+        "Тип конструкции",
+        "охватывающие"
+      ],
+      [
+        "Тип соединения",
+        "проводной, Bluetooth 5.2, кабель 1,2 м"
+      ],
+      [
+        "Активное шумоподавление",
+        "есть"
+      ],
+      [
+        "Время работы",
+        "до 60 ч"
+      ],
+      [
+        "Диапазон частот",
+        "6 Гц - 22000 Гц"
+      ],
+      [
+        "Сопротивление",
+        "60Ω"
+      ]
+    ],
+    "image": {
+      "filename": "sennheiser-momentum-4.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "sennheiser-momentum-4-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "sennheiser-momentum-4-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "jbl-tune-770nc",
+    "categoryId": "headphones",
+    "name": "JBL Tune 770NC, синие",
+    "summary": "Bluetooth 5.3 · до 70 ч",
+    "price": 7190,
+    "description": "Синие JBL Tune 770NC с чашками, закрывающими уши. Поддерживают Bluetooth и кабель, а активное шумоподавление помогает в шумной обстановке.",
+    "specs": [
+      [
+        "Тип конструкции",
+        "охватывающие"
+      ],
+      [
+        "Тип соединения",
+        "Bluetooth 5.3, кабель 1,2 м"
+      ],
+      [
+        "Активное шумоподавление",
+        "есть"
+      ],
+      [
+        "Время работы",
+        "до 70 ч"
+      ],
+      [
+        "Диапазон частот",
+        "20 Гц - 20000 Гц"
+      ],
+      [
+        "Сопротивление",
+        "32Ω"
+      ]
+    ],
+    "image": {
+      "filename": "jbl-tune-770nc.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "jbl-tune-770nc-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "jbl-tune-770nc-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
   },
   {
     "id": "apple-homepod-mini-orange",
     "categoryId": "speakers",
     "name": "Apple HomePod mini, оранжевая",
-    "summary": "Умная колонка · AirPlay",
-    "price": 15990,
-    "description": "Компактная колонка для музыки, подкастов и команд Siri. С совместимых устройств Apple звук передаётся через AirPlay. Колонка подключается к домашней сети Wi‑Fi и работает от электросети.",
+    "summary": "AirPlay · Siri · питание от сети",
+    "price": 17990,
+    "description": "Оранжевая умная колонка HomePod mini поддерживает Siri, AirPlay и Matter. Она подключается к Wi‑Fi и питается от сети.",
     "specs": [
       [
-        "Цвет",
-        "Оранжевый"
-      ],
-      [
-        "Передача звука",
-        "AirPlay"
-      ],
-      [
-        "Подключение",
-        "Wi‑Fi, Bluetooth"
-      ],
-      [
-        "Ассистент",
-        "Siri"
+        "Интерфейсы",
+        "AirPlay, Bluetooth, Matter, Wi-Fi"
       ],
       [
         "Формат акустики",
         "1.0"
+      ],
+      [
+        "Материал",
+        "пластик, ткань"
+      ],
+      [
+        "Формат системы",
+        "1.0"
+      ],
+      [
+        "Голосовой помощник",
+        "Siri"
+      ],
+      [
+        "Питание",
+        "От сети"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "iCult",
-      "url": "https://icult.ru/brand/1/"
-    },
-    "specSource": {
-      "name": "iCult",
-      "url": "https://icult.ru/item/693/134/1/40347/"
-    },
     "image": {
       "filename": "apple-homepod-mini-orange.webp",
-      "width": 720,
-      "height": 960,
-      "alt": "Apple HomePod mini, оранжевая",
-      "credit": {
-        "author": "KKPCW",
-        "url": "https://commons.wikimedia.org/wiki/File:Homepod_Mini_Orange_model.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-homepod-mini-orange-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "apple-homepod-mini-orange-3.webp",
+        "width": 1100,
+        "height": 1100
       }
-    }
+    ]
+  },
+  {
+    "id": "jbl-flip-6",
+    "categoryId": "speakers",
+    "name": "JBL Flip 6, чёрная",
+    "summary": "Bluetooth · до 12 ч",
+    "price": 10500,
+    "description": "Чёрная портативная колонка JBL Flip 6 подключается к телефону через Bluetooth. Аккумулятор рассчитан на воспроизведение до 12 часов.",
+    "specs": [
+      [
+        "Интерфейсы воспроизведения",
+        "Bluetooth"
+      ],
+      [
+        "Время работы",
+        "до 12 ч"
+      ],
+      [
+        "Диапазон частот",
+        "63 Гц - 20000 Гц"
+      ],
+      [
+        "Ёмкость аккумулятора",
+        "4800 мА·ч"
+      ]
+    ],
+    "image": {
+      "filename": "jbl-flip-6.webp",
+      "width": 1099,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "jbl-flip-6-2.webp",
+        "width": 1099,
+        "height": 1100
+      },
+      {
+        "filename": "jbl-flip-6-3.webp",
+        "width": 1099,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "jbl-charge-5",
+    "categoryId": "speakers",
+    "name": "JBL Charge 5, синяя",
+    "summary": "Bluetooth · до 20 ч",
+    "price": 11430,
+    "description": "Синяя JBL Charge 5 с Bluetooth-подключением и аккумулятором на 7500 мА·ч. Заявленное время воспроизведения — до 20 часов.",
+    "specs": [
+      [
+        "Интерфейсы воспроизведения",
+        "Bluetooth"
+      ],
+      [
+        "Время работы",
+        "до 20 ч"
+      ],
+      [
+        "Диапазон частот",
+        "60 Гц - 20000 Гц"
+      ],
+      [
+        "Ёмкость аккумулятора",
+        "7500 мА·ч"
+      ]
+    ],
+    "image": {
+      "filename": "jbl-charge-5.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "jbl-charge-5-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "jbl-charge-5-3.webp",
+        "width": 1100,
+        "height": 1099
+      }
+    ]
+  },
+  {
+    "id": "sony-srs-xb100",
+    "categoryId": "speakers",
+    "name": "Sony SRS-XB100, чёрная",
+    "summary": "Bluetooth · до 16 ч",
+    "price": 9990,
+    "description": "Чёрная мини-колонка Sony SRS‑XB100 для музыки со смартфона по Bluetooth. От одного заряда работает до 16 часов.",
+    "specs": [
+      [
+        "Интерфейсы воспроизведения",
+        "Bluetooth"
+      ],
+      [
+        "Время работы",
+        "до 16 ч"
+      ],
+      [
+        "Диапазон частот",
+        "100 Гц - 7000 Гц"
+      ]
+    ],
+    "image": {
+      "filename": "sony-srs-xb100.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "sony-srs-xb100-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "sony-srs-xb100-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "marshall-emberton-2",
+    "categoryId": "speakers",
+    "name": "Marshall Emberton II, чёрная",
+    "summary": "20 Вт · стерео · до 30 ч",
+    "price": 16990,
+    "description": "Чёрная Marshall Emberton II с двумя каналами и суммарной мощностью 20 Вт. Колонка работает от аккумулятора до 30 часов и подключается по Bluetooth.",
+    "specs": [
+      [
+        "Интерфейсы воспроизведения",
+        "Bluetooth"
+      ],
+      [
+        "Время работы",
+        "до 30 ч"
+      ],
+      [
+        "Мощность",
+        "20 Вт"
+      ],
+      [
+        "Диапазон частот",
+        "60 Гц - 20000 Гц"
+      ],
+      [
+        "Стереосистема",
+        "есть"
+      ]
+    ],
+    "image": {
+      "filename": "marshall-emberton-2.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "marshall-emberton-2-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "marshall-emberton-2-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "jbl-go-4",
+    "categoryId": "speakers",
+    "name": "JBL GO 4, фиолетовая",
+    "summary": "Bluetooth · до 7 ч",
+    "price": 4835,
+    "description": "Компактная фиолетовая JBL GO 4 воспроизводит музыку через Bluetooth. Ёмкость аккумулятора составляет 850 мА·ч, время работы — до 7 часов.",
+    "specs": [
+      [
+        "Интерфейсы воспроизведения",
+        "Bluetooth"
+      ],
+      [
+        "Время работы",
+        "до 7 ч"
+      ],
+      [
+        "Диапазон частот",
+        "90 Гц - 20000 Гц"
+      ],
+      [
+        "Ёмкость аккумулятора",
+        "850 мА·ч"
+      ]
+    ],
+    "image": {
+      "filename": "jbl-go-4.webp",
+      "width": 1100,
+      "height": 1099
+    },
+    "gallery": [
+      {
+        "filename": "jbl-go-4-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "jbl-go-4-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
   },
   {
     "id": "logitech-g502-hero",
     "categoryId": "peripherals",
-    "name": "Logitech G502 HERO",
-    "summary": "Проводная мышь · 25 600 DPI",
-    "price": 2899,
-    "description": "Проводная мышь с оптическим датчиком HERO 25K и одиннадцатью программируемыми кнопками. Чувствительность меняется через Logitech G HUB, а съёмные грузики позволяют настроить вес.",
+    "name": "Мышь Logitech G502 HERO (910-005470), чёрная",
+    "summary": "25 600 dpi · 1000 Гц",
+    "price": 2711,
+    "description": "Чёрная проводная мышь с датчиком до 25 600 dpi и программируемыми кнопками. Частота опроса 1000 Гц подходит для быстрых перемещений в игре.",
     "specs": [
       [
-        "Датчик",
-        "Logitech HERO 25K"
+        "Подключение",
+        "проводная"
       ],
       [
-        "Чувствительность",
-        "До 25 600 DPI"
+        "Разрешение датчика",
+        "25600 dpi"
       ],
       [
-        "Кнопки",
-        "11 программируемых"
+        "Частота опроса",
+        "1000 Гц"
       ],
       [
-        "Интерфейс",
-        "USB‑A"
-      ],
-      [
-        "Масса без кабеля",
+        "Вес",
         "121 г"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "DNS",
-      "url": "https://www.dns-shop.ru/catalog/recipe/55313be6477e8d6f/s-11-knopkami/"
-    },
-    "specSource": {
-      "name": "Logitech",
-      "url": "https://www.logitechg.com/en-in/shop/p/g502-hero-gaming-mouse"
-    },
     "image": {
       "filename": "logitech-g502-hero.webp",
-      "width": 960,
-      "height": 540,
-      "alt": "Logitech G502 HERO",
-      "credit": {
-        "author": "Panthermail",
-        "url": "https://commons.wikimedia.org/wiki/File:Logitech_G502_Hero.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "logitech-g502-hero-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "logitech-g502-hero-3.webp",
+        "width": 1100,
+        "height": 1100
       }
-    }
+    ]
+  },
+  {
+    "id": "logitech-mx-master-3s",
+    "categoryId": "peripherals",
+    "name": "Мышь Logitech MX Master 3S (910-006560), серая",
+    "summary": "Bluetooth и радиоканал · 8000 dpi",
+    "price": 8120,
+    "description": "Серая беспроводная MX Master 3S с тихими кнопками и датчиком до 8000 dpi. Подключается по Bluetooth или через радиоканал.",
+    "specs": [
+      [
+        "Подключение",
+        "беспроводная"
+      ],
+      [
+        "Беспроводное подключение",
+        "Bluetooth, радиоканал"
+      ],
+      [
+        "Разрешение датчика",
+        "8000 dpi"
+      ],
+      [
+        "Вес",
+        "141 г"
+      ]
+    ],
+    "image": {
+      "filename": "logitech-mx-master-3s.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "logitech-mx-master-3s-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "logitech-mx-master-3s-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "logitech-g-pro-x-superlight-2",
+    "categoryId": "peripherals",
+    "name": "Мышь Logitech G PRO X SUPERLIGHT 2 (910-006642), белая",
+    "summary": "60 г · беспроводная · до 44 000 dpi",
+    "price": 14200,
+    "description": "Белая игровая мышь весом 60 г с подключением по радиоканалу. Для настройки под игру предусмотрены программируемые кнопки.",
+    "specs": [
+      [
+        "Подключение",
+        "беспроводная"
+      ],
+      [
+        "Беспроводное подключение",
+        "радиоканал"
+      ],
+      [
+        "Разрешение датчика",
+        "44000 dpi"
+      ],
+      [
+        "Частота опроса",
+        "8000 Гц"
+      ],
+      [
+        "Вес",
+        "60 г"
+      ]
+    ],
+    "image": {
+      "filename": "logitech-g-pro-x-superlight-2.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "logitech-g-pro-x-superlight-2-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "logitech-g-pro-x-superlight-2-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "logitech-k380",
+    "categoryId": "peripherals",
+    "name": "Клавиатура Logitech K380, серая",
+    "summary": "Bluetooth · формат 75%",
+    "price": 3888,
+    "description": "Компактная серая Logitech K380 с мембранным механизмом. Подключается по Bluetooth и занимает меньше места на столе благодаря формату 75%.",
+    "specs": [
+      [
+        "Тип клавиатуры",
+        "мембранная"
+      ],
+      [
+        "Подключение",
+        "беспроводная"
+      ],
+      [
+        "Интерфейс подключения",
+        "Bluetooth"
+      ],
+      [
+        "Формат клавиатуры",
+        "75%"
+      ],
+      [
+        "Материал корпуса",
+        "пластик"
+      ]
+    ],
+    "image": {
+      "filename": "logitech-k380.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "logitech-k380-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "logitech-k380-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "keychron-k2",
+    "categoryId": "peripherals",
+    "name": "Клавиатура Keychron K2, чёрная",
+    "summary": "Механическая · формат 75% · RGB",
+    "price": 13167,
+    "description": "Чёрная механическая клавиатура Keychron K2 с подсветкой RGB. Работает с кабелем или через Bluetooth, компактный формат сохраняет ряд функциональных клавиш.",
+    "specs": [
+      [
+        "Тип клавиатуры",
+        "механическая"
+      ],
+      [
+        "Подключение",
+        "проводная + беспроводная"
+      ],
+      [
+        "Интерфейс подключения",
+        "Bluetooth"
+      ],
+      [
+        "Формат клавиатуры",
+        "75%"
+      ],
+      [
+        "Подсветка клавиш",
+        "RGB"
+      ],
+      [
+        "Материал корпуса",
+        "алюминий, пластик"
+      ]
+    ],
+    "image": {
+      "filename": "keychron-k2.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "keychron-k2-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "keychron-k2-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "logitech-c920s-hd-pro",
+    "categoryId": "peripherals",
+    "name": "Веб-камера Logitech C920s HD PRO, чёрная",
+    "summary": "Full HD · USB‑A · микрофон",
+    "price": 7910,
+    "description": "Веб-камера Logitech для видеозвонков с разрешением до 1920 × 1080. Встроенный микрофон передаёт звук, для подключения используется USB‑A.",
+    "specs": [
+      [
+        "Разрешение (видео)",
+        "1280 × 720, 1920 × 1080"
+      ],
+      [
+        "Число мегапикселей матрицы",
+        "2 Мп"
+      ],
+      [
+        "Угол обзора (градус)",
+        "78°"
+      ],
+      [
+        "Максимальная частота кадров",
+        "30 кадр./сек"
+      ],
+      [
+        "Разъём",
+        "USB Type-A"
+      ],
+      [
+        "Микрофон",
+        "Встроенный"
+      ]
+    ],
+    "image": {
+      "filename": "logitech-c920s-hd-pro.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "logitech-c920s-hd-pro-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "logitech-c920s-hd-pro-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
   },
   {
     "id": "sony-dualsense-white",
     "categoryId": "gaming",
-    "name": "Sony DualSense CFI-ZCT1W",
-    "summary": "Белый контроллер для PS5 · Bluetooth",
-    "price": 7690,
-    "description": "Беспроводной контроллер PlayStation 5 с тактильной обратной связью и адаптивными курками. В играх, которые поддерживают эти функции, контроллер передаёт разную силу вибрации и сопротивления при нажатии. Для зарядки используется USB‑C.",
+    "name": "Sony DualSense CFI-ZCT1W, белый",
+    "summary": "PlayStation 5 · Bluetooth и USB‑C",
+    "price": 6089,
+    "description": "Белый контроллер DualSense для PlayStation 5. Подключается по Bluetooth или через USB‑C, поддерживает виброотдачу и питание от аккумулятора.",
     "specs": [
       [
         "Совместимость",
-        "PlayStation 5"
+        "Android, iOS, ПК, PlayStation 5"
       ],
       [
         "Подключение",
-        "Bluetooth, USB‑C"
+        "USB Type-C, Bluetooth"
       ],
       [
-        "Обратная связь",
-        "Тактильная"
+        "Питание",
+        "от USB, от аккумулятора"
       ],
       [
-        "Курки",
-        "Адаптивные"
+        "Виброотдача",
+        "Есть"
+      ]
+    ],
+    "image": {
+      "filename": "sony-dualsense-white.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "sony-dualsense-white-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "sony-dualsense-white-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "nintendo-switch-pro-controller",
+    "categoryId": "gaming",
+    "name": "Nintendo Switch Pro, чёрный",
+    "summary": "Nintendo Switch · Bluetooth",
+    "price": 8490,
+    "description": "Чёрный Nintendo Switch Pro с матовым покрытием и беспроводным подключением по Bluetooth. Встроенный аккумулятор позволяет играть без кабеля.",
+    "specs": [
+      [
+        "Совместимость",
+        "Nintendo Switch"
+      ],
+      [
+        "Подключение",
+        "Bluetooth"
+      ],
+      [
+        "Питание",
+        "Встроенный аккумулятор"
+      ],
+      [
+        "Виброотдача",
+        "Есть"
+      ],
+      [
+        "Покрытие",
+        "Матовое"
+      ]
+    ],
+    "image": {
+      "filename": "nintendo-switch-pro-controller.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "nintendo-switch-pro-controller-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "nintendo-switch-pro-controller-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "microsoft-xbox-wireless-controller",
+    "categoryId": "gaming",
+    "name": "Microsoft Xbox Wireless Controller, чёрный",
+    "summary": "Xbox One · Bluetooth · батарейки",
+    "price": 6990,
+    "description": "Чёрный беспроводной контроллер Microsoft для Xbox One и совместимых устройств. Поддерживает Bluetooth и питается от сменных батареек.",
+    "specs": [
+      [
+        "Совместимость",
+        "Android, iOS, ПК, Xbox One"
+      ],
+      [
+        "Подключение",
+        "Bluetooth"
+      ],
+      [
+        "Питание",
+        "от батареек"
+      ]
+    ],
+    "image": {
+      "filename": "microsoft-xbox-wireless-controller.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "microsoft-xbox-wireless-controller-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "microsoft-xbox-wireless-controller-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "sony-dualshock-4-v2",
+    "categoryId": "gaming",
+    "name": "Sony DualShock 4 Ver. 2, чёрный",
+    "summary": "Bluetooth и USB · чёрный",
+    "price": 5490,
+    "description": "Чёрный DualShock 4 второй версии можно использовать с кабелем или через Bluetooth. Для беспроводной работы предусмотрен встроенный аккумулятор.",
+    "specs": [
+      [
+        "Совместимость",
+        "Android, iOS, ПК, PlayStation 3"
+      ],
+      [
+        "Подключение",
+        "USB Type-A, Bluetooth"
+      ],
+      [
+        "Питание",
+        "от USB, от аккумулятора"
+      ]
+    ],
+    "image": {
+      "filename": "sony-dualshock-4-v2.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "sony-dualshock-4-v2-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "sony-dualshock-4-v2-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "8bitdo-ultimate",
+    "categoryId": "gaming",
+    "name": "8BitDo Ultimate, чёрный",
+    "summary": "Nintendo Switch, ПК и Steam Deck",
+    "price": 6778,
+    "description": "Чёрный 8BitDo Ultimate подключается по Bluetooth, радиоканалу или с помощью USB. Совместим с Nintendo Switch, ПК и Steam Deck.",
+    "specs": [
+      [
+        "Совместимость",
+        "Nintendo Switch, ПК, Steam Deck"
+      ],
+      [
+        "Подключение",
+        "USB Type-A, Bluetooth, радиоканал"
+      ],
+      [
+        "Питание",
+        "от USB, от аккумулятора"
+      ]
+    ],
+    "image": {
+      "filename": "8bitdo-ultimate.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "8bitdo-ultimate-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "8bitdo-ultimate-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "nintendo-joy-con-pair",
+    "categoryId": "gaming",
+    "name": "Nintendo Joy-Con Pair, красный и синий",
+    "summary": "Nintendo Switch · красный и синий",
+    "price": 7990,
+    "description": "Комплект из двух контроллеров Joy‑Con для Nintendo Switch. Они подключаются к консоли по Bluetooth или через её боковые разъёмы.",
+    "specs": [
+      [
+        "Совместимость",
+        "Nintendo Switch"
+      ],
+      [
+        "Подключение",
+        "проприетарный разъем, Bluetooth"
+      ],
+      [
+        "Питание",
+        "от аккумулятора, по шине"
       ],
       [
         "Цвет",
-        "Белый"
+        "Красный и синий"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Нова",
-      "url": "https://spb.apple-nova.ru/item/geimpad-sony-dualsense-cfi-zct1w-belyi/"
-    },
-    "specSource": {
-      "name": "Sony",
-      "url": "https://www.playstation.com/ru-ru/accessories/dualsense-wireless-controller/"
-    },
     "image": {
-      "filename": "sony-dualsense-white.webp",
-      "width": 960,
-      "height": 849,
-      "alt": "Sony DualSense CFI-ZCT1W",
-      "credit": {
-        "author": "Alex Cochrane",
-        "url": "https://commons.wikimedia.org/wiki/File:Playstation_DualSense_Controller.png",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "filename": "nintendo-joy-con-pair.webp",
+      "width": 792,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "nintendo-joy-con-pair-2.webp",
+        "width": 825,
+        "height": 1100
+      },
+      {
+        "filename": "nintendo-joy-con-pair-3.webp",
+        "width": 1100,
+        "height": 825
       }
-    }
+    ]
   },
   {
     "id": "sandisk-extreme-portable-1tb",
     "categoryId": "storage",
-    "name": "SanDisk Extreme Portable SSD 1 ТБ",
-    "summary": "SDSSDE60 · до 550 МБ/с",
+    "name": "SanDisk Extreme Portable 1 ТБ, SDSSDE60-1T00-R25",
+    "summary": "1 ТБ · USB‑C",
     "price": 18990,
-    "description": "Внешний SSD объёмом 1 ТБ для хранения фотографий, видео и резервных копий. Эта версия серии SDSSDE60 подключается через USB‑C и читает данные со скоростью до 550 МБ/с.",
+    "description": "Внешний накопитель SanDisk Extreme Portable на 1 ТБ. Подключение по USB‑C подходит для переноса рабочих файлов, фотографий и резервных копий.",
     "specs": [
       [
         "Объём",
         "1 ТБ"
       ],
       [
-        "Разъём",
-        "USB‑C"
-      ],
-      [
-        "Скорость чтения",
-        "До 550 МБ/с"
-      ],
-      [
-        "Защита корпуса",
-        "IP55"
+        "Интерфейс",
+        "USB 3.2 Gen 2 Type-C"
       ],
       [
         "Артикул",
         "SDSSDE60-1T00-R25"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "restore:",
-      "url": "https://re-store.ru/catalog/SDSSDE60-1T00-R25/",
-      "note": "Цена из карточки, товар ожидается"
-    },
-    "specSource": {
-      "name": "restore:",
-      "url": "https://re-store.ru/catalog/SDSSDE60-1T00-R25/"
-    },
     "image": {
       "filename": "sandisk-extreme-portable-1tb.webp",
-      "width": 960,
-      "height": 664,
-      "alt": "SanDisk Extreme Portable SSD 1 ТБ",
-      "credit": {
-        "author": "Tony Webster from Minneapolis, Minnesota, United States",
-        "url": "https://commons.wikimedia.org/wiki/File:SanDisk_Extreme_Portable_SSD_-_1TB,_USB-C_(41036158305).jpg",
-        "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "sandisk-extreme-portable-1tb-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "sandisk-extreme-portable-1tb-3.webp",
+        "width": 1100,
+        "height": 1100
       }
-    }
+    ]
   },
   {
-    "id": "nintendo-switch-pro-controller",
-    "categoryId": "gaming",
-    "name": "Nintendo Switch Pro Controller",
-    "summary": "Чёрный · HAC‑013",
-    "price": 8490,
-    "description": "Беспроводной геймпад для Nintendo Switch с управлением движением и вибрацией HD Rumble. Встроенная метка NFC считывает фигурки amiibo. Одного заряда хватает примерно на 40 часов в зависимости от игры.",
+    "id": "samsung-t7-shield-1tb",
+    "categoryId": "storage",
+    "name": "Samsung T7 Shield 1 ТБ (MU-PE1T0S/WW), чёрный",
+    "summary": "1 ТБ · чтение до 1050 МБ/с",
+    "price": 29990,
+    "description": "Чёрный Samsung T7 Shield с объёмом 1 ТБ и подключением через USB‑C. При подходящем интерфейсе читает данные со скоростью до 1050 МБ/с.",
     "specs": [
       [
-        "Модель",
-        "HAC‑013"
+        "Объём",
+        "1000 ГБ"
       ],
       [
-        "Подключение",
-        "Bluetooth 3.0, USB‑C"
+        "Интерфейс",
+        "USB 3.2 Gen 2 Type-C"
       ],
       [
-        "Автономность",
-        "Около 40 часов"
+        "Скорость чтения",
+        "1050 МБ/с"
       ],
       [
-        "Вибрация",
-        "HD Rumble"
-      ],
-      [
-        "Поддержка amiibo",
-        "NFC"
+        "Скорость записи",
+        "1000 МБ/с"
       ]
     ],
-    "priceSource": {
-      "date": "22.11.2026",
-      "name": "BigGeek через ITVSE",
-      "url": "https://itvse.ru/product/nintendo-switch-pro-controller/"
-    },
-    "specSource": {
-      "name": "Nintendo",
-      "url": "https://www.nintendo.com/en-gb/Hardware/Accessories/Accessories-1183144.html"
-    },
     "image": {
-      "filename": "nintendo-switch-pro-controller.webp",
-      "width": 960,
-      "height": 747,
-      "alt": "Nintendo Switch Pro Controller",
-      "credit": {
-        "author": "Evan-Amos",
-        "url": "https://commons.wikimedia.org/wiki/File:Nintendo-Switch-Pro-Controller-FL.jpg",
-        "license": "Public domain",
-        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Nintendo-Switch-Pro-Controller-FL.jpg",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "filename": "samsung-t7-shield-1tb.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "samsung-t7-shield-1tb-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "samsung-t7-shield-1tb-3.webp",
+        "width": 1100,
+        "height": 1100
       }
-    }
+    ]
+  },
+  {
+    "id": "kingston-xs1000-1tb",
+    "categoryId": "storage",
+    "name": "Kingston XS1000 1 ТБ (SXS1000/1000G), чёрный",
+    "summary": "1 ТБ · USB 3.2 Gen 2",
+    "price": 20528,
+    "description": "Компактный Kingston XS1000 на 1 ТБ для хранения файлов и резервных копий. Скорость чтения достигает 1050 МБ/с, записи — 1000 МБ/с.",
+    "specs": [
+      [
+        "Объём",
+        "1000 ГБ"
+      ],
+      [
+        "Интерфейс",
+        "USB 3.2 Gen 2 Type-C"
+      ],
+      [
+        "Скорость чтения",
+        "1050 МБ/с"
+      ],
+      [
+        "Скорость записи",
+        "1000 МБ/с"
+      ]
+    ],
+    "image": {
+      "filename": "kingston-xs1000-1tb.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "kingston-xs1000-1tb-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "kingston-xs1000-1tb-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "adata-elite-se880-1tb",
+    "categoryId": "storage",
+    "name": "ADATA Elite SE880 1 ТБ (AELI-SE880-1TCGY), серый",
+    "summary": "1 ТБ · до 2000 МБ/с",
+    "price": 17360,
+    "description": "Серый ADATA Elite SE880 рассчитан на подключение по USB 3.2 Gen 2×2. При совместимом порте заявленная скорость чтения и записи достигает 2000 МБ/с.",
+    "specs": [
+      [
+        "Объём",
+        "1000 ГБ"
+      ],
+      [
+        "Интерфейс",
+        "USB 3.2 Gen 2 × 2 Type-C"
+      ],
+      [
+        "Скорость чтения",
+        "2000 МБ/с"
+      ],
+      [
+        "Скорость записи",
+        "2000 МБ/с"
+      ]
+    ],
+    "image": {
+      "filename": "adata-elite-se880-1tb.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "adata-elite-se880-1tb-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "adata-elite-se880-1tb-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "wd-black-sn770-1tb",
+    "categoryId": "storage",
+    "name": "WD Black SN770 1 ТБ WDS100T3X0E",
+    "summary": "1 ТБ · M.2 2280 · PCIe 4.0",
+    "price": 15924,
+    "description": "Внутренний WD Black SN770 на 1 ТБ для компьютеров с разъёмом M.2. В последовательном режиме читает данные со скоростью до 5150 МБ/с.",
+    "specs": [
+      [
+        "Объём",
+        "1 ТБ"
+      ],
+      [
+        "Интерфейс",
+        "PCIe 4.0 ×4, NVMe"
+      ],
+      [
+        "Форм-фактор",
+        "M.2 2280"
+      ],
+      [
+        "Скорость чтения",
+        "До 5150 МБ/с"
+      ],
+      [
+        "Скорость записи",
+        "До 4900 МБ/с"
+      ],
+      [
+        "Ресурс записи",
+        "600 ТБ"
+      ]
+    ],
+    "image": {
+      "filename": "wd-black-sn770-1tb.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "wd-black-sn770-1tb-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "wd-black-sn770-1tb-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "samsung-990-pro-1tb",
+    "categoryId": "storage",
+    "name": "Samsung 990 PRO 1 ТБ MZ-V9P1T0BW",
+    "summary": "1 ТБ · M.2 2280 · PCIe 4.0",
+    "price": 22727,
+    "description": "Внутренний Samsung 990 PRO на 1 ТБ с интерфейсом PCIe 4.0. Заявленные максимумы составляют 7450 МБ/с для чтения и 6900 МБ/с для записи.",
+    "specs": [
+      [
+        "Объём",
+        "1 ТБ"
+      ],
+      [
+        "Интерфейс",
+        "PCIe 4.0 ×4, NVMe"
+      ],
+      [
+        "Форм-фактор",
+        "M.2 2280"
+      ],
+      [
+        "Скорость чтения",
+        "До 7450 МБ/с"
+      ],
+      [
+        "Скорость записи",
+        "До 6900 МБ/с"
+      ],
+      [
+        "Ресурс записи",
+        "600 ТБ"
+      ]
+    ],
+    "image": {
+      "filename": "samsung-990-pro-1tb.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "samsung-990-pro-1tb-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "samsung-990-pro-1tb-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "apple-magsafe-charger",
+    "categoryId": "power",
+    "name": "Apple MagSafe Charger 15 Вт, белый",
+    "summary": "15 Вт · магнитная зарядка",
+    "price": 3490,
+    "description": "Магнитная зарядка для совместимых моделей iPhone. Крепится к задней панели телефона и передаёт питание без подключения кабеля к смартфону.",
+    "specs": [
+      [
+        "Выходная мощность",
+        "15 Вт"
+      ],
+      [
+        "Совместимость",
+        "Apple iPhone с MagSafe"
+      ],
+      [
+        "Поколение беспроводной зарядки",
+        "Qi1"
+      ]
+    ],
+    "image": {
+      "filename": "apple-magsafe-charger.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-magsafe-charger-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "apple-magsafe-charger-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "apple-usb-c-20w",
+    "categoryId": "power",
+    "name": "Адаптер Apple USB-C 20 Вт, белый",
+    "summary": "20 Вт · один порт USB‑C",
+    "price": 2490,
+    "description": "Белый сетевой адаптер Apple мощностью 20 Вт. Подходит для зарядки совместимых устройств через USB‑C, кабель приобретается отдельно.",
+    "specs": [
+      [
+        "Выходная мощность",
+        "20 Вт"
+      ],
+      [
+        "Разъемы подключения",
+        "1 × USB-C"
+      ],
+      [
+        "Кабель в комплекте",
+        "Нет"
+      ]
+    ],
+    "image": {
+      "filename": "apple-usb-c-20w.webp",
+      "width": 662,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "apple-usb-c-20w-2.webp",
+        "width": 548,
+        "height": 1100
+      },
+      {
+        "filename": "apple-usb-c-20w-3.webp",
+        "width": 1100,
+        "height": 650
+      }
+    ]
+  },
+  {
+    "id": "anker-735-65w",
+    "categoryId": "power",
+    "name": "Anker 735 Charger Nano II 65 Вт, чёрное",
+    "summary": "65 Вт · два USB‑C и один USB‑A",
+    "price": 6190,
+    "description": "Чёрное зарядное устройство Anker 735 с тремя выходами. Мощность до 65 Вт позволяет использовать его с совместимыми смартфонами и ноутбуками.",
+    "specs": [
+      [
+        "Выходная мощность",
+        "65 Вт"
+      ],
+      [
+        "Разъемы подключения",
+        "1 × USB+2xUSB-C"
+      ],
+      [
+        "Быстрая зарядка",
+        "PD 3.0, PPS, QC 3.0, QC 4.0"
+      ]
+    ],
+    "image": {
+      "filename": "anker-735-65w.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "anker-735-65w-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "anker-735-65w-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "ugreen-cd275-65w",
+    "categoryId": "power",
+    "name": "UGREEN CD275 65 Вт, белое",
+    "summary": "65 Вт · два USB‑C и один USB‑A",
+    "price": 3147,
+    "description": "Белый UGREEN CD275 предназначен для зарядки нескольких устройств от одной розетки. На корпусе два USB‑C и один USB‑A, максимальная мощность — 65 Вт.",
+    "specs": [
+      [
+        "Выходная мощность",
+        "65 Вт"
+      ],
+      [
+        "Разъемы подключения",
+        "1 × USB+2xUSB-C"
+      ],
+      [
+        "Быстрая зарядка",
+        "BC 1.2, FCP, PD 2.0, PD 3.0"
+      ]
+    ],
+    "image": {
+      "filename": "ugreen-cd275-65w.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "ugreen-cd275-65w-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "ugreen-cd275-65w-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-mi-power-bank-3-ultra-compact",
+    "categoryId": "power",
+    "name": "Xiaomi Mi Power Bank 3 Ultra Compact 10 000 мА·ч, чёрный",
+    "summary": "10 000 мА·ч · до 22,5 Вт",
+    "price": 1859,
+    "description": "Компактный чёрный аккумулятор Xiaomi с ёмкостью 10 000 мА·ч. Предусмотрены два выхода USB‑A и один USB‑C для зарядки гаджетов в дороге.",
+    "specs": [
+      [
+        "Мощность",
+        "22,5 Вт"
+      ],
+      [
+        "Ёмкость",
+        "10000 мА·ч"
+      ],
+      [
+        "Выходные разъемы",
+        "USB Type-A, USB Type-C"
+      ],
+      [
+        "Число портов USB-A",
+        "2 шт"
+      ],
+      [
+        "Число портов USB Type-C",
+        "1 шт"
+      ]
+    ],
+    "image": {
+      "filename": "xiaomi-mi-power-bank-3-ultra-compact.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "xiaomi-mi-power-bank-3-ultra-compact-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "xiaomi-mi-power-bank-3-ultra-compact-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "baseus-blade-100w",
+    "categoryId": "power",
+    "name": "Baseus Blade 20 000 мА·ч 100 Вт, чёрный",
+    "summary": "20 000 мА·ч · до 100 Вт",
+    "price": 6090,
+    "description": "Чёрный Baseus Blade с дисплеем, двумя портами USB‑A и двумя USB‑C. На выходе поддерживает до 100 Вт для совместимого оборудования.",
+    "specs": [
+      [
+        "Мощность",
+        "100 Вт"
+      ],
+      [
+        "Ёмкость",
+        "20000 мА·ч"
+      ],
+      [
+        "Выходные разъемы",
+        "USB Type-A, USB Type-C"
+      ],
+      [
+        "Число портов USB-A",
+        "2 шт"
+      ],
+      [
+        "Число портов USB Type-C",
+        "2 шт"
+      ]
+    ],
+    "image": {
+      "filename": "baseus-blade-100w.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "baseus-blade-100w-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "baseus-blade-100w-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
   },
   {
     "id": "tp-link-tl-wr841n",
     "categoryId": "network",
-    "name": "TP-Link TL-WR841N",
-    "summary": "Wi‑Fi 4 · 2,4 ГГц · 4 LAN",
-    "price": 1700,
-    "description": "Домашний маршрутизатор для сети 2,4 ГГц. У него две внешние антенны и четыре LAN-порта для проводного подключения. Заявленная скорость беспроводного соединения — до 300 Мбит/с.",
+    "name": "TP-Link TL-WR841N, белый",
+    "summary": "Wi‑Fi 4 · 4 LAN · до 300 Мбит/с",
+    "price": 2190,
+    "description": "Белый TL‑WR841N для домашней сети 2,4 ГГц. Через четыре LAN-порта можно подключить стационарный компьютер, телевизор или другие устройства кабелем.",
     "specs": [
       [
-        "Стандарт",
-        "Wi‑Fi 4 (802.11n)"
+        "Стандарты Wi-Fi",
+        "4 (802.11n)"
       ],
       [
-        "Диапазон",
-        "2,4 ГГц"
+        "Количество портов",
+        "1x WAN, 4x LAN"
       ],
       [
-        "Номинальная скорость Wi‑Fi",
+        "Передача данных",
+        "100 Мбит/с"
+      ],
+      [
+        "Скорость Wi-Fi",
         "До 300 Мбит/с"
-      ],
-      [
-        "Порты",
-        "1 WAN, 4 LAN"
-      ],
-      [
-        "Антенны",
-        "2 внешние"
       ]
     ],
-    "priceSource": {
-      "date": "23.11.2026",
-      "name": "Ситилинк на Яндекс Маркете",
-      "url": "https://market.yandex.ru/card/wi-fi-router-tp-link-tl-wr841n-n300-belyy/103196975077"
-    },
-    "specSource": {
-      "name": "TP-Link",
-      "url": "https://tp-link.ru/catalog/routery-wi-fi/wi-fi-4/tl-wr841n/"
-    },
     "image": {
       "filename": "tp-link-tl-wr841n.webp",
-      "width": 960,
-      "height": 960,
-      "alt": "TP-Link TL-WR841N",
-      "credit": {
-        "author": "Raimond Spekking",
-        "url": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR841N-2920.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Уменьшение размера и конвертация в WebP"
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "tp-link-tl-wr841n-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "tp-link-tl-wr841n-3.webp",
+        "width": 1100,
+        "height": 1100
       }
-    }
+    ]
+  },
+  {
+    "id": "tp-link-archer-ax23",
+    "categoryId": "network",
+    "name": "TP-Link Archer AX23, чёрный",
+    "summary": "Wi‑Fi 6 · 4 LAN · до 1775 Мбит/с",
+    "price": 5096,
+    "description": "Чёрный Archer AX23 с Wi‑Fi 6 и четырьмя гигабитными LAN-портами. Поддерживает проводное и беспроводное подключение домашних устройств.",
+    "specs": [
+      [
+        "Стандарты Wi-Fi",
+        "4 (802.11n), 5 (802.11ac), 6 (802.11ax)"
+      ],
+      [
+        "Количество портов",
+        "1x WAN, 4x LAN"
+      ],
+      [
+        "Передача данных",
+        "1000 Мбит/с"
+      ],
+      [
+        "Скорость Wi-Fi",
+        "До 1775 Мбит/с"
+      ]
+    ],
+    "image": {
+      "filename": "tp-link-archer-ax23.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "tp-link-archer-ax23-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "tp-link-archer-ax23-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "tp-link-archer-ax55",
+    "categoryId": "network",
+    "name": "TP-Link Archer AX55, чёрный",
+    "summary": "Wi‑Fi 6 · до 2976 Мбит/с · USB",
+    "price": 5885,
+    "description": "Двухдиапазонный TP‑Link Archer AX55 с Wi‑Fi 6. Порт USB позволяет использовать совместимый накопитель для обмена файлами в локальной сети.",
+    "specs": [
+      [
+        "Стандарты Wi-Fi",
+        "4 (802.11n), 5 (802.11ac), 6 (802.11ax)"
+      ],
+      [
+        "Количество портов",
+        "1x WAN, 4x LAN"
+      ],
+      [
+        "Передача данных",
+        "100 Мбит/с, 1000 Мбит/с"
+      ],
+      [
+        "Функции USB",
+        "FTP-сервер, Media-сервер, Samba-сервер, Time Machine"
+      ],
+      [
+        "Скорость Wi-Fi",
+        "До 2976 Мбит/с"
+      ]
+    ],
+    "image": {
+      "filename": "tp-link-archer-ax55.webp",
+      "width": 1100,
+      "height": 1099
+    },
+    "gallery": [
+      {
+        "filename": "tp-link-archer-ax55-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "tp-link-archer-ax55-3.webp",
+        "width": 1100,
+        "height": 1099
+      }
+    ]
+  },
+  {
+    "id": "tp-link-deco-x20",
+    "categoryId": "network",
+    "name": "TP-Link Deco X20 2-pack, белый",
+    "summary": "Wi‑Fi 6 · комплект из 2 устройств",
+    "price": 13780,
+    "description": "Белый комплект Deco X20 из двух устройств помогает расширить покрытие Wi‑Fi по квартире. У каждой точки предусмотрены два гигабитных порта LAN/WAN.",
+    "specs": [
+      [
+        "Стандарты Wi-Fi",
+        "4 (802.11n), 5 (802.11ac), 6 (802.11ax)"
+      ],
+      [
+        "Количество портов",
+        "2x LAN/WAN"
+      ],
+      [
+        "Передача данных",
+        "1000 Мбит/с"
+      ],
+      [
+        "Комплект",
+        "2 устройства"
+      ]
+    ],
+    "image": {
+      "filename": "tp-link-deco-x20.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "tp-link-deco-x20-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "tp-link-deco-x20-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "asus-rt-ax57",
+    "categoryId": "network",
+    "name": "ASUS RT-AX57, чёрный",
+    "summary": "Wi‑Fi 6 · до 2976 Мбит/с · 4 LAN",
+    "price": 8468,
+    "description": "Домашний ASUS RT‑AX57 с Wi‑Fi 6 и четырьмя LAN-портами. Подходит для сочетания проводных подключений с беспроводной сетью в двух диапазонах.",
+    "specs": [
+      [
+        "Стандарты Wi-Fi",
+        "4 (802.11n), 5 (802.11ac), 6 (802.11ax)"
+      ],
+      [
+        "Количество портов",
+        "1x WAN, 4x LAN"
+      ],
+      [
+        "Передача данных",
+        "100 Мбит/с, 1000 Мбит/с"
+      ],
+      [
+        "Скорость Wi-Fi",
+        "До 2976 Мбит/с"
+      ]
+    ],
+    "image": {
+      "filename": "asus-rt-ax57.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "asus-rt-ax57-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "asus-rt-ax57-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "keenetic-hopper-kn-3810",
+    "categoryId": "network",
+    "name": "Keenetic Hopper KN-3810, белый",
+    "summary": "Wi‑Fi 6 · 4 LAN/WAN · USB",
+    "price": 9238,
+    "description": "Белый Keenetic Hopper с четырьмя гигабитными портами и USB для совместимых накопителей или модемов. Поддерживает Wi‑Fi 6.",
+    "specs": [
+      [
+        "Стандарты Wi-Fi",
+        "4 (802.11n), 5 (802.11ac), 6 (802.11ax)"
+      ],
+      [
+        "Количество портов",
+        "4x LAN/WAN"
+      ],
+      [
+        "Передача данных",
+        "10 Мбит/с, 100 Мбит/с, 1000 Мбит/с"
+      ],
+      [
+        "Функции USB",
+        "DLNA-сервер, FTP-сервер, Time Machine, подключение USB модема"
+      ],
+      [
+        "Скорость Wi-Fi",
+        "До 1775 Мбит/с"
+      ]
+    ],
+    "image": {
+      "filename": "keenetic-hopper-kn-3810.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "keenetic-hopper-kn-3810-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "keenetic-hopper-kn-3810-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "hp-laserjet-pro-p1102",
+    "categoryId": "printers",
+    "name": "HP LaserJet Pro P1102, с пробегом",
+    "summary": "Лазерная печать A4 · до 18 стр/мин",
+    "price": 6000,
+    "description": "Монохромный принтер HP LaserJet Pro P1102 для текстовых документов A4. Подключается к компьютеру по USB и использует картридж HP 85A.",
+    "specs": [
+      [
+        "Печать",
+        "чёрно-белая"
+      ],
+      [
+        "Скорость ч/б печати",
+        "18 стр/мин (A4)"
+      ],
+      [
+        "Разрешение ч/б печати",
+        "600 × 600 dpi"
+      ],
+      [
+        "Интерфейсы",
+        "USB Type-B"
+      ],
+      [
+        "Совместимые картриджи",
+        "HP 85A (CE285A)"
+      ]
+    ],
+    "image": {
+      "filename": "hp-laserjet-pro-p1102.webp",
+      "width": 1100,
+      "height": 810
+    },
+    "gallery": [
+      {
+        "filename": "hp-laserjet-pro-p1102-2.webp",
+        "width": 1100,
+        "height": 825
+      },
+      {
+        "filename": "hp-laserjet-pro-p1102-3.webp",
+        "width": 1100,
+        "height": 825
+      }
+    ]
+  },
+  {
+    "id": "hp-laserjet-m111w",
+    "categoryId": "printers",
+    "name": "HP LaserJet M111w, белый",
+    "summary": "Лазерная печать A4 · USB и Wi‑Fi",
+    "price": 12360,
+    "description": "Белый компактный HP LaserJet M111w для чёрно-белой печати. Поддерживает подключение по USB и Wi‑Fi, печатает до 20 страниц A4 в минуту.",
+    "specs": [
+      [
+        "Печать",
+        "чёрно-белая"
+      ],
+      [
+        "Скорость ч/б печати",
+        "20 стр/мин (A4)"
+      ],
+      [
+        "Разрешение ч/б печати",
+        "600 × 600 dpi"
+      ],
+      [
+        "Интерфейсы",
+        "USB Type-B, Wi-Fi"
+      ],
+      [
+        "Совместимые картриджи",
+        "HP 150A (W1500A)"
+      ]
+    ],
+    "image": {
+      "filename": "hp-laserjet-m111w.webp",
+      "width": 1099,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "hp-laserjet-m111w-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "hp-laserjet-m111w-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "brother-hl-l2400d",
+    "categoryId": "printers",
+    "name": "Brother HL-L2400D",
+    "summary": "Лазерная печать A4 · до 30 стр/мин",
+    "price": 11549,
+    "description": "Монохромный принтер Brother для документов A4. В характеристиках указана скорость до 30 страниц в минуту, подключение к компьютеру — по USB.",
+    "specs": [
+      [
+        "Печать",
+        "чёрно-белая"
+      ],
+      [
+        "Скорость ч/б печати",
+        "30 стр/мин (A4)"
+      ],
+      [
+        "Разрешение ч/б печати",
+        "1200 × 1200 dpi"
+      ],
+      [
+        "Интерфейсы",
+        "USB Type-B"
+      ],
+      [
+        "Совместимые картриджи",
+        "Brother TN-2570XL, Brother TN-2570XXL"
+      ]
+    ],
+    "image": {
+      "filename": "brother-hl-l2400d.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "brother-hl-l2400d-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "brother-hl-l2400d-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "canon-pixma-g3470",
+    "categoryId": "printers",
+    "name": "Canon PIXMA G3470, чёрное",
+    "summary": "Цветная печать · сканер · Wi‑Fi",
+    "price": 19770,
+    "description": "Чёрное струйное МФУ Canon PIXMA совмещает печать, копирование и сканирование. Поддерживает USB и Wi‑Fi, а чернила заправляются в резервуары.",
+    "specs": [
+      [
+        "Функции",
+        "копир, принтер, сканер"
+      ],
+      [
+        "Скорость ч/б печати",
+        "11 стр/мин (A4)"
+      ],
+      [
+        "Скорость цв. печати",
+        "6 стр/мин (A4)"
+      ],
+      [
+        "Разрешение цв. печати",
+        "1200 × 4800 dpi"
+      ],
+      [
+        "Интерфейсы",
+        "USB Type-B, Wi-Fi"
+      ],
+      [
+        "Совместимые картриджи",
+        "Canon GI-41 C, Canon GI-41 M, Canon GI-41 PGBK, Canon GI-41 Y"
+      ]
+    ],
+    "image": {
+      "filename": "canon-pixma-g3470.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "canon-pixma-g3470-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "canon-pixma-g3470-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "epson-l3250",
+    "categoryId": "printers",
+    "name": "Epson L3250, чёрное",
+    "summary": "Цветная печать · сканер · Wi‑Fi",
+    "price": 19944,
+    "description": "Epson L3250 подходит для цветной печати, копирования и сканирования. Устройство подключается по USB или Wi‑Fi и использует заправляемые ёмкости для чернил.",
+    "specs": [
+      [
+        "Функции",
+        "копир, принтер, сканер"
+      ],
+      [
+        "Скорость ч/б печати",
+        "10 стр/мин (A4)"
+      ],
+      [
+        "Скорость цв. печати",
+        "5 стр/мин (A4)"
+      ],
+      [
+        "Разрешение цв. печати",
+        "1440 × 5760 dpi"
+      ],
+      [
+        "Интерфейсы",
+        "USB Type-B, Wi-Fi"
+      ],
+      [
+        "Совместимые картриджи",
+        "Epson 003 (C13T00V198), Epson 003 (C13T00V298), Epson 003 (C13T00V398), Epson 003 (C13T00V498)"
+      ]
+    ],
+    "image": {
+      "filename": "epson-l3250.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "epson-l3250-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "epson-l3250-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "pantum-m6500w",
+    "categoryId": "printers",
+    "name": "Pantum M6500W, чёрное",
+    "summary": "Лазерное МФУ · до 22 стр/мин",
+    "price": 17234,
+    "description": "Чёрное Pantum M6500W печатает монохромные документы A4 и может работать как сканер или копир. Подключение возможно через USB или Wi‑Fi.",
+    "specs": [
+      [
+        "Печать",
+        "чёрно-белая"
+      ],
+      [
+        "Функции устройства",
+        "копир, принтер, сканер"
+      ],
+      [
+        "Скорость ч/б печати",
+        "22 стр/мин (A4)"
+      ],
+      [
+        "Разрешение ч/б печати",
+        "1200 × 1200 dpi"
+      ],
+      [
+        "Интерфейсы",
+        "USB, Wi-Fi"
+      ],
+      [
+        "Совместимые картриджи",
+        "Pantum P-230R, Pantum ПК-211EV"
+      ]
+    ],
+    "image": {
+      "filename": "pantum-m6500w.webp",
+      "width": 1100,
+      "height": 1100
+    },
+    "gallery": [
+      {
+        "filename": "pantum-m6500w-2.webp",
+        "width": 1100,
+        "height": 1100
+      },
+      {
+        "filename": "pantum-m6500w-3.webp",
+        "width": 1100,
+        "height": 1100
+      }
+    ]
   }
 ]

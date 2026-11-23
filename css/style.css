@@ -355,7 +355,7 @@ button { cursor: pointer; }
 .product-card__visual--iphone-18-pro { background: radial-gradient(ellipse at 48% 40%, #4e3142, #211720 75%); }
 .product-card__visual--iphone-18-pro img { mix-blend-mode: normal; }
 .product-card__visual--photo img { mix-blend-mode: normal; }
-.product-card__visual--photo { position: relative; background: #231c25; }
+.product-card__visual--photo { position: relative; background: #fff; }
 .product-card__visual--photo picture { position: absolute; inset: 6%; width: auto; height: auto; }
 .product-card__visual--iphone-18-pro picture { width: 95%; height: 90%; }
 .product-placeholder { color: #664457; font-size: clamp(4rem, 9vw, 7rem); line-height: 1; }
@@ -367,6 +367,8 @@ button { cursor: pointer; }
 .product-card__actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .7rem; }
 .product-card__actions { margin-top: auto; padding-top: .55rem; }
 .product-card__actions strong { font-size: 1.08rem; }
+.product-price { display: grid; gap: .16rem; }
+.product-price span { font-size: .82rem; color: var(--muted); }
 
 .breadcrumbs ol {
   display: flex;
@@ -405,23 +407,11 @@ button { cursor: pointer; }
   line-height: 1.2;
 }
 .category-tile__art {
-  position: relative;
-  height: clamp(6.4rem, 15vw, 10rem);
-  overflow: hidden;
-  isolation: isolate;
-  background: radial-gradient(ellipse at 43% 39%, var(--tile-light, #eee1e9), var(--tile-shade, #bfa3b8));
-}
-.category-tile--blush { --tile-light: #f4e6ea; --tile-shade: #c9a9b9; }
-.category-tile--cool { --tile-light: #e5e5f0; --tile-shade: #ada9c0; }
-.category-tile--violet { --tile-light: #ebd9e6; --tile-shade: #bba4c0; }
-.category-tile__art img {
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1.26;
   object-fit: cover;
+  background: #4c303e;
 }
-.category-tile__art--phones img { object-position: 50% 37%; }
 .catalog-filters { display: grid; gap: .9rem; padding: 1.1rem; min-width: 0; }
 .catalog-filters h2 { font-size: 1.26rem; }
 .filter-limits { display: flex; justify-content: space-between; gap: .55rem; color: var(--muted); font-size: .8rem; }
@@ -458,6 +448,22 @@ button { cursor: pointer; }
 .product-overview, .product-description { display: grid; grid-template-columns: minmax(0, 1fr); }
 .product-overview { overflow: hidden; }
 .product-overview .product-detail__visual { aspect-ratio: 1.13; }
+.product-gallery { min-width: 0; align-self: stretch; background: var(--surface); }
+.product-gallery__thumbs { display: flex; justify-content: center; gap: .55rem; padding: .7rem; }
+.product-gallery__thumbs button {
+  display: grid;
+  place-items: center;
+  inline-size: clamp(3.55rem, 10vw, 4.5rem);
+  aspect-ratio: 1;
+  overflow: hidden;
+  padding: .25rem;
+  border: 2px solid transparent;
+  border-radius: .55rem;
+  background: #fff;
+  cursor: pointer;
+}
+.product-gallery__thumbs button[aria-pressed="true"] { border-color: #da5a79; }
+.product-gallery__thumbs img { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
 .product-overview .product-card__visual--iphone-18-pro {
   background: radial-gradient(ellipse at 52% 36%, #795065, #4d3048 44%, #211824 100%);
 }
@@ -474,7 +480,7 @@ button { cursor: pointer; }
   overflow-wrap: anywhere;
 }
 .product-facts dt { color: var(--muted); }
-.product-overview__spec-link, .product-description a { color: var(--accent); font-size: .9rem; }
+.product-overview__spec-link { color: var(--accent); font-size: .9rem; }
 .product-purchase {
   display: flex;
   flex-wrap: wrap;
@@ -488,8 +494,6 @@ button { cursor: pointer; }
   background: #2a1d29;
 }
 .product-purchase strong { display: block; font-size: clamp(1.16rem, 2.1vw, 1.45rem); }
-.product-purchase > div a { font-size: .84rem; color: var(--muted); }
-.product-purchase__note { font-size: .84rem; color: var(--muted); }
 .product-description { gap: clamp(1.2rem, 4vw, 2.5rem); padding-top: clamp(1.3rem, 3.6vw, 2.5rem); }
 .product-description p { margin-block: .85rem; color: var(--muted); max-width: 42ch; }
 .product-table { border-collapse: collapse; width: 100%; table-layout: fixed; color: #f7ebf2; }
@@ -497,7 +501,6 @@ button { cursor: pointer; }
 .product-table :is(td, th) { border-bottom: 1px solid var(--line); padding: .55rem .3rem; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
 .product-table th { color: var(--muted); font-weight: 550; }
 .product-table th:first-child { width: 39%; }
-.product-credits { margin-top: 1.1rem; font-size: .875rem; color: var(--muted); overflow-wrap: anywhere; }
 
 .order-form { padding: clamp(1rem, 3.8vw, 2rem); width: min(100%, 52rem); margin-block: 1.6rem clamp(2rem, 5vw, 4rem); }
 .consent { display: flex; align-items: center; gap: .55rem; min-height: 2.75rem; }

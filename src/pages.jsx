@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Breadcrumbs, ProductCard, ProductImage } from './components';
+import { Breadcrumbs, ProductCard, ProductGallery } from './components';
 import { catalogProducts, categories, categoriesById, demoCategoryIds, findCategory } from './catalog-data';
 import { HomeShowcase } from './phone-hero';
 import {
@@ -100,17 +100,12 @@ export function Catalog({ query }) {
       <Breadcrumbs current="Каталог" />
       <div className="page-heading"><h1>Каталог техники</h1></div>
       <div className="category-grid section" aria-label="Категории каталога">
-        {categories.map(({ id, name, theme, preview }) => {
-          const product = catalogProducts.find((item) => preview ? item.id === preview : item.categoryId === id);
-          return (
-            <a key={id} className={`category-tile category-tile--${theme}`} href={categoryUrl(id)}>
-              <div className={`category-tile__art category-tile__art--${id}`}>
-                {product && <img src={imageUrl(product.image.filename)} alt="" loading="lazy" decoding="async" />}
-              </div>
-              <h2>{name}</h2>
-            </a>
-          );
-        })}
+        {categories.map(({ id, name }) => (
+          <a key={id} className="category-tile" href={categoryUrl(id)}>
+            <img className="category-tile__art" src={imageUrl(`category-${id}.webp`)} alt="" loading="lazy" decoding="async" />
+            <h2>{name}</h2>
+          </a>
+        ))}
       </div>
     </>
   );
@@ -202,7 +197,6 @@ export function Product({ query }) {
   const product = products.find(({ id }) => id === query.get('id'));
   const title = product?.name ?? 'Товар не найден';
   const category = product && categoriesById.get(product.categoryId ?? demoCategoryIds[product.id]);
-  const photoCredit = product?.image?.credit;
   useEffect(() => { document.title = `${title} — Corekit`; }, [title]);
 
   return (
@@ -211,9 +205,7 @@ export function Product({ query }) {
       {product ? (
         <article className="product-page section">
           <div className="product-overview surface">
-            <div className={`product-detail__visual product-card__visual--${product.id}${photoCredit ? ' product-card__visual--photo' : ''}`}>
-              <ProductImage product={product} kind="detail" eager />
-            </div>
+            <ProductGallery key={product.id} product={product} />
             <div className="product-overview__info">
               {category && <a className="category-label" href={categoryUrl(category.id)}>{category.name}</a>}
               <h1>{product.name}</h1>
@@ -223,12 +215,9 @@ export function Product({ query }) {
               </dl>
               <a className="product-overview__spec-link" href="#product-specifications">Все характеристики</a>
               <div className="product-purchase">
-                <div>
+                <div className="product-price">
+                  <span>Цена</span>
                   <strong>{formatPrice(product.price)}</strong>
-                  {product.priceSource && <a href={product.priceSource.url}>
-                    Цена по данным {product.priceSource.name} · {product.priceSource.date}
-                  </a>}
-                  {product.priceSource?.note && <p className="product-purchase__note">{product.priceSource.note}</p>}
                 </div>
                 <a className="button button--primary" href={orderUrl(product)}>Оставить заявку</a>
               </div>
@@ -238,7 +227,6 @@ export function Product({ query }) {
             <section aria-labelledby="product-description-title">
               <h2 id="product-description-title">Описание</h2>
               <p>{product.description}</p>
-              {product.specSource && <a href={product.specSource.url}>Характеристики · {product.specSource.name}</a>}
             </section>
             <table className="product-table" id="product-specifications">
               <caption>Характеристики</caption>
@@ -248,13 +236,6 @@ export function Product({ query }) {
               </tbody>
             </table>
           </div>
-          {photoCredit && (
-            <p className="product-credits">
-              <a href={photoCredit.url}>Фото · Wikimedia Commons</a> · {photoCredit.author} ·{' '}
-              <a href={photoCredit.licenseUrl}>{photoCredit.license}</a>
-              {photoCredit.changes && ` · ${photoCredit.changes}`}
-            </p>
-          )}
         </article>
       ) : (
         <section className="section">

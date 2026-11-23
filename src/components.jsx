@@ -117,8 +117,7 @@ const cardSizes = '(min-width: 1380px) 310px, (min-width: 1024px) 23vw, (min-wid
 const catalogSizes = '(min-width: 1380px) 240px, (min-width: 1280px) 18vw, (min-width: 1024px) 27vw, (min-width: 640px) 34vw, 69vw';
 const detailSizes = '(min-width: 1380px) 475px, (min-width: 900px) 34vw, 69vw';
 
-export function ProductImage({ product, kind = 'card', eager = false, decorative = false }) {
-  const image = product.image;
+export function ProductImage({ product, image = product.image, kind = 'card', eager = false, decorative = false }) {
   if (!image) return <span className="product-placeholder" aria-hidden="true">▧</span>;
   const sizes = kind === 'detail' ? detailSizes : kind === 'catalog' ? catalogSizes : cardSizes;
   const srcset = image.variants?.map(([file, width]) => `${imageUrl(file)} ${width}w`).join(', ');
@@ -131,11 +130,35 @@ export function ProductImage({ product, kind = 'card', eager = false, decorative
   );
 }
 
+export function ProductGallery({ product }) {
+  const [selected, setSelected] = useState(0);
+  const photos = [product.image, ...(product.gallery ?? [])];
+  const photoStyle = product.gallery?.length ? ' product-card__visual--photo' : '';
+
+  return (
+    <div className="product-gallery">
+      <div className={`product-detail__visual product-card__visual--${product.id}${photoStyle}`}>
+        <ProductImage product={product} image={photos[selected]} kind="detail" eager />
+      </div>
+      {photos.length > 1 && (
+        <div className="product-gallery__thumbs" role="group" aria-label="Фотографии товара">
+          {photos.map((photo, index) => (
+            <button key={photo.filename} type="button" aria-label={`Фото ${index + 1} из ${photos.length}`}
+              aria-pressed={selected === index} onClick={() => setSelected(index)}>
+              <img src={imageUrl(photo.filename)} alt="" loading="lazy" decoding="async" />
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function ProductCard({ product, kind, titleTag = 'h3' }) {
   const Title = titleTag;
   return (
     <article className="product-card">
-      <a href={productUrl(product)} className={`product-card__visual product-card__visual--${product.id}${product.image?.credit ? ' product-card__visual--photo' : ''}`}
+      <a href={productUrl(product)} className={`product-card__visual product-card__visual--${product.id}${product.gallery?.length ? ' product-card__visual--photo' : ''}`}
         aria-label={`Подробнее о товаре «${product.name}»`}>
         <ProductImage product={product} kind={kind} decorative />
       </a>
@@ -144,7 +167,10 @@ export function ProductCard({ product, kind, titleTag = 'h3' }) {
         <Title><a href={productUrl(product)}>{product.name}</a></Title>
         <p>{product.summary}</p>
         <div className="product-card__actions">
-          <strong>{formatPrice(product.price)}</strong>
+          <div className="product-price">
+            <span>Цена</span>
+            <strong>{formatPrice(product.price)}</strong>
+          </div>
           <a className="button button--quiet" href={orderUrl(product)} aria-label={`Заявка на товар «${product.name}»`}>Заявка</a>
         </div>
       </div>
