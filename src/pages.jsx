@@ -10,17 +10,21 @@ export function Home() {
   return (
     <>
       <HomeShowcase />
-      <ProductCarousel id="popular" title="Хиты продаж" trackLabel="Лента хитов продаж" items={popular} showCatalogLink />
+      <ProductCarousel id="popular" title="Хиты продаж" trackLabel="Лента хитов продаж" items={popular} />
       <ProductCarousel id="new-arrivals" title="Новинки" trackLabel="Лента новинок" items={newArrivals} />
     </>
   );
 }
 
-function ProductCarousel({ id, title, trackLabel, items, showCatalogLink = false }) {
+const carouselPageSize = 5;
+
+function ProductCarousel({ id, title, trackLabel, items }) {
   const track = useRef(null);
   const [visibleCount, setVisibleCount] = useState(1);
   const [activeIndex, setActiveIndex] = useState(0);
   const lastIndex = Math.max(0, items.length - visibleCount);
+  const pageCount = Math.ceil(items.length / carouselPageSize);
+  const activePage = Math.floor(activeIndex / carouselPageSize);
   const titleId = `${id}-title`;
   const trackId = `${id}-products`;
 
@@ -56,15 +60,15 @@ function ProductCarousel({ id, title, trackLabel, items, showCatalogLink = false
       <div className="container">
         <div className="section-heading">
           <h2 id={titleId}>{title}</h2>
-          {lastIndex > 0 && (
-            <div className="slide-dots" role="group" aria-label="Позиции в ряду товаров">
-              {Array.from({ length: lastIndex + 1 }, (_, index) => (
-                <button key={index} type="button" aria-controls={trackId}
-                  aria-label={visibleCount === 1
-                    ? `Показать товар «${items[index].name}»`
-                    : `Показать товары с ${index + 1} по ${index + visibleCount}`}
-                  aria-pressed={Math.min(activeIndex, lastIndex) === index} onClick={() => goTo(index)} />
-              ))}
+          {pageCount > 1 && (
+            <div className="slide-dots" role="group" aria-label={`Страницы раздела «${title}»`}>
+              {Array.from({ length: pageCount }, (_, page) => {
+                const start = page * carouselPageSize;
+                const end = Math.min(start + carouselPageSize, items.length);
+                return <button key={start} type="button" aria-controls={trackId}
+                  aria-label={`Страница ${page + 1} из ${pageCount}, товары ${start + 1}–${end}`}
+                  aria-pressed={activePage === page} onClick={() => goTo(start)} />;
+              })}
             </div>
           )}
         </div>
@@ -72,18 +76,17 @@ function ProductCarousel({ id, title, trackLabel, items, showCatalogLink = false
           role="region" aria-label={trackLabel} onScroll={(event) => updateActive(event.currentTarget)}
           onKeyDown={(event) => {
             if (event.target !== event.currentTarget) return;
-            const positions = { ArrowLeft: activeIndex - 1, ArrowRight: activeIndex + 1, Home: 0, End: lastIndex };
+            const step = visibleCount === carouselPageSize ? carouselPageSize : 1;
+            const positions = { ArrowLeft: activeIndex - step, ArrowRight: activeIndex + step, Home: 0, End: lastIndex };
             if (!Object.hasOwn(positions, event.key)) return;
             event.preventDefault();
             goTo(positions[event.key]);
           }}>
           {items.map((product) => <ProductCard key={product.id} product={product} />)}
         </div>
-        {showCatalogLink && (
-          <div className="product-carousel__footer">
-            <a className="button button--outline" href={pageUrl('products')}>Все товары</a>
-          </div>
-        )}
+        <div className="product-carousel__footer">
+          <a className="button button--outline" href={pageUrl('products')}>Все товары</a>
+        </div>
       </div>
     </section>
   );
