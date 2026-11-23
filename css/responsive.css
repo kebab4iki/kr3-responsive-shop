@@ -65,7 +65,7 @@ img, video { display: block; max-width: 100%; height: auto; }
     padding: 0;
     pointer-events: none;
   }
-  .home-showcase__navigation { pointer-events: auto; }
+  .home-showcase__toggle { pointer-events: auto; }
   .hero__art { height: var(--banner-height); aspect-ratio: auto; }
   .hero__footer {
     position: absolute;
@@ -123,6 +123,8 @@ img, video { display: block; max-width: 100%; height: auto; }
   .page-main--home { padding-top: 0; }
   .product-overview { grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); align-items: center; }
   .product-description { grid-template-columns: minmax(0, 1fr) minmax(0, 1.65fr); align-items: start; }
+  .home-faq__layout { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+  .home-faq h2 { max-width: 11ch; }
 }
 
 @media (min-width: 960px) {
@@ -152,6 +154,6 @@ img, video { display: block; max-width: 100%; height: auto; }
   .button { transition: none; }
   .home-showcase__viewport { transition: none; }
   .home-showcase__slide--leaving { visibility: hidden; }
-  .home-showcase__slide--entering, .home-showcase__navigation { animation: none; }
+  .home-showcase__slide--entering, .home-showcase__toggle { animation: none; }
   .slide-dots button::before { transition: none; }
 }
