@@ -2,23 +2,27 @@ import { useEffect, useRef, useState } from 'react';
 import { Breadcrumbs, ProductCard, ProductImage } from './components';
 import { HomeShowcase } from './phone-hero';
 import {
-  categories, categoryFromQuery, filterUrl, formatPrice, orderUrl, pageUrl, phone, popular, products, productUrl,
+  categories, categoryFromQuery, filterUrl, formatPrice, newArrivals, orderUrl, pageUrl,
+  phone, popular, products, productUrl, storeContact,
 } from './shop';
 
 export function Home() {
   return (
     <>
       <HomeShowcase />
-      <SalesHits />
+      <ProductCarousel id="popular" title="Хиты продаж" trackLabel="Лента хитов продаж" items={popular} showCatalogLink />
+      <ProductCarousel id="new-arrivals" title="Новинки" trackLabel="Лента новинок" items={newArrivals} />
     </>
   );
 }
 
-function SalesHits() {
+function ProductCarousel({ id, title, trackLabel, items, showCatalogLink = false }) {
   const track = useRef(null);
   const [visibleCount, setVisibleCount] = useState(1);
   const [activeIndex, setActiveIndex] = useState(0);
-  const lastIndex = Math.max(0, popular.length - visibleCount);
+  const lastIndex = Math.max(0, items.length - visibleCount);
+  const titleId = `${id}-title`;
+  const trackId = `${id}-products`;
 
   function cardStep(element) {
     const [first, second] = element.children;
@@ -38,7 +42,7 @@ function SalesHits() {
   useEffect(() => {
     const element = track.current;
     function measure() {
-      setVisibleCount(Number(getComputedStyle(element).getPropertyValue('--hits-visible')));
+      setVisibleCount(Number(getComputedStyle(element).getPropertyValue('--carousel-visible')));
       updateActive(element);
     }
     const observer = new ResizeObserver(measure);
@@ -48,24 +52,24 @@ function SalesHits() {
   }, []);
 
   return (
-    <section className="section popular" id="popular" aria-labelledby="popular-title">
+    <section className="section product-carousel" id={id} aria-labelledby={titleId}>
       <div className="container">
         <div className="section-heading">
-          <h2 id="popular-title">Хиты продаж</h2>
+          <h2 id={titleId}>{title}</h2>
           {lastIndex > 0 && (
             <div className="slide-dots" role="group" aria-label="Позиции в ряду товаров">
               {Array.from({ length: lastIndex + 1 }, (_, index) => (
-                <button key={index} type="button" aria-controls="popular-products"
+                <button key={index} type="button" aria-controls={trackId}
                   aria-label={visibleCount === 1
-                    ? `Показать товар «${popular[index].name}»`
+                    ? `Показать товар «${items[index].name}»`
                     : `Показать товары с ${index + 1} по ${index + visibleCount}`}
                   aria-pressed={Math.min(activeIndex, lastIndex) === index} onClick={() => goTo(index)} />
               ))}
             </div>
           )}
         </div>
-        <div id="popular-products" className="popular__track" ref={track} tabIndex={0}
-          role="region" aria-label="Лента хитов продаж" onScroll={(event) => updateActive(event.currentTarget)}
+        <div id={trackId} className="product-carousel__track" ref={track} tabIndex={0}
+          role="region" aria-label={trackLabel} onScroll={(event) => updateActive(event.currentTarget)}
           onKeyDown={(event) => {
             if (event.target !== event.currentTarget) return;
             const positions = { ArrowLeft: activeIndex - 1, ArrowRight: activeIndex + 1, Home: 0, End: lastIndex };
@@ -73,11 +77,13 @@ function SalesHits() {
             event.preventDefault();
             goTo(positions[event.key]);
           }}>
-          {popular.map((product) => <ProductCard key={product.id} product={product} />)}
+          {items.map((product) => <ProductCard key={product.id} product={product} />)}
         </div>
-        <div className="popular__footer">
-          <a className="button button--outline" href={pageUrl('products')}>Все товары</a>
-        </div>
+        {showCatalogLink && (
+          <div className="product-carousel__footer">
+            <a className="button button--outline" href={pageUrl('products')}>Все товары</a>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -281,9 +287,11 @@ export function Contacts() {
         <section className="surface contact-panel">
           <h2>Связаться с Corekit</h2>
           <address>
-            <div><span>Телефон</span><a href="tel:+79000000000">+7 (900) 000-00-00</a></div>
-            <div><span>Электронная почта</span><a href="mailto:info@example.com">info@example.com</a></div>
+            <div><span>Телефон</span><a href={storeContact.phoneHref}>{storeContact.phone}</a></div>
+            <div><span>Электронная почта</span><a href={`mailto:${storeContact.email}`}>{storeContact.email}</a></div>
             <div><span>Город</span><strong>Москва</strong></div>
+            <div><span>Адрес</span><strong>{storeContact.address}</strong></div>
+            <div><span>Режим работы</span><strong>{storeContact.hours}</strong></div>
           </address>
         </section>
         <section className="surface contact-panel">
