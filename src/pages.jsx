@@ -5,6 +5,7 @@ import {
 } from './catalog-data';
 import { iphone18Title } from './iphone-18-pro';
 import { HomeFaq } from './home-faq';
+import { HomeReviews } from './home-reviews';
 import { HomeShowcase } from './phone-hero';
 import {
   categoryUrl, formatPrice, imageUrl, orderUrl, pageUrl, products, productUrl, storeContact,
@@ -16,6 +17,7 @@ export function Home() {
       <HomeShowcase />
       <ProductCarousel id="popular" title="Хиты продаж" trackLabel="Лента хитов продаж" items={popular} />
       <ProductCarousel id="new-arrivals" title="Новинки" trackLabel="Лента новинок" items={newArrivals} />
+      <HomeReviews />
       <HomeFaq />
     </>
   );
