@@ -1,7 +1,25 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const reviewPrefix = 'corekit.review.v1.';
 const dateFormat = new Intl.DateTimeFormat('ru-RU', { dateStyle: 'medium' });
+const ratingFormat = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 1 });
+const sampleReviews = [
+  { key: 'sample-anna', name: 'Анна', rating: 5, text: 'На странице iPhone удобно переключаться между цветами. Сразу видно, как выглядит каждый вариант.' },
+  { key: 'sample-mikhail', name: 'Михаил', rating: 5, text: 'Быстро нашёл мониторы в каталоге. Цена и основные характеристики видны сразу при открытии товара.' },
+  { key: 'sample-elena', name: 'Елена', rating: 4, text: 'У наушников можно рассмотреть разные ракурсы. Хотелось бы ещё увеличивать фото.' },
+  { key: 'sample-artem', name: 'Артём', rating: 5, text: 'Добавил клавиатуру и мышь в корзину. Удобно, что итоговая сумма сразу пересчитывается.' },
+  { key: 'sample-darya', name: 'Дарья', rating: 4, text: 'В новинках легко пролистать подборку. Было бы удобно ещё сортировать товары по цене.' },
+  { key: 'sample-ivan', name: 'Иван', rating: 5, text: 'Зашёл с телефона, открыл карточку ноутбука и быстро нашёл нужные характеристики.' },
+];
+
+function RatingStars({ rating, label = `Оценка ${rating} из 5` }) {
+  return (
+    <span className="review-stars" role="img" aria-label={label}>
+      <span aria-hidden="true">☆☆☆☆☆</span>
+      <span className="review-stars__filled" aria-hidden="true" style={{ width: `${rating * 20}%` }}>★★★★★</span>
+    </span>
+  );
+}
 
 function readReviews() {
   const reviews = [];
@@ -30,6 +48,10 @@ function readReviews() {
 export function HomeReviews() {
   const [reviews, setReviews] = useState(readReviews);
   const [status, setStatus] = useState('');
+  const reviewList = useRef(null);
+  const allReviews = [...reviews, ...sampleReviews];
+  const average = allReviews.reduce((sum, review) => sum + review.rating, 0) / allReviews.length;
+  const formattedAverage = ratingFormat.format(average);
 
   useEffect(() => {
     function syncReviews(event) {
@@ -66,7 +88,10 @@ export function HomeReviews() {
     }
     const createdAt = Date.now();
     const id = globalThis.crypto?.randomUUID?.() ?? `${createdAt}-${Math.random().toString(36).slice(2)}`;
-    if (saveReview(reviewPrefix + id, { name, text, rating, createdAt })) form.reset();
+    if (saveReview(reviewPrefix + id, { name, text, rating, createdAt })) {
+      form.reset();
+      reviewList.current.scrollTop = 0;
+    }
   }
 
   return (
@@ -97,24 +122,31 @@ export function HomeReviews() {
             </div>
           </form>
           <div className="review-list">
-            <h3>Ваши отзывы</h3>
-            <p className="review-list__note">Отзывы сохраняются в этом браузере.</p>
-            {reviews.length === 0 && <p className="surface review-list__empty">Отзывов пока нет.</p>}
-            {reviews.map(({ key, name, text, rating, createdAt }) => (
-              <article className="surface review-card" key={key}>
-                <div className="review-card__header">
-                  <h4>{name}</h4>
-                  <span className="review-card__rating" aria-label={`Оценка ${rating} из 5`}>
-                    <span aria-hidden="true">★</span> {rating}/5
-                  </span>
-                </div>
-                <p>{text}</p>
-                <div className="review-card__footer">
-                  <time dateTime={new Date(createdAt).toISOString()}>{dateFormat.format(createdAt)}</time>
-                  <button className="button button--quiet" type="button" onClick={() => saveReview(key)}>Удалить отзыв</button>
-                </div>
-              </article>
-            ))}
+            <div className="review-list__header">
+              <h3>Все отзывы</h3>
+              <div className="review-list__rating">
+                <RatingStars rating={average} label={`Средняя оценка ${formattedAverage} из 5 по всем отзывам`} />
+                <strong aria-hidden="true">{formattedAverage}</strong>
+              </div>
+            </div>
+            <p className="review-list__note">Ваши отзывы сохраняются в этом браузере.</p>
+            <div className="review-list__scroll" ref={reviewList} role="region" aria-label="Список отзывов" tabIndex={0}>
+              {allReviews.map(({ key, name, text, rating, createdAt }) => (
+                <article className="surface review-card" key={key}>
+                  <div className="review-card__header">
+                    <h4>{name}</h4>
+                    <RatingStars rating={rating} />
+                  </div>
+                  <p>{text}</p>
+                  <div className="review-card__footer">
+                    {createdAt === undefined ? <span>Пример отзыва</span> : <>
+                      <time dateTime={new Date(createdAt).toISOString()}>{dateFormat.format(createdAt)}</time>
+                      <button className="button button--quiet" type="button" onClick={() => saveReview(key)}>Удалить отзыв</button>
+                    </>}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </div>
