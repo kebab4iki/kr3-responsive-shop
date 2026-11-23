@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Breadcrumbs, ProductCard, ProductImage } from './components';
+import { catalogProducts, categories, categoriesById, demoCategoryIds, findCategory } from './catalog-data';
 import { HomeShowcase } from './phone-hero';
 import {
-  categories, categoryFromQuery, filterUrl, formatPrice, newArrivals, orderUrl, pageUrl,
+  categoryUrl, formatPrice, imageUrl, newArrivals, orderUrl, pageUrl,
   phone, popular, products, productUrl, storeContact,
 } from './shop';
 
@@ -92,40 +93,75 @@ function ProductCarousel({ id, title, trackLabel, items }) {
   );
 }
 
-const maxPrice = Math.max(...products.map(({ price }) => price ?? 0));
-
-function CategoryLinks({ selected }) {
+export function Catalog({ query }) {
+  if (query.has('category') || query.has('id')) return <Category query={query} />;
   return (
-    <nav className="category-links" aria-label="Категории каталога">
-      <a href={pageUrl('catalog')} aria-current={selected === 'all' ? 'page' : undefined}>Все категории</a>
-      {categories.map(({ id, name, label }) =>
-        <a key={id} href={filterUrl(name)} aria-current={selected === name ? 'page' : undefined}>{label}</a>
-      )}
-    </nav>
+    <>
+      <Breadcrumbs current="Каталог" />
+      <div className="page-heading"><h1>Каталог техники</h1></div>
+      <div className="category-grid section" aria-label="Категории каталога">
+        {categories.map(({ id, name, theme, preview }) => {
+          const product = catalogProducts.find((item) => preview ? item.id === preview : item.categoryId === id);
+          return (
+            <a key={id} className={`category-tile category-tile--${theme}`} href={categoryUrl(id)}>
+              <div className={`category-tile__art category-tile__art--${id}`}>
+                {product && <img src={imageUrl(product.image.filename)} alt="" loading="lazy" decoding="async" />}
+              </div>
+              <h2>{name}</h2>
+            </a>
+          );
+        })}
+      </div>
+    </>
   );
 }
 
-export function Catalog({ entry, query }) {
+function CatalogGrid({ items, emptyMessage }) {
+  return (
+    <section aria-label="Список товаров">
+      {items.length ? (
+        <div className="products-grid products-grid--catalog">
+          {items.map((product) => <ProductCard key={product.id} product={product} kind="catalog" titleTag="h2" />)}
+        </div>
+      ) : <p className="surface empty-state">{emptyMessage}</p>}
+    </section>
+  );
+}
+
+export function Category({ query }) {
+  const category = findCategory(query.get('category') ?? query.get('id'));
+  const title = category?.name ?? 'Категория не найдена';
+  const ids = category?.ids ?? [category?.id];
+  const items = catalogProducts.filter(({ categoryId }) => ids.includes(categoryId));
+  useEffect(() => { document.title = `${title} — Corekit`; }, [title]);
+  return (
+    <>
+      <Breadcrumbs current={title} links={[[pageUrl('catalog'), 'Каталог']]} />
+      <div className="page-heading"><h1>{title}</h1></div>
+      <div className="section">
+        <CatalogGrid items={items} emptyMessage="В этой категории пока нет товаров." />
+      </div>
+    </>
+  );
+}
+
+const maxPrice = Math.max(0, ...catalogProducts.map(({ price }) => price ?? 0));
+
+export function AllProducts({ query }) {
   const [search, setSearch] = useState('');
-  const [category, setCategory] = useState(categoryFromQuery(query));
+  const [category, setCategory] = useState(() => findCategory(query.get('category'))?.id ?? 'all');
   const [price, setPrice] = useState(maxPrice);
   const term = search.trim().toLocaleLowerCase('ru');
-  const filtered = products.filter((product) =>
+  const filtered = catalogProducts.filter((product) =>
     product.name.toLocaleLowerCase('ru').includes(term)
-    && (category === 'all' || product.category === category)
+    && (category === 'all' || product.categoryId === category)
     && (price === maxPrice || (product.price != null && product.price <= price))
   );
-  const categoryLabel = categories.find(({ name }) => name === category)?.label;
-  const title = entry === 'category' && categoryLabel ? categoryLabel : entry === 'products' ? 'Все товары' : 'Каталог техники';
 
   return (
     <>
-      <Breadcrumbs current={title} links={entry === 'catalog' ? [] : [[pageUrl('catalog'), 'Каталог']]} />
-      <div className="page-heading">
-        <h1>{title}</h1>
-        <p>Подбери технику по названию, категории и цене.</p>
-      </div>
-      <CategoryLinks selected={category} />
+      <Breadcrumbs current="Все товары" links={[[pageUrl('catalog'), 'Каталог']]} />
+      <div className="page-heading"><h1>Все товары</h1></div>
       <div className="catalog-layout section">
         <aside className="catalog-filters surface" aria-labelledby="filter-title">
           <h2 id="filter-title">Подбор товаров</h2>
@@ -138,12 +174,12 @@ export function Catalog({ entry, query }) {
             <label htmlFor="catalog-category">Категория</label>
             <select id="catalog-category" value={category} onChange={(event) => setCategory(event.target.value)}>
               <option value="all">Все категории</option>
-              {categories.map(({ id, name, label }) => <option key={id} value={name}>{label}</option>)}
+              {categories.map(({ id, name }) => <option key={id} value={id}>{name}</option>)}
             </select>
           </div>
           <div className="field">
             <label htmlFor="catalog-price">Цена до <output htmlFor="catalog-price">{formatPrice(price)}</output></label>
-            <input id="catalog-price" type="range" min="0" max={maxPrice} step="500" value={price}
+            <input id="catalog-price" type="range" min="0" max={maxPrice} value={price}
               onChange={(event) => setPrice(Number(event.target.value))} />
             <div className="filter-limits"><span>0 ₽</span><span>{formatPrice(maxPrice)}</span></div>
           </div>
@@ -153,14 +189,10 @@ export function Catalog({ entry, query }) {
             setPrice(maxPrice);
           }}>Сбросить фильтры</button>
         </aside>
-        <section aria-label="Список товаров" className="catalog-results">
+        <div className="catalog-results">
           <p className="count" role="status">Найдено товаров: {filtered.length}</p>
-          {filtered.length ? (
-            <div className="products-grid products-grid--catalog">
-              {filtered.map((product) => <ProductCard key={product.id} product={product} kind="catalog" titleTag="h2" />)}
-            </div>
-          ) : <p className="surface empty-state">По выбранным параметрам товары не найдены.</p>}
-        </section>
+          <CatalogGrid items={filtered} emptyMessage="По выбранным параметрам товары не найдены." />
+        </div>
       </div>
     </>
   );
@@ -169,34 +201,60 @@ export function Catalog({ entry, query }) {
 export function Product({ query }) {
   const product = products.find(({ id }) => id === query.get('id'));
   const title = product?.name ?? 'Товар не найден';
+  const category = product && categoriesById.get(product.categoryId ?? demoCategoryIds[product.id]);
+  const photoCredit = product?.image?.credit;
   useEffect(() => { document.title = `${title} — Corekit`; }, [title]);
 
   return (
     <>
-      <Breadcrumbs links={[[pageUrl('catalog'), 'Каталог']]} current={title} />
+      <Breadcrumbs links={[[pageUrl('catalog'), 'Каталог'], ...(category ? [[categoryUrl(category.id), category.name]] : [])]} current={title} />
       {product ? (
-        <article className="section product-detail">
-          <div className={`product-detail__visual product-card__visual--${product.id}`}>
-            <ProductImage product={product} kind="detail" eager />
-          </div>
-          <div className="product-detail__content">
-            <a className="category-label" href={filterUrl(product.category)}>{product.category}</a>
-            <h1>{product.name}</h1>
-            <p className="product-detail__description">{product.description}</p>
-            <div className="detail-actions">
-              <strong>{formatPrice(product.price)}</strong>
-              <a className="button button--primary" href={orderUrl(product)}>Оставить заявку</a>
+        <article className="product-page section">
+          <div className="product-overview surface">
+            <div className={`product-detail__visual product-card__visual--${product.id}${photoCredit ? ' product-card__visual--photo' : ''}`}>
+              <ProductImage product={product} kind="detail" eager />
             </div>
-            <div className="table-wrapper" tabIndex={0} role="region" aria-label={`Характеристики товара ${product.name}`}>
-              <table className="product-table">
-                <caption>Характеристики</caption>
-                <thead><tr><th scope="col">Параметр</th><th scope="col">Значение</th></tr></thead>
-                <tbody>
-                  {product.specs.map(([label, value]) => <tr key={label}><th scope="row">{label}</th><td>{value}</td></tr>)}
-                </tbody>
-              </table>
+            <div className="product-overview__info">
+              {category && <a className="category-label" href={categoryUrl(category.id)}>{category.name}</a>}
+              <h1>{product.name}</h1>
+              <p className="product-page__summary">{product.summary}</p>
+              <dl className="product-facts">
+                {product.specs.slice(0, 3).map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
+              </dl>
+              <a className="product-overview__spec-link" href="#product-specifications">Все характеристики</a>
+              <div className="product-purchase">
+                <div>
+                  <strong>{formatPrice(product.price)}</strong>
+                  {product.priceSource && <a href={product.priceSource.url}>
+                    Цена по данным {product.priceSource.name} · {product.priceSource.date}
+                  </a>}
+                  {product.priceSource?.note && <p className="product-purchase__note">{product.priceSource.note}</p>}
+                </div>
+                <a className="button button--primary" href={orderUrl(product)}>Оставить заявку</a>
+              </div>
             </div>
           </div>
+          <div className="product-description">
+            <section aria-labelledby="product-description-title">
+              <h2 id="product-description-title">Описание</h2>
+              <p>{product.description}</p>
+              {product.specSource && <a href={product.specSource.url}>Характеристики · {product.specSource.name}</a>}
+            </section>
+            <table className="product-table" id="product-specifications">
+              <caption>Характеристики</caption>
+              <thead><tr><th scope="col">Параметр</th><th scope="col">Значение</th></tr></thead>
+              <tbody>
+                {product.specs.map(([label, value]) => <tr key={label}><th scope="row">{label}</th><td>{value}</td></tr>)}
+              </tbody>
+            </table>
+          </div>
+          {photoCredit && (
+            <p className="product-credits">
+              <a href={photoCredit.url}>Фото · Wikimedia Commons</a> · {photoCredit.author} ·{' '}
+              <a href={photoCredit.licenseUrl}>{photoCredit.license}</a>
+              {photoCredit.changes && ` · ${photoCredit.changes}`}
+            </p>
+          )}
         </article>
       ) : (
         <section className="section">

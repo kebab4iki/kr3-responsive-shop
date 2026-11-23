@@ -1,4 +1,5 @@
 import originalProducts from './products.json';
+import { catalogProducts } from './catalog-data';
 
 export const phoneFinishes = ['Black', 'Burgundy', 'Glacier', 'Silver'];
 
@@ -23,7 +24,7 @@ export const phone = {
   },
 };
 
-export const products = [...originalProducts, phone];
+export const products = [...catalogProducts, ...originalProducts, phone];
 export const popular = [
   'notebook', 'headphones', 'keyboard', 'monitor', 'mouse',
   'kolonki', 'gamepad', 'power-bank', 'external-ssd', 'usb-hub',
@@ -42,13 +43,6 @@ export const storeContact = {
   phoneHref: 'tel:+79000000000',
   email: 'info@example.com',
 };
-
-export const categories = [
-  { id: 'computers', name: 'Компьютеры', label: 'Компьютерная техника', featured: 'notebook' },
-  { id: 'accessories', name: 'Аксессуары', label: 'Аксессуары', featured: 'keyboard' },
-  { id: 'network', name: 'Сеть', label: 'Сетевое оборудование', featured: 'router' },
-  { id: 'phones', name: 'Смартфоны', label: 'Смартфоны', featured: phone.id },
-];
 
 export const standalone = document.documentElement.hasAttribute('data-corekit-standalone');
 
@@ -77,8 +71,8 @@ export function orderUrl(product) {
   return pageUrl('order', { product: product.name });
 }
 
-export function filterUrl(category) {
-  return pageUrl('catalog', { category });
+export function categoryUrl(id) {
+  return pageUrl('category', { id });
 }
 
 const rubles = new Intl.NumberFormat('ru-RU', {
@@ -87,9 +81,4 @@ const rubles = new Intl.NumberFormat('ru-RU', {
 
 export function formatPrice(amount) {
   return amount == null ? 'Цена по запросу' : rubles.format(amount);
-}
-
-export function categoryFromQuery(query) {
-  const value = query.get('category') ?? query.get('id');
-  return categories.find(({ id, name }) => value === id || value === name)?.name ?? 'all';
 }

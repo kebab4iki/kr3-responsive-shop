@@ -1,0 +1,1326 @@
+[
+  {
+    "id": "apple-iphone-15-blue",
+    "categoryId": "phones",
+    "name": "Apple iPhone 15 128 ГБ, голубой",
+    "summary": "Голубой · OLED 6,1″",
+    "price": 58990,
+    "description": "Голубой iPhone с OLED-экраном, чипом A16 Bionic и накопителем на 128 ГБ. Основная камера на 48 Мп дополняется сверхширокоугольной камерой. Для зарядки и передачи данных используется USB‑C.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,1″ OLED, 2556 × 1179"
+      ],
+      [
+        "Процессор",
+        "A16 Bionic"
+      ],
+      [
+        "Память",
+        "128 ГБ"
+      ],
+      [
+        "Задние камеры",
+        "48 Мп + 12 Мп"
+      ],
+      [
+        "Разъём",
+        "USB‑C"
+      ],
+      [
+        "Вес",
+        "171 г"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Appzone",
+      "url": "https://appzone.store/catalog/iphone/iphone-15/apple-iphone-15-128-gb-blue/"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-euro/111831"
+    },
+    "image": {
+      "filename": "apple-iphone-15-blue.webp",
+      "width": 720,
+      "height": 960,
+      "alt": "Apple iPhone 15 128 ГБ, голубой",
+      "credit": {
+        "author": "メイド理世",
+        "url": "https://commons.wikimedia.org/wiki/File:Back_view_of_iPhone_15_blue.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-iphone-15-pink",
+    "categoryId": "phones",
+    "name": "Apple iPhone 15 128 ГБ, розовый",
+    "summary": "OLED 6,1″ · A16 Bionic",
+    "price": 60999,
+    "description": "iPhone 15 в розовом корпусе с алюминиевой рамкой. Дисплей поддерживает Dynamic Island. К основной камере на 48 Мп добавлен сверхширокоугольный модуль.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,1″ OLED, 2556 × 1179"
+      ],
+      [
+        "Процессор",
+        "A16 Bionic"
+      ],
+      [
+        "Память",
+        "128 ГБ"
+      ],
+      [
+        "Задние камеры",
+        "48 Мп + 12 Мп"
+      ],
+      [
+        "Разъём",
+        "USB‑C"
+      ],
+      [
+        "Цвет",
+        "Розовый"
+      ]
+    ],
+    "priceSource": {
+      "date": "12.11.2026",
+      "name": "Клуб DNS",
+      "url": "https://club.dns-shop.ru/discussions/t-78-smartfonyi/645521-hochu-priobresti-danyii-telefon/"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-euro/111831"
+    },
+    "image": {
+      "filename": "apple-iphone-15-pink.webp",
+      "width": 720,
+      "height": 960,
+      "alt": "Apple iPhone 15 128 ГБ, розовый",
+      "credit": {
+        "author": "メイド理世",
+        "url": "https://commons.wikimedia.org/wiki/File:Apple_iPhone_15_Pink_-_back_view_(November_1,_2024).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-iphone-16-ultramarine",
+    "categoryId": "phones",
+    "name": "Apple iPhone 16 128 ГБ, ультрамарин",
+    "summary": "OLED 6,1″ · Apple A18",
+    "price": 61990,
+    "description": "iPhone 16 с процессором Apple A18 и 128 ГБ памяти. Две задние камеры позволяют выбирать между обычным и сверхшироким углом съёмки.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,1″ OLED, 2556 × 1179"
+      ],
+      [
+        "Процессор",
+        "Apple A18"
+      ],
+      [
+        "Память",
+        "128 ГБ"
+      ],
+      [
+        "Задние камеры",
+        "48 Мп + 12 Мп"
+      ],
+      [
+        "Разъём",
+        "USB‑C"
+      ],
+      [
+        "Цвет",
+        "Ultramarine"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Hi Store",
+      "url": "https://msk.hi-stores.ru/catalog/smartphones/128gb/"
+    },
+    "specSource": {
+      "name": "DNS",
+      "url": "https://www.dns-shop.ru/product/6c00456c6f27d0a4/61-smartfon-apple-iphone-16-128-gb-goluboj/"
+    },
+    "image": {
+      "filename": "apple-iphone-16-ultramarine.webp",
+      "width": 540,
+      "height": 960,
+      "alt": "Apple iPhone 16 128 ГБ, ультрамарин",
+      "credit": {
+        "author": "Kyu3a",
+        "url": "https://commons.wikimedia.org/wiki/File:Back_of_iPhone_16_Blue_model.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-watch-ultra-2",
+    "categoryId": "watches",
+    "name": "Apple Watch Ultra 2 49 мм",
+    "summary": "Натуральный титан · GPS",
+    "price": 62100,
+    "description": "Часы в титановом корпусе с двухчастотным GPS и дисплеем Retina, который может оставаться включённым. Боковую кнопку действия можно настроить на запуск тренировки или другой поддерживаемой функции.",
+    "specs": [
+      [
+        "Корпус",
+        "49 мм, титан"
+      ],
+      [
+        "Процессор",
+        "Apple S9 SiP"
+      ],
+      [
+        "Дисплей",
+        "Всегда включённый Retina LTPO OLED"
+      ],
+      [
+        "Автономность",
+        "До 36 часов при обычном использовании"
+      ],
+      [
+        "Навигация",
+        "Двухчастотный GPS"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Qubtech",
+      "url": "https://qubtech.ru/catalog/apple/apple-watch-ultra-2--natural-std-222534"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-euro/111832"
+    },
+    "image": {
+      "filename": "apple-watch-ultra-2.webp",
+      "width": 810,
+      "height": 960,
+      "alt": "Apple Watch Ultra 2 49 мм",
+      "credit": {
+        "author": "Pangalau",
+        "url": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Ultra_2.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-iphone-16-pro-white",
+    "categoryId": "phones",
+    "name": "Apple iPhone 16 Pro 128 ГБ, белый титан",
+    "summary": "OLED 6,3″ · A18 Pro",
+    "price": 83680,
+    "description": "iPhone 16 Pro с титановым корпусом и экраном с частотой обновления до 120 Гц. У задней камеры есть отдельный телеобъектив с пятикратным оптическим приближением. Сбоку расположена кнопка управления камерой.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,3″ OLED, 2622 × 1206"
+      ],
+      [
+        "Процессор",
+        "A18 Pro"
+      ],
+      [
+        "Память",
+        "128 ГБ"
+      ],
+      [
+        "Разъём",
+        "USB‑C"
+      ],
+      [
+        "Цвет",
+        "Белый титан"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Price.ru",
+      "url": "https://price.ru/mobilnye-telefony/apple-iphone-16-pro-128gb-white-titanium/",
+      "note": "Минимальная цена в подборке"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-us/121031"
+    },
+    "image": {
+      "filename": "apple-iphone-16-pro-white.webp",
+      "width": 720,
+      "height": 960,
+      "alt": "Apple iPhone 16 Pro 128 ГБ, белый титан",
+      "credit": {
+        "author": "メイド理世",
+        "url": "https://commons.wikimedia.org/wiki/File:Back_view_of_iPhone_16_Pro_White_Titanium.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-iphone-15-plus",
+    "categoryId": "phones",
+    "name": "Apple iPhone 15 Plus 128 ГБ, зелёный",
+    "summary": "OLED 6,7″ · A16 Bionic",
+    "price": 58990,
+    "description": "iPhone 15 Plus с крупным экраном Super Retina XDR и 128 ГБ встроенной памяти. Основная камера на 48 Мп поддерживает съёмку с двукратным приближением. Для зарядки предусмотрен USB‑C.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,7″ OLED, 2796 × 1290"
+      ],
+      [
+        "Процессор",
+        "A16 Bionic"
+      ],
+      [
+        "Память",
+        "128 ГБ"
+      ],
+      [
+        "Задние камеры",
+        "48 Мп + 12 Мп"
+      ],
+      [
+        "Цвет",
+        "Зелёный"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "iProfiShop через Stok",
+      "url": "https://stok.io/apple/ru/ryazan/iphone/15-plus/128gb/green"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-us/111830"
+    },
+    "image": {
+      "filename": "apple-iphone-15-plus.webp",
+      "width": 721,
+      "height": 960,
+      "alt": "Apple iPhone 15 Plus 128 ГБ, зелёный",
+      "credit": {
+        "author": "Ka Kit Pang",
+        "url": "https://commons.wikimedia.org/wiki/File:IPhone_15_Plus.jpeg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-iphone-16e-black",
+    "categoryId": "phones",
+    "name": "Apple iPhone 16e 128 ГБ, чёрный",
+    "summary": "OLED 6,1″ · Apple A18",
+    "price": 45399,
+    "description": "Компактная модель серии iPhone 16 с чипом A18, модемом Apple C1 и экраном Super Retina XDR с диагональю 6,1″. На задней панели установлена камера Fusion на 48 Мп.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,1″ OLED, 2532 × 1170"
+      ],
+      [
+        "Процессор",
+        "Apple A18"
+      ],
+      [
+        "Память",
+        "128 ГБ"
+      ],
+      [
+        "Основная камера",
+        "48 Мп"
+      ],
+      [
+        "Зарядка",
+        "USB‑C, Qi"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Ниндзя",
+      "url": "https://nnj.moscow/t/iphone-16e-128-black"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-us/122208"
+    },
+    "image": {
+      "filename": "apple-iphone-16e-black.webp",
+      "width": 720,
+      "height": 960,
+      "alt": "Apple iPhone 16e 128 ГБ, чёрный",
+      "credit": {
+        "author": "茅野ふたば",
+        "url": "https://commons.wikimedia.org/wiki/File:IPhone_16e_black_rear_view.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-iphone-17-lavender",
+    "categoryId": "phones",
+    "name": "Apple iPhone 17 256 ГБ, лавандовый",
+    "summary": "OLED 6,3″ · ProMotion до 120 Гц",
+    "price": 75450,
+    "description": "iPhone 17 оснащён экраном Super Retina XDR с адаптивной частотой обновления и чипом Apple A19. У основной и сверхширокоугольной задних камер по 48 Мп.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,3″ OLED, до 120 Гц"
+      ],
+      [
+        "Процессор",
+        "Apple A19"
+      ],
+      [
+        "Память",
+        "256 ГБ"
+      ],
+      [
+        "Задние камеры",
+        "48 Мп + 48 Мп"
+      ],
+      [
+        "Разъём",
+        "USB‑C"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Orderit.ru через Price.ru",
+      "url": "https://price.ru/mobilnye-telefony/apple-iphone-17-256gb-lavender/"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-us/125089"
+    },
+    "image": {
+      "filename": "apple-iphone-17-lavender.webp",
+      "width": 688,
+      "height": 960,
+      "alt": "Apple iPhone 17 256 ГБ, лавандовый",
+      "credit": {
+        "author": "AzureSaturn",
+        "url": "https://commons.wikimedia.org/wiki/File:IPhone_17_(Lavender)_-_Backside.jpg",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-iphone-17-pro-max-orange",
+    "categoryId": "phones",
+    "name": "Apple iPhone 17 Pro Max 256 ГБ, оранжевый",
+    "summary": "OLED 6,9″ · Apple A19 Pro",
+    "price": 95650,
+    "description": "Смартфон с большим экраном Super Retina XDR и чипом A19 Pro. Камеры включают основной, сверхширокоугольный и телефотомодуль. В этой конфигурации доступно 256 ГБ встроенной памяти.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,9″ OLED, до 120 Гц"
+      ],
+      [
+        "Процессор",
+        "Apple A19 Pro"
+      ],
+      [
+        "Память",
+        "256 ГБ"
+      ],
+      [
+        "Разъём",
+        "USB‑C"
+      ],
+      [
+        "Цвет",
+        "Cosmic Orange"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Price.ru",
+      "url": "https://price.ru/mobilnye-telefony/apple-iphone-17-pro-max-256gb-cosmic-orange/",
+      "note": "Минимальная цена в подборке"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-us/125091"
+    },
+    "image": {
+      "filename": "apple-iphone-17-pro-max-orange.webp",
+      "width": 960,
+      "height": 720,
+      "alt": "Apple iPhone 17 Pro Max 256 ГБ, оранжевый",
+      "credit": {
+        "author": "Kyu3a",
+        "url": "https://commons.wikimedia.org/wiki/File:IPhone_17_Pro_Max_(Cosmic_Orange)_-_7.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-iphone-14-red",
+    "categoryId": "phones",
+    "name": "Apple iPhone 14 128 ГБ, красный",
+    "summary": "OLED 6,1″ · A15 Bionic",
+    "price": 38400,
+    "description": "Красный iPhone 14 с OLED-дисплеем и 128 ГБ памяти. Две задние камеры позволяют переключаться между обычным и сверхшироким углом съёмки. Для проводной зарядки используется Lightning.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,1″ OLED, 2532 × 1170"
+      ],
+      [
+        "Процессор",
+        "A15 Bionic"
+      ],
+      [
+        "Память",
+        "128 ГБ"
+      ],
+      [
+        "Задние камеры",
+        "12 Мп + 12 Мп"
+      ],
+      [
+        "Разъём",
+        "Lightning"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Мегабайт через Stok",
+      "url": "https://stok.io/apple/ru/moscow/iphone/14/2022/128gb/red"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-us/111850"
+    },
+    "image": {
+      "filename": "apple-iphone-14-red.webp",
+      "width": 570,
+      "height": 960,
+      "alt": "Apple iPhone 14 128 ГБ, красный",
+      "credit": {
+        "author": "Hajoon0102",
+        "url": "https://commons.wikimedia.org/wiki/File:IPhone_14_Product_Red.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-ipad-air-m1",
+    "categoryId": "phones",
+    "name": "Apple iPad Air (M1, 2022) 64 ГБ Wi‑Fi",
+    "summary": "Liquid Retina 10,9″ · Apple M1",
+    "price": 47280,
+    "description": "Планшет пятого поколения на чипе Apple M1 с экраном Liquid Retina и Touch ID в верхней кнопке. Поддерживает Apple Pencil второго поколения. Клавиатура, показанная на фото, приобретается отдельно.",
+    "specs": [
+      [
+        "Дисплей",
+        "10,9″, 2360 × 1640"
+      ],
+      [
+        "Процессор",
+        "Apple M1"
+      ],
+      [
+        "Память",
+        "64 ГБ"
+      ],
+      [
+        "Беспроводная связь",
+        "Wi‑Fi 6, Bluetooth 5.0"
+      ],
+      [
+        "Разъём",
+        "USB‑C"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Onliners",
+      "url": "https://onliners.ru/plansheti/planshety-apple-ipad/ipad-air/ipad-air-5-2022/"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-us/111887"
+    },
+    "image": {
+      "filename": "apple-ipad-air-m1.webp",
+      "width": 960,
+      "height": 719,
+      "alt": "Apple iPad Air (M1, 2022) 64 ГБ Wi‑Fi",
+      "credit": {
+        "author": "Captainmorlypogi1959",
+        "url": "https://commons.wikimedia.org/wiki/File:IPad_Air_5th_Generation_2024.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "samsung-galaxy-s24-ultra-black",
+    "categoryId": "phones",
+    "name": "Samsung Galaxy S24 Ultra 256 ГБ, чёрный титан",
+    "summary": "AMOLED 6,8″ · S Pen",
+    "price": 72990,
+    "description": "Смартфон с большим экраном и встроенным стилусом S Pen. Четыре задние камеры включают основной модуль на 200 Мп и два телеобъектива с разными фокусными расстояниями.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,8″ Dynamic AMOLED 2X, 3120 × 1440"
+      ],
+      [
+        "Накопитель",
+        "256 ГБ"
+      ],
+      [
+        "Оперативная память",
+        "12 ГБ"
+      ],
+      [
+        "Задние камеры",
+        "200 Мп + 50 Мп + 12 Мп + 10 Мп"
+      ],
+      [
+        "Аккумулятор",
+        "5000 мА·ч"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "MiPort",
+      "url": "https://msk.miport.ru/smartphones/smartphone-samsung/samsung-galaxy-s24-ultra-5g/"
+    },
+    "specSource": {
+      "name": "Samsung",
+      "url": "https://www.samsung.com/ru/smartphones/galaxy-s/galaxy-s24-ultra-titanium-black-256gb-sm-s928bzkgcau/buy/"
+    },
+    "image": {
+      "filename": "samsung-galaxy-s24-ultra-black.webp",
+      "width": 720,
+      "height": 960,
+      "alt": "Samsung Galaxy S24 Ultra 256 ГБ, чёрный титан",
+      "credit": {
+        "author": "メイド理世",
+        "url": "https://commons.wikimedia.org/wiki/File:Back_view_of_Samsung_Galaxy_S24_Ultra_Black.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "samsung-galaxy-s25-ultra-silverblue",
+    "categoryId": "phones",
+    "name": "Samsung Galaxy S25 Ultra 256 ГБ, синий титан",
+    "summary": "AMOLED 6,9″ · S Pen",
+    "price": 69490,
+    "description": "Galaxy S25 Ultra с экраном 6,9″ и частотой обновления до 120 Гц. Встроенный S Pen подходит для рукописных заметок, а блок камер включает сверхширокоугольный и два телеобъектива.",
+    "specs": [
+      [
+        "Дисплей",
+        "6,9″ Dynamic AMOLED 2X, до 120 Гц"
+      ],
+      [
+        "Накопитель",
+        "256 ГБ"
+      ],
+      [
+        "Оперативная память",
+        "12 ГБ"
+      ],
+      [
+        "Задние камеры",
+        "200 Мп + 50 Мп + 50 Мп + 10 Мп"
+      ],
+      [
+        "Аккумулятор",
+        "5000 мА·ч"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "MiPort",
+      "url": "https://msk.miport.ru/smartphones/smartphone-samsung/samsung-galaxy-s25-ultra-5g/"
+    },
+    "specSource": {
+      "name": "Samsung",
+      "url": "https://www.samsung.com/nz/smartphones/galaxy-s25-ultra/specs/"
+    },
+    "image": {
+      "filename": "samsung-galaxy-s25-ultra-silverblue.webp",
+      "width": 720,
+      "height": 960,
+      "alt": "Samsung Galaxy S25 Ultra 256 ГБ, синий титан",
+      "credit": {
+        "author": "Alvis Jean",
+        "url": "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_S25_Ultra_Titanium_Silverblue.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-airpods-max-lightning",
+    "categoryId": "headphones",
+    "name": "Apple AirPods Max (Lightning), серый космос",
+    "summary": "Полноразмерные · активное шумоподавление",
+    "price": 36900,
+    "description": "Полноразмерные беспроводные наушники с переключением между активным шумоподавлением и режимом прозрачности. За громкость и управлением воспроизведением отвечает колесико Digital Crown. Эта версия заряжается через Lightning.",
+    "specs": [
+      [
+        "Подключение",
+        "Bluetooth 5.0"
+      ],
+      [
+        "Автономность",
+        "До 20 часов"
+      ],
+      [
+        "Зарядка",
+        "Lightning"
+      ],
+      [
+        "Цвет",
+        "Серый космос"
+      ],
+      [
+        "Вес",
+        "384,8 г"
+      ]
+    ],
+    "priceSource": {
+      "date": "17.11.2026",
+      "name": "AppMiStore через Stok",
+      "url": "https://stok.io/o/jhsf8k"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-ie/111858"
+    },
+    "image": {
+      "filename": "apple-airpods-max-lightning.webp",
+      "width": 960,
+      "height": 686,
+      "alt": "Apple AirPods Max (Lightning), серый космос",
+      "credit": {
+        "author": "SimonWaldherr",
+        "url": "https://commons.wikimedia.org/wiki/File:Apple_AirPods_Max.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-macbook-air-m2",
+    "categoryId": "laptops",
+    "name": "Apple MacBook Air 13″ (M2, 2022)",
+    "summary": "Starlight · 8 ГБ / SSD 256 ГБ",
+    "price": 80990,
+    "description": "Компактный ноутбук на чипе Apple M2. В конфигурации MLY13 установлены 8 ГБ объединённой памяти и SSD на 256 ГБ. Экран 13,6″ с разрешением 2560 × 1664 и клавиатура с Touch ID подходят для повседневной работы.",
+    "specs": [
+      [
+        "Процессор",
+        "Apple M2, 8 ядер"
+      ],
+      [
+        "Экран",
+        "13,6″, 2560 × 1664"
+      ],
+      [
+        "Память",
+        "8 ГБ"
+      ],
+      [
+        "Накопитель",
+        "SSD 256 ГБ"
+      ],
+      [
+        "Операционная система",
+        "macOS"
+      ],
+      [
+        "Цвет",
+        "Starlight"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "iProfiShop через Stok",
+      "url": "https://stok.io/apple/ru/moscow/macbook/air/2022/m2/13/8gb/256gb/starlight"
+    },
+    "specSource": {
+      "name": "DNS",
+      "url": "https://www.dns-shop.ru/product/75c9fd276551ed20/136-noutbuk-apple-macbook-air-2022-mly13-m2-8-core8192ssd-256gpu-m2-8-coremac-osstarlight-bez-gravirovki-5060044/"
+    },
+    "image": {
+      "filename": "apple-macbook-air-m2.webp",
+      "width": 960,
+      "height": 960,
+      "alt": "Apple MacBook Air 13″ (M2, 2022)",
+      "credit": {
+        "author": "KKPCW（Kyu3）",
+        "url": "https://commons.wikimedia.org/wiki/File:M2_Macbook_Air_Starlight_model.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-magsafe-charger",
+    "categoryId": "power",
+    "name": "Apple MagSafe Charger 15 Вт",
+    "summary": "A2140 · магнитная зарядка",
+    "price": 2990,
+    "description": "Зарядная площадка Apple первого поколения примагничивается к совместимому iPhone. Для мощности до 15 Вт ей требуется подходящий сетевой адаптер USB‑C от 20 Вт.",
+    "specs": [
+      [
+        "Модель",
+        "A2140"
+      ],
+      [
+        "Мощность",
+        "До 15 Вт"
+      ],
+      [
+        "Подключение",
+        "USB‑C"
+      ],
+      [
+        "Крепление",
+        "Магнитное MagSafe"
+      ],
+      [
+        "Цвет",
+        "Белый"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Хатико через Цена7",
+      "url": "https://cena7.ru/product/apple-magsafe-charger"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-ca/105047"
+    },
+    "image": {
+      "filename": "apple-magsafe-charger.webp",
+      "width": 960,
+      "height": 720,
+      "alt": "Apple MagSafe Charger 15 Вт",
+      "credit": {
+        "author": "James Tamim",
+        "url": "https://commons.wikimedia.org/wiki/File:MagSafe_and_USB-C_Cable_Charger_for_iPhone.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "hp-laserjet-pro-p1102w",
+    "categoryId": "printers",
+    "name": "HP LaserJet Pro P1102w",
+    "summary": "Лазерная печать A4 · с пробегом",
+    "price": 9500,
+    "description": "Монохромный лазерный принтер для документов формата A4. Печатает до 18 страниц A4 в минуту и подключается через USB или Wi‑Fi. Цена относится к предложению на принтер с пробегом.",
+    "specs": [
+      [
+        "Печать",
+        "Чёрно-белая лазерная"
+      ],
+      [
+        "Формат",
+        "A4"
+      ],
+      [
+        "Скорость A4",
+        "До 18 стр/мин"
+      ],
+      [
+        "Подключение",
+        "USB 2.0, Wi‑Fi 802.11b/g"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Принт Маркет",
+      "url": "https://print-market.net/printery-mfu-skanery/s-probegom-b-u/hp-3/printer-hp-laserjet-pro-p1102w/",
+      "note": "Принтер с пробегом, под заказ"
+    },
+    "specSource": {
+      "name": "HP",
+      "url": "https://support.hp.com/emea_middle_east-en/product/product-specs/hp-laserjet-pro-p1102-printer-series/model/5149432"
+    },
+    "image": {
+      "filename": "hp-laserjet-pro-p1102w.webp",
+      "width": 960,
+      "height": 720,
+      "alt": "HP LaserJet Pro P1102w",
+      "credit": {
+        "author": "MSDN.WhiteKnight",
+        "url": "https://commons.wikimedia.org/wiki/File:HP_LaserJet_P1102w.jpg",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-studio-display-2022",
+    "categoryId": "monitors",
+    "name": "Apple Studio Display 27″ (2022)",
+    "summary": "Retina 5K · стандартное стекло",
+    "price": 199990,
+    "description": "Внешний 27-дюймовый монитор для Mac с панелью 5K. В этом варианте используется стандартное стекло и подставка с регулировкой наклона. Экран работает с разрешением 5120 × 2880 и частотой 60 Гц.",
+    "specs": [
+      [
+        "Диагональ",
+        "27″"
+      ],
+      [
+        "Разрешение",
+        "5120 × 2880"
+      ],
+      [
+        "Частота",
+        "60 Гц"
+      ],
+      [
+        "Тип панели",
+        "IPS"
+      ],
+      [
+        "Стекло",
+        "Стандартное"
+      ],
+      [
+        "Подставка",
+        "С регулировкой наклона"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Save & Sale",
+      "url": "https://savensale.ru/monitor-apple-studio-display-standard-glass-tilt-adjustable-stand/"
+    },
+    "specSource": {
+      "name": "DNS",
+      "url": "https://www.dns-shop.ru/product/ed8bbb85d2c5ed20/27-monitor-apple-studio-display-serebristyj/"
+    },
+    "image": {
+      "filename": "apple-studio-display-2022.webp",
+      "width": 960,
+      "height": 747,
+      "alt": "Apple Studio Display 27″ (2022)",
+      "credit": {
+        "author": "KKPCW",
+        "url": "https://commons.wikimedia.org/wiki/File:Studio_Display_(2022).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-airpods-pro-2-lightning",
+    "categoryId": "headphones",
+    "name": "Apple AirPods Pro 2",
+    "summary": "Активное шумоподавление · кейс Lightning",
+    "price": 19000,
+    "description": "Внутриканальные наушники второго поколения с чипом H2. В шумной обстановке можно включить шумоподавление, а с режимом прозрачности остаются слышны окружающие звуки. Кейс заряжается через Lightning, MagSafe или Qi.",
+    "specs": [
+      [
+        "Подключение",
+        "Bluetooth 5.3"
+      ],
+      [
+        "Шумоподавление",
+        "Активное"
+      ],
+      [
+        "Чип",
+        "Apple H2"
+      ],
+      [
+        "Зарядка кейса",
+        "Lightning, MagSafe, Qi"
+      ],
+      [
+        "Время прослушивания",
+        "До 6 часов"
+      ],
+      [
+        "Защита",
+        "IPX4"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Скайнет",
+      "url": "https://skynet-service.ru/product/besprovodnaya-garnitura-apple-airpods-pro-2-s-futlyarom-dlya-zaryadki-magsafe-lightning-a2698-a2699-a2700-yaponiya-17526"
+    },
+    "specSource": {
+      "name": "Apple",
+      "url": "https://support.apple.com/en-gb/111851"
+    },
+    "image": {
+      "filename": "apple-airpods-pro-2-lightning.webp",
+      "width": 960,
+      "height": 720,
+      "alt": "Apple AirPods Pro 2",
+      "credit": {
+        "author": "Hajoon0102",
+        "url": "https://commons.wikimedia.org/wiki/File:AirPods_Pro_(2nd_generation).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "apple-homepod-mini-orange",
+    "categoryId": "speakers",
+    "name": "Apple HomePod mini, оранжевая",
+    "summary": "Умная колонка · AirPlay",
+    "price": 15990,
+    "description": "Компактная колонка для музыки, подкастов и команд Siri. С совместимых устройств Apple звук передаётся через AirPlay. Колонка подключается к домашней сети Wi‑Fi и работает от электросети.",
+    "specs": [
+      [
+        "Цвет",
+        "Оранжевый"
+      ],
+      [
+        "Передача звука",
+        "AirPlay"
+      ],
+      [
+        "Подключение",
+        "Wi‑Fi, Bluetooth"
+      ],
+      [
+        "Ассистент",
+        "Siri"
+      ],
+      [
+        "Формат акустики",
+        "1.0"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "iCult",
+      "url": "https://icult.ru/brand/1/"
+    },
+    "specSource": {
+      "name": "iCult",
+      "url": "https://icult.ru/item/693/134/1/40347/"
+    },
+    "image": {
+      "filename": "apple-homepod-mini-orange.webp",
+      "width": 720,
+      "height": 960,
+      "alt": "Apple HomePod mini, оранжевая",
+      "credit": {
+        "author": "KKPCW",
+        "url": "https://commons.wikimedia.org/wiki/File:Homepod_Mini_Orange_model.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "logitech-g502-hero",
+    "categoryId": "peripherals",
+    "name": "Logitech G502 HERO",
+    "summary": "Проводная мышь · 25 600 DPI",
+    "price": 2899,
+    "description": "Проводная мышь с оптическим датчиком HERO 25K и одиннадцатью программируемыми кнопками. Чувствительность меняется через Logitech G HUB, а съёмные грузики позволяют настроить вес.",
+    "specs": [
+      [
+        "Датчик",
+        "Logitech HERO 25K"
+      ],
+      [
+        "Чувствительность",
+        "До 25 600 DPI"
+      ],
+      [
+        "Кнопки",
+        "11 программируемых"
+      ],
+      [
+        "Интерфейс",
+        "USB‑A"
+      ],
+      [
+        "Масса без кабеля",
+        "121 г"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "DNS",
+      "url": "https://www.dns-shop.ru/catalog/recipe/55313be6477e8d6f/s-11-knopkami/"
+    },
+    "specSource": {
+      "name": "Logitech",
+      "url": "https://www.logitechg.com/en-in/shop/p/g502-hero-gaming-mouse"
+    },
+    "image": {
+      "filename": "logitech-g502-hero.webp",
+      "width": 960,
+      "height": 540,
+      "alt": "Logitech G502 HERO",
+      "credit": {
+        "author": "Panthermail",
+        "url": "https://commons.wikimedia.org/wiki/File:Logitech_G502_Hero.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "sony-dualsense-white",
+    "categoryId": "gaming",
+    "name": "Sony DualSense CFI-ZCT1W",
+    "summary": "Белый контроллер для PS5 · Bluetooth",
+    "price": 7690,
+    "description": "Беспроводной контроллер PlayStation 5 с тактильной обратной связью и адаптивными курками. В играх, которые поддерживают эти функции, контроллер передаёт разную силу вибрации и сопротивления при нажатии. Для зарядки используется USB‑C.",
+    "specs": [
+      [
+        "Совместимость",
+        "PlayStation 5"
+      ],
+      [
+        "Подключение",
+        "Bluetooth, USB‑C"
+      ],
+      [
+        "Обратная связь",
+        "Тактильная"
+      ],
+      [
+        "Курки",
+        "Адаптивные"
+      ],
+      [
+        "Цвет",
+        "Белый"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Нова",
+      "url": "https://spb.apple-nova.ru/item/geimpad-sony-dualsense-cfi-zct1w-belyi/"
+    },
+    "specSource": {
+      "name": "Sony",
+      "url": "https://www.playstation.com/ru-ru/accessories/dualsense-wireless-controller/"
+    },
+    "image": {
+      "filename": "sony-dualsense-white.webp",
+      "width": 960,
+      "height": 849,
+      "alt": "Sony DualSense CFI-ZCT1W",
+      "credit": {
+        "author": "Alex Cochrane",
+        "url": "https://commons.wikimedia.org/wiki/File:Playstation_DualSense_Controller.png",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "sandisk-extreme-portable-1tb",
+    "categoryId": "storage",
+    "name": "SanDisk Extreme Portable SSD 1 ТБ",
+    "summary": "SDSSDE60 · до 550 МБ/с",
+    "price": 18990,
+    "description": "Внешний SSD объёмом 1 ТБ для хранения фотографий, видео и резервных копий. Эта версия серии SDSSDE60 подключается через USB‑C и читает данные со скоростью до 550 МБ/с.",
+    "specs": [
+      [
+        "Объём",
+        "1 ТБ"
+      ],
+      [
+        "Разъём",
+        "USB‑C"
+      ],
+      [
+        "Скорость чтения",
+        "До 550 МБ/с"
+      ],
+      [
+        "Защита корпуса",
+        "IP55"
+      ],
+      [
+        "Артикул",
+        "SDSSDE60-1T00-R25"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "restore:",
+      "url": "https://re-store.ru/catalog/SDSSDE60-1T00-R25/",
+      "note": "Цена из карточки, товар ожидается"
+    },
+    "specSource": {
+      "name": "restore:",
+      "url": "https://re-store.ru/catalog/SDSSDE60-1T00-R25/"
+    },
+    "image": {
+      "filename": "sandisk-extreme-portable-1tb.webp",
+      "width": 960,
+      "height": 664,
+      "alt": "SanDisk Extreme Portable SSD 1 ТБ",
+      "credit": {
+        "author": "Tony Webster from Minneapolis, Minnesota, United States",
+        "url": "https://commons.wikimedia.org/wiki/File:SanDisk_Extreme_Portable_SSD_-_1TB,_USB-C_(41036158305).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "nintendo-switch-pro-controller",
+    "categoryId": "gaming",
+    "name": "Nintendo Switch Pro Controller",
+    "summary": "Чёрный · HAC‑013",
+    "price": 8490,
+    "description": "Беспроводной геймпад для Nintendo Switch с управлением движением и вибрацией HD Rumble. Встроенная метка NFC считывает фигурки amiibo. Одного заряда хватает примерно на 40 часов в зависимости от игры.",
+    "specs": [
+      [
+        "Модель",
+        "HAC‑013"
+      ],
+      [
+        "Подключение",
+        "Bluetooth 3.0, USB‑C"
+      ],
+      [
+        "Автономность",
+        "Около 40 часов"
+      ],
+      [
+        "Вибрация",
+        "HD Rumble"
+      ],
+      [
+        "Поддержка amiibo",
+        "NFC"
+      ]
+    ],
+    "priceSource": {
+      "date": "22.11.2026",
+      "name": "BigGeek через ITVSE",
+      "url": "https://itvse.ru/product/nintendo-switch-pro-controller/"
+    },
+    "specSource": {
+      "name": "Nintendo",
+      "url": "https://www.nintendo.com/en-gb/Hardware/Accessories/Accessories-1183144.html"
+    },
+    "image": {
+      "filename": "nintendo-switch-pro-controller.webp",
+      "width": 960,
+      "height": 747,
+      "alt": "Nintendo Switch Pro Controller",
+      "credit": {
+        "author": "Evan-Amos",
+        "url": "https://commons.wikimedia.org/wiki/File:Nintendo-Switch-Pro-Controller-FL.jpg",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Nintendo-Switch-Pro-Controller-FL.jpg",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  },
+  {
+    "id": "tp-link-tl-wr841n",
+    "categoryId": "network",
+    "name": "TP-Link TL-WR841N",
+    "summary": "Wi‑Fi 4 · 2,4 ГГц · 4 LAN",
+    "price": 1700,
+    "description": "Домашний маршрутизатор для сети 2,4 ГГц. У него две внешние антенны и четыре LAN-порта для проводного подключения. Заявленная скорость беспроводного соединения — до 300 Мбит/с.",
+    "specs": [
+      [
+        "Стандарт",
+        "Wi‑Fi 4 (802.11n)"
+      ],
+      [
+        "Диапазон",
+        "2,4 ГГц"
+      ],
+      [
+        "Номинальная скорость Wi‑Fi",
+        "До 300 Мбит/с"
+      ],
+      [
+        "Порты",
+        "1 WAN, 4 LAN"
+      ],
+      [
+        "Антенны",
+        "2 внешние"
+      ]
+    ],
+    "priceSource": {
+      "date": "23.11.2026",
+      "name": "Ситилинк на Яндекс Маркете",
+      "url": "https://market.yandex.ru/card/wi-fi-router-tp-link-tl-wr841n-n300-belyy/103196975077"
+    },
+    "specSource": {
+      "name": "TP-Link",
+      "url": "https://tp-link.ru/catalog/routery-wi-fi/wi-fi-4/tl-wr841n/"
+    },
+    "image": {
+      "filename": "tp-link-tl-wr841n.webp",
+      "width": 960,
+      "height": 960,
+      "alt": "TP-Link TL-WR841N",
+      "credit": {
+        "author": "Raimond Spekking",
+        "url": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR841N-2920.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "changes": "Уменьшение размера и конвертация в WebP"
+      }
+    }
+  }
+]

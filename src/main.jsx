@@ -1,14 +1,14 @@
 import { createRoot } from 'react-dom/client';
 import { Header, Footer, BackToTop } from './components';
-import { Home, Catalog, Product, Order, Contacts } from './pages';
+import { Home, Catalog, Category, AllProducts, Product, Order, Contacts } from './pages';
 import { standalone } from './shop';
 
 const query = new URLSearchParams(window.location.search);
 const routes = {
   index: [Home, 'Corekit — магазин техники'],
   catalog: [Catalog, 'Каталог — Corekit'],
-  products: [Catalog, 'Все товары — Corekit'],
-  category: [Catalog, 'Категория — Corekit'],
+  products: [AllProducts, 'Все товары — Corekit'],
+  category: [Category, 'Категория — Corekit'],
   product: [Product, 'Товар — Corekit'],
   order: [Order, 'Заявка — Corekit'],
   application: [Order, 'Заявка — Corekit'],
