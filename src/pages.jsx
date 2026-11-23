@@ -3,6 +3,7 @@ import { Breadcrumbs, ProductBadges, ProductCard, ProductGallery } from './compo
 import {
   catalogProducts, categories, categoriesById, colorOptions, demoCategoryIds, featuredPhone, findCategory, newArrivals, popular,
 } from './catalog-data';
+import { catalogFilterOptions, defaultFilters, filterCatalog } from './catalog-filters';
 import { iphone18Title } from './iphone-18-pro';
 import { HomeFaq } from './home-faq';
 import { HomeReviews } from './home-reviews';
@@ -146,18 +147,23 @@ export function Category({ query }) {
   );
 }
 
-const maxPrice = Math.max(0, ...catalogProducts.map(({ price }) => price ?? 0));
-
 export function AllProducts({ query }) {
-  const [search, setSearch] = useState('');
-  const [category, setCategory] = useState(() => findCategory(query.get('category'))?.id ?? 'all');
-  const [price, setPrice] = useState(maxPrice);
-  const term = search.trim().toLocaleLowerCase('ru');
-  const filtered = catalogProducts.filter((product) =>
-    product.name.toLocaleLowerCase('ru').includes(term)
-    && (category === 'all' || product.categoryId === category)
-    && (price === maxPrice || (product.price != null && product.price <= price))
-  );
+  const [filters, setFilters] = useState(() => ({
+    ...defaultFilters, category: findCategory(query.get('category'))?.id ?? defaultFilters.category,
+  }));
+  const options = catalogFilterOptions(filters.category);
+  const filtered = filterCatalog(filters);
+  const invalidPrice = filters.from !== '' && filters.to !== '' && Number(filters.from) > Number(filters.to);
+
+  function updateFilters(patch) {
+    setFilters((previous) => ({ ...previous, ...patch }));
+  }
+
+  function changeCategory(event) {
+    const category = event.target.value;
+    const { brands } = catalogFilterOptions(category);
+    updateFilters({ category, brand: brands.includes(filters.brand) ? filters.brand : '', specs: {} });
+  }
 
   return (
     <>
@@ -166,32 +172,76 @@ export function AllProducts({ query }) {
       <div className="catalog-layout section">
         <aside className="catalog-filters surface" aria-labelledby="filter-title">
           <h2 id="filter-title">Подбор товаров</h2>
-          <div className="field">
-            <label htmlFor="catalog-search">Поиск по названию</label>
-            <input id="catalog-search" type="search" placeholder="Например, монитор"
-              value={search} onChange={(event) => setSearch(event.target.value)} />
+          <div className="catalog-filters__options">
+            <div className="field">
+              <label htmlFor="catalog-search">Поиск по названию</label>
+              <input id="catalog-search" type="search" placeholder="Например, AirPods"
+                value={filters.search} onChange={(event) => updateFilters({ search: event.target.value })} />
+            </div>
+            <div className="field">
+              <label htmlFor="catalog-category">Категория</label>
+              <select id="catalog-category" value={filters.category} onChange={changeCategory}>
+                <option value="all">Все категории</option>
+                {categories.map(({ id, name }) => <option key={id} value={id}>{name}</option>)}
+              </select>
+            </div>
+            <div className="field">
+              <label htmlFor="catalog-brand">Бренд</label>
+              <select id="catalog-brand" value={filters.brand} onChange={(event) => updateFilters({ brand: event.target.value })}>
+                <option value="">Все бренды</option>
+                {options.brands.map((brand) => <option key={brand}>{brand}</option>)}
+              </select>
+            </div>
+            <fieldset className="catalog-filter-group">
+              <legend>Цена, ₽</legend>
+              <div className="catalog-filters__price">
+                <div className="field">
+                  <input aria-label="Цена от" id="catalog-price-from" type="number" min="0" inputMode="numeric" placeholder="От"
+                    aria-invalid={invalidPrice || undefined} aria-describedby={invalidPrice ? 'catalog-price-notice' : undefined}
+                    value={filters.from} onChange={(event) => updateFilters({ from: event.target.value })} />
+                </div>
+                <div className="field">
+                  <input aria-label="Цена до" id="catalog-price-to" type="number" min="0" inputMode="numeric" placeholder="До"
+                    aria-invalid={invalidPrice || undefined} aria-describedby={invalidPrice ? 'catalog-price-notice' : undefined}
+                    value={filters.to} onChange={(event) => updateFilters({ to: event.target.value })} />
+                </div>
+              </div>
+              {invalidPrice && <p className="catalog-filters__notice" id="catalog-price-notice" role="alert">Цена «от» должна быть меньше или равна цене «до».</p>}
+            </fieldset>
+            <fieldset className="catalog-filter-group">
+              <legend>Подборки</legend>
+              <div className="catalog-filters__toggles">
+                <label><input type="checkbox" checked={filters.hit} onChange={(event) => updateFilters({ hit: event.target.checked })} />Хиты</label>
+                <label><input type="checkbox" checked={filters.fresh} onChange={(event) => updateFilters({ fresh: event.target.checked })} />Новинки</label>
+              </div>
+            </fieldset>
+            {options.specs.map(({ id, label, options: values }) => (
+              <div className="field" key={id}>
+                <label htmlFor={`catalog-spec-${id}`}>{label}</label>
+                <select id={`catalog-spec-${id}`} value={filters.specs[id] ?? ''} onChange={(event) => {
+                  updateFilters({ specs: { ...filters.specs, [id]: event.target.value } });
+                }}>
+                  <option value="">Любое значение</option>
+                  {values.map((value) => <option key={value}>{value}</option>)}
+                </select>
+              </div>
+            ))}
           </div>
-          <div className="field">
-            <label htmlFor="catalog-category">Категория</label>
-            <select id="catalog-category" value={category} onChange={(event) => setCategory(event.target.value)}>
-              <option value="all">Все категории</option>
-              {categories.map(({ id, name }) => <option key={id} value={id}>{name}</option>)}
-            </select>
-          </div>
-          <div className="field">
-            <label htmlFor="catalog-price">Цена до <output htmlFor="catalog-price">{formatPrice(price)}</output></label>
-            <input id="catalog-price" type="range" min="0" max={maxPrice} value={price}
-              onChange={(event) => setPrice(Number(event.target.value))} />
-            <div className="filter-limits"><span>0 ₽</span><span>{formatPrice(maxPrice)}</span></div>
-          </div>
-          <button className="button button--outline" type="button" onClick={() => {
-            setSearch('');
-            setCategory('all');
-            setPrice(maxPrice);
-          }}>Сбросить фильтры</button>
+          <button className="button button--outline" type="button" onClick={() => setFilters(defaultFilters)}>Сбросить фильтры</button>
         </aside>
         <div className="catalog-results">
-          <p className="count" role="status">Найдено товаров: {filtered.length}</p>
+          <div className="catalog-results__toolbar">
+            <p className="count" role="status">Найдено товаров: {filtered.length}</p>
+            <div className="field catalog-results__sort">
+              <label htmlFor="catalog-sort">Сортировка</label>
+              <select id="catalog-sort" value={filters.sort} onChange={(event) => updateFilters({ sort: event.target.value })}>
+                <option value="default">По умолчанию</option>
+                <option value="price-asc">Сначала дешевле</option>
+                <option value="price-desc">Сначала дороже</option>
+                <option value="name">По названию</option>
+              </select>
+            </div>
+          </div>
           <CatalogGrid items={filtered} emptyMessage="По выбранным параметрам товары не найдены." fadePhotos />
         </div>
       </div>
