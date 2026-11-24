@@ -38,6 +38,13 @@ const games = [
   },
 ];
 
+function productPhotos(id, size, ...captions) {
+  const [image, ...gallery] = captions.map((alt, index) => ({
+    filename: `${id}-${index + 1}.png`, width: size, height: size, alt,
+  }));
+  return { image, gallery };
+}
+
 const consoles = [
   {
     id: 'sony-playstation-5-slim', categoryId: 'consoles', brand: 'Sony',
@@ -45,6 +52,7 @@ const consoles = [
     description: 'Компактная версия PlayStation 5 с SSD на 1 ТБ и приводом для дисков. Подключается по HDMI 2.1 и поддерживает вывод изображения в 4K.',
     specs: [['Накопитель', 'SSD 1 ТБ'], ['Дисковод', 'В комплекте'], ['Разрешение', 'До 3840 × 2160'],
       ['Подключение к экрану', 'HDMI 2.1'], ['Беспроводная связь', 'Wi-Fi 6, Bluetooth 5.1'], ['USB-порты', '4']],
+    ...productPhotos('sony-playstation-5-slim', 250, 'PlayStation 5 Slim с контроллером DualSense', 'PlayStation 5 Slim, вид на дисковод'),
   },
   {
     id: 'sony-playstation-5-pro', categoryId: 'consoles', brand: 'Sony',
@@ -52,6 +60,7 @@ const consoles = [
     description: 'PlayStation 5 Pro оснащена SSD на 2 ТБ и рассчитана на игры с повышенной детализацией и трассировкой лучей. Совместимый дисковод приобретается отдельно.',
     specs: [['Накопитель', 'SSD 2 ТБ'], ['Дисковод', 'Приобретается отдельно'], ['Разрешение', 'До 3840 × 2160'],
       ['Подключение к экрану', 'HDMI 2.1'], ['Беспроводная связь', 'Wi-Fi 7']],
+    ...productPhotos('sony-playstation-5-pro', 250, 'PlayStation 5 Pro с контроллером DualSense', 'Коробка PlayStation 5 Pro'),
   },
 ];
 
@@ -62,6 +71,7 @@ const coffeeMachines = [
     description: 'C781 готовит колд-брю, кофейный концентрат и чай. Съёмный резервуар упрощает долив воды, а на сенсорном OLED-дисплее можно настроить крепость и выбрать программу.',
     specs: [['Способ приготовления', 'Колд-брю'], ['Используемый кофе', 'Молотый'], ['Резервуар для воды', '1 л'],
       ['Мощность', '150 Вт'], ['Дисплей', 'Сенсорный OLED'], ['Кофемолка', 'Нет'], ['Автоматические программы', '4']],
+    ...productPhotos('bork-c781', 1000, 'Кофемашина BORK C781, вид спереди', 'Кофемашина BORK C781, вид на резервуар для воды'),
   },
   {
     id: 'bork-c751', categoryId: 'coffee-machines', brand: 'BORK',
@@ -69,6 +79,7 @@ const coffeeMachines = [
     description: 'C751 готовит фильтр-кофе из зёрен. Встроенная жерновая кофемолка даёт 80 вариантов помола, а в настройках можно выбрать объём порции. Машина поддерживает приложение BORK через Bluetooth.',
     specs: [['Способ приготовления', 'Фильтр-кофе'], ['Используемый кофе', 'Зерновой'], ['Резервуар для воды', '0,946 л'],
       ['Мощность', '1200 Вт'], ['Кофемолка', 'Жерновая, 80 степеней помола'], ['Дисплей', 'LED'], ['Цвет', 'Чёрный']],
+    ...productPhotos('bork-c751', 1000, 'Кофемашина BORK C751, вид спереди', 'Кофемашина BORK C751, вид сзади'),
   },
 ];
 
@@ -83,6 +94,7 @@ const ovens = [
   ...model, categoryId: 'mini-ovens', brand: 'BORK', summary: `22 л · 2400 Вт · ${finish.toLowerCase()}`,
   description: 'Настольная аэропечь с конвекцией и кварцевым грилем. Можно выбрать одну из 11 программ, в том числе для пиццы, выпечки, тостов и аэрогриля. На LCD-дисплее отображаются режим, температура и время.',
   specs: [...ovenSpecs, ['Цвет', finish]],
+  ...productPhotos(model.id, 1000, model.name, `${model.name} с выдвинутым поддоном`),
 }));
 
 export const newCatalogProducts = [...giftCards, ...games, ...consoles, ...coffeeMachines, ...ovens];
