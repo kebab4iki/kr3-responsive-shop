@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Breadcrumbs, ProductBadges, ProductCard, ProductGallery } from './components';
 import {
-  catalogProducts, categories, categoriesById, colorOptions, demoCategoryIds, featuredPhone, findCategory, newArrivals, popular,
+  catalogProducts, categories, categoriesById, demoCategoryIds, featuredPhone, findCategory, newArrivals, popular, productVariants,
 } from './catalog-data';
 import { catalogFilterOptions, defaultFilters, filterCatalog, filtersFromUrl } from './catalog-filters';
 import { iphone18Title } from './iphone-18-pro';
@@ -107,11 +107,9 @@ export function Catalog({ query }) {
       <Breadcrumbs current="Каталог" />
       <div className="page-heading"><h1>Каталог техники</h1></div>
       <div className="category-grid section" aria-label="Категории каталога">
-        {categories.map(({ id, name, art, illustration }) => (
+        {categories.map(({ id, name }) => (
           <a key={id} className="category-tile" href={categoryUrl(id)}>
-            {illustration ? (
-              <div className={`category-tile__art category-tile__art--illustration category-tile__art--${illustration}`} aria-hidden="true"><span /></div>
-            ) : <img className="category-tile__art" src={imageUrl(art ?? `category-${id}.webp`)} alt="" loading="lazy" decoding="async" />}
+            <img className="category-tile__art" src={imageUrl(`category-${id}.webp`)} alt="" loading="lazy" decoding="async" />
             <h2>{name}</h2>
           </a>
         ))}
@@ -249,19 +247,21 @@ export function AllProducts({ query }) {
   );
 }
 
-function ProductColors({ product }) {
-  const options = colorOptions(product);
+function ProductVariants({ product }) {
+  const { label, options } = productVariants(product);
   if (options.length < 2) return null;
 
   return (
-    <nav className="product-colors" aria-labelledby="product-color-heading">
-      <p id="product-color-heading">Цвет</p>
+    <nav className="product-variants" aria-labelledby="product-variant-heading">
+      <p id="product-variant-heading">{label}</p>
       <ul>
         {options.map((option) => (
           <li key={option.id}>
             <a href={productUrl(option)} aria-current={option.id === product.id ? 'page' : undefined}>
-              <span className="product-colors__swatch" style={{ backgroundColor: option.color.swatch }} aria-hidden="true" />
-              {option.color.label}
+              {option.color && (
+                <span className="product-variants__swatch" style={{ backgroundColor: option.color.swatch }} aria-hidden="true" />
+              )}
+              {option.edition?.label ?? option.color?.label}
             </a>
           </li>
         ))}
@@ -288,7 +288,7 @@ export function Product({ query }) {
               <h1>{product.name}</h1>
               <p className="product-page__summary">{product.summary}</p>
               <ProductBadges product={product} />
-              <ProductColors product={product} />
+              <ProductVariants product={product} />
               <dl className="product-facts">
                 {product.specs.slice(0, 3).map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
               </dl>

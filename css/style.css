@@ -553,28 +553,6 @@ button { cursor: pointer; }
   object-fit: cover;
   background: #4c303e;
 }
-.category-tile__art--illustration { display: grid; place-items: center; background: radial-gradient(ellipse at 55% 34%, #8d5a77, #362639 75%); }
-.category-tile__art--illustration span { position: relative; display: block; width: 51%; aspect-ratio: 1.55; }
-.category-tile__art--illustration span::before, .category-tile__art--illustration span::after { content: ""; position: absolute; }
-.category-tile__art--console span {
-  width: 50%; aspect-ratio: 2.1; border-radius: 28% 30% 17% 20%; rotate: -14deg;
-  border: .45rem solid #eee4ea; background: linear-gradient(150deg, #24212f, #100f17); box-shadow: .55rem .8rem 1rem #2117279c;
-}
-.category-tile__art--console span::after { inset: 25% 10% auto 57%; height: 3px; border-radius: 5px; background: #a7a5ff; box-shadow: 0 0 .8rem #a7a5ff; }
-.category-tile__art--coffee { background: radial-gradient(ellipse at 42% 35%, #a57b73, #392632 76%); }
-.category-tile__art--coffee span {
-  width: 38%; aspect-ratio: .93; border-radius: 14% 14% 10% 10%; border: .3rem solid #bca1a9;
-  background: linear-gradient(140deg, #534047, #1f1721); box-shadow: .55rem .65rem 1rem #2c1b22a6;
-}
-.category-tile__art--coffee span::before { inset: 28% 16% 11%; border-radius: 10%; background: #110d15; border-top: .25rem solid #a9807a; }
-.category-tile__art--coffee span::after { inset: 48% 33% 15% 31%; border-radius: 8% 8% 35% 35%; background: linear-gradient(105deg, #f0dcd6, #bba09f); }
-.category-tile__art--oven { background: radial-gradient(ellipse at 55% 31%, #8c6f88, #38283d 75%); }
-.category-tile__art--oven span {
-  width: 60%; aspect-ratio: 1.55; border-radius: 11%; border: .35rem solid #bba9b9;
-  background: linear-gradient(145deg, #4b3e4a, #1e1a24); box-shadow: .55rem .72rem 1rem #201727a6;
-}
-.category-tile__art--oven span::before { inset: 13% 23% 13% 8%; border-radius: 8%; border: 2px solid #907c8b; background: linear-gradient(155deg, #251a24, #40272d 72%, #e29059 114%); }
-.category-tile__art--oven span::after { inset: 30% 6% auto auto; width: 10%; aspect-ratio: 1; border-radius: 50%; background: #e7cbcd; box-shadow: 0 .95rem #c8aab6; }
 .catalog-filters { display: grid; gap: .9rem; padding: 1.1rem; min-width: 0; }
 .catalog-filters h2 { font-size: 1.26rem; }
 .catalog-filters__options { display: grid; gap: .8rem; }
@@ -643,10 +621,10 @@ button { cursor: pointer; }
 .product-overview__info { min-width: 0; padding: clamp(1rem, 3.2vw, 2.5rem); align-self: center; }
 .product-overview__info h1 { font-size: clamp(2rem, 4.35vw, 3.7rem); }
 .product-page__summary { margin-top: .5rem; color: var(--muted); }
-.product-overview__info .product-badges, .product-colors { margin-top: .9rem; }
-.product-colors p { margin-bottom: .4rem; color: var(--muted); font-size: .86rem; }
-.product-colors ul { display: flex; flex-wrap: wrap; gap: .45rem; padding: 0; list-style: none; }
-.product-colors a {
+.product-overview__info .product-badges, .product-variants { margin-top: .9rem; }
+.product-variants p { margin-bottom: .4rem; color: var(--muted); font-size: .86rem; }
+.product-variants ul { display: flex; flex-wrap: wrap; gap: .45rem; padding: 0; list-style: none; }
+.product-variants a {
   display: flex;
   align-items: center;
   gap: .45rem;
@@ -659,8 +637,8 @@ button { cursor: pointer; }
   font-size: .86rem;
   text-decoration: none;
 }
-.product-colors a:hover, .product-colors a[aria-current="page"] { border-color: var(--accent); background: #382636; }
-.product-colors__swatch { width: 1rem; height: 1rem; border: 1px solid #a88f9c; border-radius: 50%; }
+.product-variants a:hover, .product-variants a[aria-current="page"] { border-color: var(--accent); background: #382636; }
+.product-variants__swatch { width: 1rem; height: 1rem; border: 1px solid #a88f9c; border-radius: 50%; }
 .product-facts { margin-block: 1rem .6rem; }
 .product-facts > div {
   display: grid;
@@ -804,7 +782,7 @@ button { cursor: pointer; }
   .site-nav__link, .home-faq__item summary, .breadcrumbs a, .site-footer a, .product-card__body a:not(.button), .product-overview__spec-link {
     transition: color .22s, background-color .22s, text-decoration-color .22s;
   }
-  .button, .product-gallery__thumbs button, .product-colors a, .product-card, .category-tile {
+  .button, .product-gallery__thumbs button, .product-variants a, .product-card, .category-tile {
     transition: transform .28s var(--motion-ease), box-shadow .28s var(--motion-ease),
       color .22s, background-color .22s, border-color .22s;
   }
@@ -822,7 +800,7 @@ button { cursor: pointer; }
     }
     .product-card:hover .product-card__visual picture img, .product-card:hover .gift-card-art,
     .category-tile:hover .category-tile__art { scale: 1.05; }
-    .product-gallery__thumbs button:hover, .product-colors a:hover { transform: translateY(-2px); }
+    .product-gallery__thumbs button:hover, .product-variants a:hover { transform: translateY(-2px); }
     .button:not(:disabled):hover { transform: translateY(-2px); box-shadow: 0 .35rem .9rem #0005; }
     .back-to-top:enabled:hover { translate: 0 -.2rem; }
   }
