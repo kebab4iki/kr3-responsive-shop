@@ -13,8 +13,11 @@ const giftCards = [5000, 10000, 25000, 50000].map((giftValue) => {
   };
 });
 
-const gtaScreens = [2, 3, 4, 5, 6, 8].map((index) => ({
-  filename: `gta-vi-screen-${index}.jpg`, width: 1000, height: 1000, alt: 'Кадр из GTA VI',
+const gtaScreens = [
+  [2, 'герой рядом с мотоциклом'], [3, 'вечеринка на улице'], [4, 'герой у пальмы ночью'],
+  [5, 'герой за рулём автомобиля'], [6, 'герой у барной стойки'], [8, 'персонаж на катере на закате'],
+].map(([index, scene]) => ({
+  filename: `gta-vi-screen-${index}.jpg`, width: 1000, height: 1000, alt: `GTA VI — ${scene}`,
 }));
 const standardEdition = { group: 'gta-vi-ps5', label: 'Standard Edition' };
 const ultimateEdition = { group: 'gta-vi-ps5', label: 'Ultimate Edition' };

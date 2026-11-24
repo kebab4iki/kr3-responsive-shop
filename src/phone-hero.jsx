@@ -2,6 +2,7 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react
 import { featuredPhone } from './catalog-data';
 import { iphone18Finishes, iphone18Title } from './iphone-18-pro';
 import { gamesAndGiftsId, giftCardType, gtaStandardId } from './new-catalog-products';
+import { responsiveSource } from './responsive-image';
 import { assetUrl, imageUrl, orderUrl, pageUrl, productUrl } from './shop';
 
 const wideScreen = '(min-width: 768px)';
@@ -10,6 +11,7 @@ const posterUrl = (width) => imageUrl(`iphone-lineup-studio-${width}.webp`);
 const posterSet = (widths) => widths.map((width) => `${posterUrl(width)} ${width}w`).join(', ');
 const widePosters = posterSet([960, 1280, 1920, 2560]);
 const mobilePosters = posterSet([360, 656]);
+const promoSizes = '(min-width: 768px) 100vw, 960px';
 
 const promos = [
   {
@@ -56,12 +58,19 @@ export function HomeShowcase() {
 
   useEffect(() => {
     if (!introComplete) return;
-    for (const { id } of promos) {
+    if (navigator.connection?.saveData) return;
+    for (const { id } of (matchMedia(wideScreen).matches ? promos : promos.slice(active, active + 1))) {
+      const filename = `home-promo-${id}.webp`;
       const background = new Image();
       background.fetchPriority = 'low';
-      background.src = imageUrl(`home-promo-${id}.webp`);
+      const sources = responsiveSource(filename);
+      if (sources) {
+        background.sizes = promoSizes;
+        background.srcset = sources;
+      }
+      background.src = imageUrl(filename);
     }
-  }, [introComplete]);
+  }, [active, introComplete]);
 
   useEffect(() => {
     if (!introComplete || contentFocused) return;
@@ -100,7 +109,7 @@ export function HomeShowcase() {
           const transitionClass = current ? (previous === null ? '' : ' home-showcase__slide--entering') : ' home-showcase__slide--leaving';
           return (
             <div key={index} className={`home-showcase__slide${transitionClass}`} ref={current ? currentSlide : undefined}
-              aria-hidden={!current || undefined} inert={!current}>
+              inert={!current}>
               {index === 0 ? <PhoneHero intro={!introComplete} showPoster={finishIntro} />
                 : <PromoSlide promo={promos[index - 1]} />}
             </div>
@@ -122,9 +131,10 @@ export function HomeShowcase() {
 }
 
 function PromoSlide({ promo }) {
+  const filename = `home-promo-${promo.id}.webp`;
   return (
     <div className={`promo promo--${promo.id}`}>
-      <img className="promo__background" src={imageUrl(`home-promo-${promo.id}.webp`)} alt="" />
+      <img className="promo__background" src={imageUrl(filename)} srcSet={responsiveSource(filename)} sizes={promoSizes} alt="" />
       <div className="promo__inner container">
         <div className="promo__copy">
           {promo.id === 'bork' && <img className="promo__logo" src={imageUrl('home-promo-bork-logo.webp')}

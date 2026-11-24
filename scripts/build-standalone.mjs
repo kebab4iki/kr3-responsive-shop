@@ -29,6 +29,7 @@ const assets = {};
 for (const directory of ['images', 'media']) {
   const source = new URL(`public/${directory}/`, root);
   for (const filename of await readdir(source)) {
+    if (/\.responsive-\d+\.webp$/.test(filename)) continue;
     const type = mime[filename.split('.').pop()];
     if (!type) continue;
     const data = await readFile(new URL(filename, source));

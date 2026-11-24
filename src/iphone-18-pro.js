@@ -10,8 +10,9 @@ const finishes = [
 export const iphone18Finishes = finishes.map(({ name }) => name);
 
 export const iphone18Products = finishes.map(({ slug, name, label, swatch, price, sizes }) => {
+  const views = ['вид спереди и сзади', 'задняя панель', slug === 'burgundy' ? 'блок камер крупным планом' : 'боковой профиль'];
   const [image, ...gallery] = sizes.map(([width, height], index) => ({
-    filename: `iphone-18-pro-${slug}-${index + 1}.png`, width, height,
+    filename: `iphone-18-pro-${slug}-${index + 1}.png`, width, height, alt: `${iphone18Title} ${name} — ${views[index]}`,
   }));
 
   return {

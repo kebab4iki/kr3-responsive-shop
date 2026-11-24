@@ -3,7 +3,10 @@
     "id": "apple-iphone-15-blue",
     "categoryId": "phones",
     "colorGroup": "iphone-15-128",
-    "color": { "label": "Голубой", "swatch": "#d5e5eb" },
+    "color": {
+      "label": "Голубой",
+      "swatch": "#d5e5eb"
+    },
     "name": "Apple iPhone 15 128 ГБ, голубой",
     "summary": "6,1″ OLED · A16 Bionic",
     "price": 61990,
@@ -43,12 +46,14 @@
       {
         "filename": "apple-iphone-15-blue-2.webp",
         "width": 545,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 15 128 ГБ, голубой — экран, вид спереди"
       },
       {
         "filename": "apple-iphone-15-blue-3.webp",
         "width": 483,
-        "height": 671
+        "height": 671,
+        "alt": "Apple iPhone 15 128 ГБ, голубой — задняя панель под углом"
       }
     ]
   },
@@ -56,7 +61,10 @@
     "id": "apple-iphone-15-pink",
     "categoryId": "phones",
     "colorGroup": "iphone-15-128",
-    "color": { "label": "Розовый", "swatch": "#f2c8d1" },
+    "color": {
+      "label": "Розовый",
+      "swatch": "#f2c8d1"
+    },
     "name": "Apple iPhone 15 128 ГБ, розовый",
     "summary": "6,1″ OLED · камера 48 Мп",
     "price": 60999,
@@ -96,12 +104,14 @@
       {
         "filename": "apple-iphone-15-pink-2.webp",
         "width": 545,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 15 128 ГБ, розовый — экран, вид спереди"
       },
       {
         "filename": "apple-iphone-15-pink-3.webp",
         "width": 495,
-        "height": 676
+        "height": 676,
+        "alt": "Apple iPhone 15 128 ГБ, розовый — задняя панель под углом"
       }
     ]
   },
@@ -147,12 +157,14 @@
       {
         "filename": "apple-iphone-15-plus-2.webp",
         "width": 540,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 15 Plus 128 ГБ, зелёный — экран, вид спереди"
       },
       {
         "filename": "apple-iphone-15-plus-3.webp",
         "width": 541,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 15 Plus 128 ГБ, зелёный — задняя панель с камерами"
       }
     ]
   },
@@ -198,12 +210,14 @@
       {
         "filename": "apple-iphone-14-red-2.webp",
         "width": 548,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 14 128 ГБ, красный — экран, вид спереди"
       },
       {
         "filename": "apple-iphone-14-red-3.webp",
         "width": 556,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 14 128 ГБ, красный — задняя панель с камерами"
       }
     ]
   },
@@ -249,12 +263,14 @@
       {
         "filename": "apple-iphone-16-ultramarine-2.webp",
         "width": 543,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 16 128 ГБ, голубой — задняя панель"
       },
       {
         "filename": "apple-iphone-16-ultramarine-3.webp",
         "width": 1048,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 16 128 ГБ, голубой — блок камер крупным планом"
       }
     ]
   },
@@ -292,12 +308,14 @@
       {
         "filename": "apple-iphone-16e-black-2.webp",
         "width": 547,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 16e 128 ГБ, чёрный — задняя панель"
       },
       {
         "filename": "apple-iphone-16e-black-3.webp",
         "width": 468,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 16e 128 ГБ, чёрный — боковой профиль корпуса"
       }
     ]
   },
@@ -343,12 +361,14 @@
       {
         "filename": "apple-iphone-16-pro-white-2.webp",
         "width": 536,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 16 Pro 128 ГБ, белый — задняя панель"
       },
       {
         "filename": "apple-iphone-16-pro-white-3.webp",
         "width": 1052,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 16 Pro 128 ГБ, белый — блок камер крупным планом"
       }
     ]
   },
@@ -394,12 +414,14 @@
       {
         "filename": "apple-iphone-17-lavender-2.webp",
         "width": 536,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 17 256 ГБ, фиолетовый — задняя панель"
       },
       {
         "filename": "apple-iphone-17-lavender-3.webp",
         "width": 874,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 17 256 ГБ, фиолетовый — блок камер крупным планом"
       }
     ]
   },
@@ -445,12 +467,14 @@
       {
         "filename": "apple-iphone-17-pro-max-orange-2.webp",
         "width": 536,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 17 Pro Max 256 ГБ, оранжевый — задняя панель"
       },
       {
         "filename": "apple-iphone-17-pro-max-orange-3.webp",
         "width": 877,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPhone 17 Pro Max 256 ГБ, оранжевый — блок камер крупным планом"
       }
     ]
   },
@@ -496,12 +520,14 @@
       {
         "filename": "samsung-galaxy-s24-ultra-black-2.webp",
         "width": 543,
-        "height": 1100
+        "height": 1100,
+        "alt": "Samsung Galaxy S24 Ultra 256 ГБ, чёрный — вид спереди с выключенным экраном"
       },
       {
         "filename": "samsung-galaxy-s24-ultra-black-3.webp",
         "width": 552,
-        "height": 1100
+        "height": 1100,
+        "alt": "Samsung Galaxy S24 Ultra 256 ГБ, чёрный — задняя панель с камерами"
       }
     ]
   },
@@ -547,12 +573,14 @@
       {
         "filename": "samsung-galaxy-s25-ultra-silverblue-2.webp",
         "width": 537,
-        "height": 1100
+        "height": 1100,
+        "alt": "Samsung Galaxy S25 Ultra 256 ГБ, синий — вид спереди с выключенным экраном"
       },
       {
         "filename": "samsung-galaxy-s25-ultra-silverblue-3.webp",
         "width": 543,
-        "height": 1100
+        "height": 1100,
+        "alt": "Samsung Galaxy S25 Ultra 256 ГБ, синий — задняя панель с камерами"
       }
     ]
   },
@@ -598,12 +626,14 @@
       {
         "filename": "apple-ipad-air-m1-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPad Air (5‑го поколения) Wi‑Fi 64 ГБ, синий — задняя панель"
       },
       {
         "filename": "apple-ipad-air-m1-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple iPad Air (5‑го поколения) Wi‑Fi 64 ГБ, синий — камера крупным планом"
       }
     ]
   },
@@ -645,12 +675,14 @@
       {
         "filename": "apple-macbook-air-m2-2.webp",
         "width": 1100,
-        "height": 845
+        "height": 845,
+        "alt": "Apple MacBook Air 13,6″ (M2, 2022) MLY13, Starlight — открытый ноутбук, вид спереди"
       },
       {
         "filename": "apple-macbook-air-m2-3.webp",
         "width": 1100,
-        "height": 845
+        "height": 845,
+        "alt": "Apple MacBook Air 13,6″ (M2, 2022) MLY13, Starlight — внешняя крышка"
       }
     ]
   },
@@ -692,12 +724,14 @@
       {
         "filename": "apple-macbook-air-m3-2.webp",
         "width": 1100,
-        "height": 733
+        "height": 733,
+        "alt": "Apple MacBook Air 13,6″ (M3, 2024), чёрный — клавиатура и трекпад"
       },
       {
         "filename": "apple-macbook-air-m3-3.webp",
         "width": 1100,
-        "height": 733
+        "height": 733,
+        "alt": "Apple MacBook Air 13,6″ (M3, 2024), чёрный — два боковых профиля"
       }
     ]
   },
@@ -743,12 +777,14 @@
       {
         "filename": "lenovo-ideapad-slim-3-15abr8-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Lenovo IdeaPad Slim 3 15ABR8, серый — выключенный ноутбук, вид спереди"
       },
       {
         "filename": "lenovo-ideapad-slim-3-15abr8-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Lenovo IdeaPad Slim 3 15ABR8, серый — открытый ноутбук под углом"
       }
     ]
   },
@@ -794,12 +830,14 @@
       {
         "filename": "asus-vivobook-x1504va-bq5738-2.webp",
         "width": 1100,
-        "height": 745
+        "height": 745,
+        "alt": "ASUS Vivobook X1504VA-BQ5738, серебристый — открытый ноутбук под углом слева"
       },
       {
         "filename": "asus-vivobook-x1504va-bq5738-3.webp",
         "width": 1100,
-        "height": 746
+        "height": 746,
+        "alt": "ASUS Vivobook X1504VA-BQ5738, серебристый — открытый ноутбук под углом справа"
       }
     ]
   },
@@ -845,12 +883,14 @@
       {
         "filename": "huawei-matebook-d15-bod-wdi9-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "HUAWEI MateBook D 15 BOD-WDI9, Space Grey — выключенный ноутбук, вид спереди"
       },
       {
         "filename": "huawei-matebook-d15-bod-wdi9-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "HUAWEI MateBook D 15 BOD-WDI9, Space Grey — открытый ноутбук под углом"
       }
     ]
   },
@@ -896,12 +936,14 @@
       {
         "filename": "acer-aspire-5-a515-58m-53e8-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Acer Aspire 5 A515-58M-53E8, серый — открытый ноутбук под углом"
       },
       {
         "filename": "acer-aspire-5-a515-58m-53e8-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Acer Aspire 5 A515-58M-53E8, серый — ноутбук с наклонённой крышкой"
       }
     ]
   },
@@ -943,12 +985,14 @@
       {
         "filename": "apple-studio-display-2022-2.webp",
         "width": 1000,
-        "height": 591
+        "height": 591,
+        "alt": "Apple Studio Display 27″ VESA, серебристый — задняя панель с креплением"
       },
       {
         "filename": "apple-studio-display-2022-3.webp",
         "width": 404,
-        "height": 705
+        "height": 705,
+        "alt": "Apple Studio Display 27″ VESA, серебристый — боковой профиль"
       }
     ]
   },
@@ -990,12 +1034,14 @@
       {
         "filename": "dell-g2723h-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Dell G2723H 27″, чёрный — выключенный экран, вид спереди"
       },
       {
         "filename": "dell-g2723h-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Dell G2723H 27″, чёрный — выключенный экран под углом"
       }
     ]
   },
@@ -1033,12 +1079,14 @@
       {
         "filename": "asus-proart-pa278qv-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "ASUS ProArt PA278QV 27″, чёрный — монитор на подставке под углом"
       },
       {
         "filename": "asus-proart-pa278qv-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "ASUS ProArt PA278QV 27″, чёрный — экран в вертикальном положении"
       }
     ]
   },
@@ -1076,12 +1124,14 @@
       {
         "filename": "lg-27up850n-w-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "LG 27UP850N-W 27″, белый — монитор на подставке под углом"
       },
       {
         "filename": "lg-27up850n-w-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "LG 27UP850N-W 27″, белый — выключенный экран, вид спереди"
       }
     ]
   },
@@ -1119,12 +1169,14 @@
       {
         "filename": "aoc-24g2sp-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "AOC 24G2SP 23,8″, чёрный — монитор на подставке под углом"
       },
       {
         "filename": "aoc-24g2sp-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "AOC 24G2SP 23,8″, чёрный — выключенный экран, вид спереди"
       }
     ]
   },
@@ -1166,12 +1218,14 @@
       {
         "filename": "samsung-odyssey-g5-s27cg550ei-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Samsung Odyssey G5 G55C S27CG550EI 27″, чёрный — изогнутый экран, вид спереди"
       },
       {
         "filename": "samsung-odyssey-g5-s27cg550ei-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Samsung Odyssey G5 G55C S27CG550EI 27″, чёрный — изогнутый экран под углом"
       }
     ]
   },
@@ -1217,12 +1271,14 @@
       {
         "filename": "apple-watch-ultra-2-2.webp",
         "width": 421,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple Watch Ultra 2 49 мм, чёрный корпус, чёрный ремешок — ремешок крупным планом"
       },
       {
         "filename": "apple-watch-ultra-2-3.webp",
         "width": 949,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple Watch Ultra 2 49 мм, чёрный корпус, чёрный ремешок — корпус с экраном и застёгнутым ремешком"
       }
     ]
   },
@@ -1272,12 +1328,14 @@
       {
         "filename": "apple-watch-series-10-42-2.webp",
         "width": 496,
-        "height": 739
+        "height": 739,
+        "alt": "Apple Watch Series 10 42 мм, коралловый ремешок — коралловый ремешок крупным планом"
       },
       {
         "filename": "apple-watch-series-10-42-3.webp",
         "width": 715,
-        "height": 820
+        "height": 820,
+        "alt": "Apple Watch Series 10 42 мм, коралловый ремешок — корпус с экраном и застёгнутым ремешком"
       }
     ]
   },
@@ -1319,12 +1377,14 @@
       {
         "filename": "apple-watch-se-2022-40-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple Watch SE 2022 40 мм, Starlight — корпус с выключенным экраном спереди"
       },
       {
         "filename": "apple-watch-se-2022-40-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple Watch SE 2022 40 мм, Starlight — корпус и ремешок сбоку"
       }
     ]
   },
@@ -1374,12 +1434,14 @@
       {
         "filename": "samsung-galaxy-watch7-44-2.webp",
         "width": 594,
-        "height": 736
+        "height": 736,
+        "alt": "Samsung Galaxy Watch7 44 мм, серебристые — циферблат и ремешок спереди"
       },
       {
         "filename": "samsung-galaxy-watch7-44-3.webp",
         "width": 631,
-        "height": 726
+        "height": 726,
+        "alt": "Samsung Galaxy Watch7 44 мм, серебристые — корпус с циферблатом под углом"
       }
     ]
   },
@@ -1429,12 +1491,14 @@
       {
         "filename": "garmin-venu-3-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Garmin Venu 3, серебристый корпус, белый ремешок — выключенный экран и застёгнутый ремешок"
       },
       {
         "filename": "garmin-venu-3-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Garmin Venu 3, серебристый корпус, белый ремешок — выключенный экран спереди"
       }
     ]
   },
@@ -1484,12 +1548,14 @@
       {
         "filename": "amazfit-balance-a2287-2.webp",
         "width": 656,
-        "height": 848
+        "height": 848,
+        "alt": "Amazfit Balance A2287, серый корпус, чёрный ремешок — циферблат спереди"
       },
       {
         "filename": "amazfit-balance-a2287-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Amazfit Balance A2287, серый корпус, чёрный ремешок — корпус под углом с выключенным экраном"
       }
     ]
   },
@@ -1535,12 +1601,14 @@
       {
         "filename": "apple-airpods-max-lightning-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple AirPods Max (2020), серые — внешняя сторона чашек и оголовье"
       },
       {
         "filename": "apple-airpods-max-lightning-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple AirPods Max (2020), серые — амбушюры с внутренней стороны"
       }
     ]
   },
@@ -1586,12 +1654,14 @@
       {
         "filename": "apple-airpods-pro-2-lightning-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple AirPods Pro 2 (2022), белые — наушники со стороны внешних микрофонов"
       },
       {
         "filename": "apple-airpods-pro-2-lightning-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple AirPods Pro 2 (2022), белые — силиконовые насадки и звуководы"
       }
     ]
   },
@@ -1637,12 +1707,14 @@
       {
         "filename": "sony-wh-1000xm5-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Sony WH-1000XM5, чёрные — внешняя сторона чашек и оголовье"
       },
       {
         "filename": "sony-wh-1000xm5-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Sony WH-1000XM5, чёрные — амбушюры с внутренней стороны"
       }
     ]
   },
@@ -1684,12 +1756,14 @@
       {
         "filename": "bose-quietcomfort-2023-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Bose QuietComfort 2023, чёрные — внешняя сторона чашек и оголовье"
       },
       {
         "filename": "bose-quietcomfort-2023-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Bose QuietComfort 2023, чёрные — амбушюры с внутренней стороны"
       }
     ]
   },
@@ -1735,12 +1809,14 @@
       {
         "filename": "sennheiser-momentum-4-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Sennheiser Momentum 4 Wireless, чёрные — внешняя сторона чашек и оголовье"
       },
       {
         "filename": "sennheiser-momentum-4-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Sennheiser Momentum 4 Wireless, чёрные — амбушюры с внутренней стороны"
       }
     ]
   },
@@ -1786,12 +1862,14 @@
       {
         "filename": "jbl-tune-770nc-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "JBL Tune 770NC, синие — синие чашки и оголовье"
       },
       {
         "filename": "jbl-tune-770nc-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "JBL Tune 770NC, синие — амбушюры с внутренней стороны"
       }
     ]
   },
@@ -1837,12 +1915,14 @@
       {
         "filename": "apple-homepod-mini-orange-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple HomePod mini, оранжевая — верхняя сенсорная панель"
       },
       {
         "filename": "apple-homepod-mini-orange-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple HomePod mini, оранжевая — сетчатый корпус сбоку"
       }
     ]
   },
@@ -1880,12 +1960,14 @@
       {
         "filename": "jbl-flip-6-2.webp",
         "width": 1099,
-        "height": 1100
+        "height": 1100,
+        "alt": "JBL Flip 6, чёрная — решётка с логотипом JBL спереди"
       },
       {
         "filename": "jbl-flip-6-3.webp",
         "width": 1099,
-        "height": 1100
+        "height": 1100,
+        "alt": "JBL Flip 6, чёрная — торцевой пассивный излучатель"
       }
     ]
   },
@@ -1923,12 +2005,14 @@
       {
         "filename": "jbl-charge-5-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "JBL Charge 5, синяя — решётка с логотипом JBL спереди"
       },
       {
         "filename": "jbl-charge-5-3.webp",
         "width": 1100,
-        "height": 1099
+        "height": 1099,
+        "alt": "JBL Charge 5, синяя — торцевой пассивный излучатель"
       }
     ]
   },
@@ -1962,12 +2046,14 @@
       {
         "filename": "sony-srs-xb100-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Sony SRS-XB100, чёрная — верхняя решётка динамика"
       },
       {
         "filename": "sony-srs-xb100-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Sony SRS-XB100, чёрная — разъём и кнопки на корпусе"
       }
     ]
   },
@@ -2009,12 +2095,14 @@
       {
         "filename": "marshall-emberton-2-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Marshall Emberton II, чёрная — передняя решётка с логотипом Marshall"
       },
       {
         "filename": "marshall-emberton-2-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Marshall Emberton II, чёрная — противоположная сторона корпуса"
       }
     ]
   },
@@ -2052,12 +2140,14 @@
       {
         "filename": "jbl-go-4-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "JBL GO 4, фиолетовая — передняя решётка с логотипом JBL"
       },
       {
         "filename": "jbl-go-4-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "JBL GO 4, фиолетовая — боковая грань и петля"
       }
     ]
   },
@@ -2095,12 +2185,14 @@
       {
         "filename": "logitech-g502-hero-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Мышь Logitech G502 HERO (910-005470), чёрная — колесо прокрутки и верхние кнопки"
       },
       {
         "filename": "logitech-g502-hero-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Мышь Logitech G502 HERO (910-005470), чёрная — левые боковые кнопки"
       }
     ]
   },
@@ -2138,12 +2230,14 @@
       {
         "filename": "logitech-mx-master-3s-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Мышь Logitech MX Master 3S (910-006560), серая — корпус и колесо прокрутки под углом"
       },
       {
         "filename": "logitech-mx-master-3s-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Мышь Logitech MX Master 3S (910-006560), серая — боковые кнопки и боковое колесо"
       }
     ]
   },
@@ -2185,12 +2279,14 @@
       {
         "filename": "logitech-g-pro-x-superlight-2-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Мышь Logitech G PRO X SUPERLIGHT 2 (910-006642), белая — верх корпуса с колесом прокрутки"
       },
       {
         "filename": "logitech-g-pro-x-superlight-2-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Мышь Logitech G PRO X SUPERLIGHT 2 (910-006642), белая — боковая грань и кнопки"
       }
     ]
   },
@@ -2232,12 +2328,14 @@
       {
         "filename": "logitech-k380-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Клавиатура Logitech K380, серая — клавиатура под углом"
       },
       {
         "filename": "logitech-k380-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Клавиатура Logitech K380, серая — клавиши быстрого переключения устройств"
       }
     ]
   },
@@ -2283,12 +2381,14 @@
       {
         "filename": "keychron-k2-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Клавиатура Keychron K2, чёрная — раскладка клавиш сверху"
       },
       {
         "filename": "keychron-k2-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Клавиатура Keychron K2, чёрная — корпус и профиль клавиш под углом"
       }
     ]
   },
@@ -2334,12 +2434,14 @@
       {
         "filename": "logitech-c920s-hd-pro-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Веб-камера Logitech C920s HD PRO, чёрная — объектив и раскрытое крепление"
       },
       {
         "filename": "logitech-c920s-hd-pro-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Веб-камера Logitech C920s HD PRO, чёрная — корпус и крепление сбоку"
       }
     ]
   },
@@ -2377,12 +2479,14 @@
       {
         "filename": "sony-dualsense-white-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Sony DualSense CFI-ZCT1W, белый — задняя сторона контроллера"
       },
       {
         "filename": "sony-dualsense-white-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Sony DualSense CFI-ZCT1W, белый — боковой профиль контроллера"
       }
     ]
   },
@@ -2424,12 +2528,14 @@
       {
         "filename": "nintendo-switch-pro-controller-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Nintendo Switch Pro, чёрный — задняя сторона контроллера"
       },
       {
         "filename": "nintendo-switch-pro-controller-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Nintendo Switch Pro, чёрный — боковой профиль контроллера"
       }
     ]
   },
@@ -2463,12 +2569,14 @@
       {
         "filename": "microsoft-xbox-wireless-controller-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Microsoft Xbox Wireless Controller, чёрный — задняя сторона контроллера"
       },
       {
         "filename": "microsoft-xbox-wireless-controller-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Microsoft Xbox Wireless Controller, чёрный — боковой профиль контроллера"
       }
     ]
   },
@@ -2502,12 +2610,14 @@
       {
         "filename": "sony-dualshock-4-v2-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Sony DualShock 4 Ver. 2, чёрный — задняя сторона контроллера"
       },
       {
         "filename": "sony-dualshock-4-v2-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Sony DualShock 4 Ver. 2, чёрный — боковой профиль контроллера"
       }
     ]
   },
@@ -2541,12 +2651,14 @@
       {
         "filename": "8bitdo-ultimate-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "8BitDo Ultimate, чёрный — кнопки и стики спереди"
       },
       {
         "filename": "8bitdo-ultimate-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "8BitDo Ultimate, чёрный — задняя сторона контроллера"
       }
     ]
   },
@@ -2584,12 +2696,14 @@
       {
         "filename": "nintendo-joy-con-pair-2.webp",
         "width": 825,
-        "height": 1100
+        "height": 1100,
+        "alt": "Nintendo Joy-Con Pair, красный и синий — задняя сторона красного и синего контроллеров"
       },
       {
         "filename": "nintendo-joy-con-pair-3.webp",
         "width": 1100,
-        "height": 825
+        "height": 825,
+        "alt": "Nintendo Joy-Con Pair, красный и синий — кнопки двух контроллеров под углом"
       }
     ]
   },
@@ -2623,12 +2737,14 @@
       {
         "filename": "sandisk-extreme-portable-1tb-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "SanDisk Extreme Portable 1 ТБ, SDSSDE60-1T00-R25 — задняя сторона корпуса"
       },
       {
         "filename": "sandisk-extreme-portable-1tb-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "SanDisk Extreme Portable 1 ТБ, SDSSDE60-1T00-R25 — торец с разъёмом"
       }
     ]
   },
@@ -2666,12 +2782,14 @@
       {
         "filename": "samsung-t7-shield-1tb-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Samsung T7 Shield 1 ТБ (MU-PE1T0S/WW), чёрный — обратная сторона ребристого корпуса"
       },
       {
         "filename": "samsung-t7-shield-1tb-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Samsung T7 Shield 1 ТБ (MU-PE1T0S/WW), чёрный — ребристый корпус под углом"
       }
     ]
   },
@@ -2709,12 +2827,14 @@
       {
         "filename": "kingston-xs1000-1tb-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Kingston XS1000 1 ТБ (SXS1000/1000G), чёрный — наклейка на задней панели"
       },
       {
         "filename": "kingston-xs1000-1tb-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Kingston XS1000 1 ТБ (SXS1000/1000G), чёрный — торец с разъёмом USB"
       }
     ]
   },
@@ -2752,12 +2872,14 @@
       {
         "filename": "adata-elite-se880-1tb-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "ADATA Elite SE880 1 ТБ (AELI-SE880-1TCGY), серый — маркировка на обратной стороне"
       },
       {
         "filename": "adata-elite-se880-1tb-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "ADATA Elite SE880 1 ТБ (AELI-SE880-1TCGY), серый — разъём USB-C на торце"
       }
     ]
   },
@@ -2803,12 +2925,14 @@
       {
         "filename": "wd-black-sn770-1tb-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "WD Black SN770 1 ТБ WDS100T3X0E — обратная сторона платы"
       },
       {
         "filename": "wd-black-sn770-1tb-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "WD Black SN770 1 ТБ WDS100T3X0E — розничная упаковка с накопителем"
       }
     ]
   },
@@ -2854,12 +2978,14 @@
       {
         "filename": "samsung-990-pro-1tb-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Samsung 990 PRO 1 ТБ MZ-V9P1T0BW — плата накопителя с маркировкой"
       },
       {
         "filename": "samsung-990-pro-1tb-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Samsung 990 PRO 1 ТБ MZ-V9P1T0BW — обратная сторона платы"
       }
     ]
   },
@@ -2893,12 +3019,14 @@
       {
         "filename": "apple-magsafe-charger-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple MagSafe Charger 15 Вт, белый — оборотная сторона зарядной площадки"
       },
       {
         "filename": "apple-magsafe-charger-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Apple MagSafe Charger 15 Вт, белый — площадка и её кабель"
       }
     ]
   },
@@ -2932,12 +3060,14 @@
       {
         "filename": "apple-usb-c-20w-2.webp",
         "width": 548,
-        "height": 1100
+        "height": 1100,
+        "alt": "Адаптер Apple USB-C 20 Вт, белый — корпус и вилка под углом"
       },
       {
         "filename": "apple-usb-c-20w-3.webp",
         "width": 1100,
-        "height": 650
+        "height": 650,
+        "alt": "Адаптер Apple USB-C 20 Вт, белый — разъём USB-C крупным планом"
       }
     ]
   },
@@ -2971,12 +3101,14 @@
       {
         "filename": "anker-735-65w-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Anker 735 Charger Nano II 65 Вт, чёрное — вилка и боковая грань"
       },
       {
         "filename": "anker-735-65w-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Anker 735 Charger Nano II 65 Вт, чёрное — три разъёма зарядки"
       }
     ]
   },
@@ -3010,12 +3142,14 @@
       {
         "filename": "ugreen-cd275-65w-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "UGREEN CD275 65 Вт, белое — вилка и боковая грань"
       },
       {
         "filename": "ugreen-cd275-65w-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "UGREEN CD275 65 Вт, белое — три разъёма зарядки"
       }
     ]
   },
@@ -3057,12 +3191,14 @@
       {
         "filename": "xiaomi-mi-power-bank-3-ultra-compact-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Xiaomi Mi Power Bank 3 Ultra Compact 10 000 мА·ч, чёрный — обратная сторона корпуса"
       },
       {
         "filename": "xiaomi-mi-power-bank-3-ultra-compact-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Xiaomi Mi Power Bank 3 Ultra Compact 10 000 мА·ч, чёрный — торец с разъёмами"
       }
     ]
   },
@@ -3104,12 +3240,14 @@
       {
         "filename": "baseus-blade-100w-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Baseus Blade 20 000 мА·ч 100 Вт, чёрный — панель с индикатором"
       },
       {
         "filename": "baseus-blade-100w-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Baseus Blade 20 000 мА·ч 100 Вт, чёрный — задняя панель с технической маркировкой"
       }
     ]
   },
@@ -3147,12 +3285,14 @@
       {
         "filename": "tp-link-tl-wr841n-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "TP-Link TL-WR841N, белый — корпус и антенны спереди"
       },
       {
         "filename": "tp-link-tl-wr841n-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "TP-Link TL-WR841N, белый — корпус с антеннами сбоку"
       }
     ]
   },
@@ -3190,12 +3330,14 @@
       {
         "filename": "tp-link-archer-ax23-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "TP-Link Archer AX23, чёрный — корпус и антенны спереди"
       },
       {
         "filename": "tp-link-archer-ax23-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "TP-Link Archer AX23, чёрный — корпус с антеннами сбоку"
       }
     ]
   },
@@ -3237,12 +3379,14 @@
       {
         "filename": "tp-link-archer-ax55-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "TP-Link Archer AX55, чёрный — корпус и антенны спереди"
       },
       {
         "filename": "tp-link-archer-ax55-3.webp",
         "width": 1100,
-        "height": 1099
+        "height": 1099,
+        "alt": "TP-Link Archer AX55, чёрный — корпус с антеннами сбоку"
       }
     ]
   },
@@ -3280,12 +3424,14 @@
       {
         "filename": "tp-link-deco-x20-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "TP-Link Deco X20 2-pack, белый — отдельный модуль под углом"
       },
       {
         "filename": "tp-link-deco-x20-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "TP-Link Deco X20 2-pack, белый — отдельный модуль, вид спереди"
       }
     ]
   },
@@ -3323,12 +3469,14 @@
       {
         "filename": "asus-rt-ax57-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "ASUS RT-AX57, чёрный — корпус и антенны спереди"
       },
       {
         "filename": "asus-rt-ax57-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "ASUS RT-AX57, чёрный — корпус с антеннами сбоку"
       }
     ]
   },
@@ -3370,12 +3518,14 @@
       {
         "filename": "keenetic-hopper-kn-3810-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Keenetic Hopper KN-3810, белый — корпус и антенны спереди"
       },
       {
         "filename": "keenetic-hopper-kn-3810-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Keenetic Hopper KN-3810, белый — корпус с антеннами сбоку"
       }
     ]
   },
@@ -3417,12 +3567,14 @@
       {
         "filename": "hp-laserjet-pro-p1102-2.webp",
         "width": 1100,
-        "height": 825
+        "height": 825,
+        "alt": "HP LaserJet Pro P1102, с пробегом — корпус в три четверти"
       },
       {
         "filename": "hp-laserjet-pro-p1102-3.webp",
         "width": 1100,
-        "height": 825
+        "height": 825,
+        "alt": "HP LaserJet Pro P1102, с пробегом — открытый лоток для бумаги"
       }
     ]
   },
@@ -3464,12 +3616,14 @@
       {
         "filename": "hp-laserjet-m111w-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "HP LaserJet M111w, белый — корпус спереди"
       },
       {
         "filename": "hp-laserjet-m111w-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "HP LaserJet M111w, белый — открытая крышка отсека картриджа"
       }
     ]
   },
@@ -3511,12 +3665,14 @@
       {
         "filename": "brother-hl-l2400d-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Brother HL-L2400D — корпус спереди"
       },
       {
         "filename": "brother-hl-l2400d-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Brother HL-L2400D — выдвинутый лоток для бумаги"
       }
     ]
   },
@@ -3562,12 +3718,14 @@
       {
         "filename": "canon-pixma-g3470-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Canon PIXMA G3470, чёрное — панель управления спереди"
       },
       {
         "filename": "canon-pixma-g3470-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Canon PIXMA G3470, чёрное — открытые лотки для бумаги"
       }
     ]
   },
@@ -3613,12 +3771,14 @@
       {
         "filename": "epson-l3250-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Epson L3250, чёрное — передняя панель с чернильными ёмкостями"
       },
       {
         "filename": "epson-l3250-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Epson L3250, чёрное — открытая крышка корпуса"
       }
     ]
   },
@@ -3664,12 +3824,14 @@
       {
         "filename": "pantum-m6500w-2.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Pantum M6500W, чёрное — панель управления спереди"
       },
       {
         "filename": "pantum-m6500w-3.webp",
         "width": 1100,
-        "height": 1100
+        "height": 1100,
+        "alt": "Pantum M6500W, чёрное — поднятая крышка сканера"
       }
     ]
   }

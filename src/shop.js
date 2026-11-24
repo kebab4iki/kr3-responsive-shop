@@ -1,6 +1,8 @@
 import originalProducts from './products.json';
 import { catalogProducts } from './catalog-data';
 
+export { formatPrice } from './product-tools';
+
 export const products = [...catalogProducts, ...originalProducts];
 
 export const storeContact = {
@@ -40,12 +42,4 @@ export function orderUrl(product) {
 
 export function categoryUrl(id) {
   return pageUrl('category', { id });
-}
-
-const rubles = new Intl.NumberFormat('ru-RU', {
-  style: 'currency', currency: 'RUB', maximumFractionDigits: 0,
-});
-
-export function formatPrice(amount) {
-  return amount == null ? 'Цена по запросу' : rubles.format(amount);
 }

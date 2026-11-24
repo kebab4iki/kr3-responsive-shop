@@ -8,6 +8,7 @@ import { iphone18Title } from './iphone-18-pro';
 import { HomeFaq } from './home-faq';
 import { HomeReviews } from './home-reviews';
 import { HomeShowcase } from './phone-hero';
+import { responsiveSource } from './responsive-image';
 import {
   categoryUrl, formatPrice, imageUrl, orderUrl, pageUrl, products, productUrl, storeContact,
 } from './shop';
@@ -106,14 +107,16 @@ export function Catalog({ query }) {
     <>
       <Breadcrumbs current="Каталог" />
       <div className="page-heading"><h1>Каталог техники</h1></div>
-      <div className="category-grid section" aria-label="Категории каталога">
+      <nav className="category-grid section" aria-label="Категории каталога">
         {categories.map(({ id, name }) => (
           <a key={id} className="category-tile" href={categoryUrl(id)}>
-            <img className="category-tile__art" src={imageUrl(`category-${id}.webp`)} alt="" loading="lazy" decoding="async" />
+            <img className="category-tile__art" src={imageUrl(`category-${id}.webp`)} srcSet={responsiveSource(`category-${id}.webp`)}
+              sizes="(min-width: 1380px) 310px, (min-width: 1024px) 23vw, (min-width: 640px) 30vw, 45vw"
+              alt="" loading="lazy" decoding="async" />
             <h2>{name}</h2>
           </a>
         ))}
-      </div>
+      </nav>
     </>
   );
 }
@@ -149,6 +152,7 @@ export function Category({ query }) {
 
 export function AllProducts({ query }) {
   const [filters, setFilters] = useState(() => filtersFromUrl(query));
+  const [filtersOpen, setFiltersOpen] = useState(() => query.has('category') || query.has('brand'));
   const options = catalogFilterOptions(filters.category);
   const filtered = filterCatalog(filters);
   const invalidPrice = filters.from !== '' && filters.to !== '' && Number(filters.from) > Number(filters.to);
@@ -168,64 +172,70 @@ export function AllProducts({ query }) {
       <Breadcrumbs current="Все товары" links={[[pageUrl('catalog'), 'Каталог']]} />
       <div className="page-heading"><h1>Все товары</h1></div>
       <div className="catalog-layout section">
-        <aside className="catalog-filters surface" aria-labelledby="filter-title">
-          <h2 id="filter-title">Подбор товаров</h2>
-          <div className="catalog-filters__options">
-            <div className="field">
-              <label htmlFor="catalog-search">Поиск по названию</label>
-              <input id="catalog-search" type="search" placeholder="Например, AirPods"
-                value={filters.search} onChange={(event) => updateFilters({ search: event.target.value })} />
-            </div>
-            <div className="field">
-              <label htmlFor="catalog-category">Категория</label>
-              <select id="catalog-category" value={filters.category} onChange={changeCategory}>
-                <option value="all">Все категории</option>
-                {categories.map(({ id, name }) => <option key={id} value={id}>{name}</option>)}
-              </select>
-            </div>
-            <div className="field">
-              <label htmlFor="catalog-brand">Бренд</label>
-              <select id="catalog-brand" value={filters.brand} onChange={(event) => updateFilters({ brand: event.target.value })}>
-                <option value="">Все бренды</option>
-                {options.brands.map((brand) => <option key={brand}>{brand}</option>)}
-              </select>
-            </div>
-            <fieldset className="catalog-filter-group">
-              <legend>Цена, ₽</legend>
-              <div className="catalog-filters__price">
-                <div className="field">
-                  <input aria-label="Цена от" id="catalog-price-from" type="number" min="0" inputMode="numeric" placeholder="От"
-                    aria-invalid={invalidPrice || undefined} aria-describedby={invalidPrice ? 'catalog-price-notice' : undefined}
-                    value={filters.from} onChange={(event) => updateFilters({ from: event.target.value })} />
-                </div>
-                <div className="field">
-                  <input aria-label="Цена до" id="catalog-price-to" type="number" min="0" inputMode="numeric" placeholder="До"
-                    aria-invalid={invalidPrice || undefined} aria-describedby={invalidPrice ? 'catalog-price-notice' : undefined}
-                    value={filters.to} onChange={(event) => updateFilters({ to: event.target.value })} />
-                </div>
+        <aside className="catalog-filters surface" aria-label="Фильтры каталога">
+          <h2 className="catalog-filters__title">Подбор товаров</h2>
+          <button className="catalog-filters__toggle button button--outline" type="button" aria-expanded={filtersOpen}
+            aria-controls="catalog-filter-fields" onClick={() => setFiltersOpen(!filtersOpen)}>
+            {filtersOpen ? 'Свернуть фильтры' : 'Открыть фильтры'}
+          </button>
+          <div id="catalog-filter-fields" className={`catalog-filters__body${filtersOpen ? ' catalog-filters__body--expanded' : ''}`}>
+            <div className="catalog-filters__options">
+              <div className="field">
+                <label htmlFor="catalog-search">Поиск по названию</label>
+                <input id="catalog-search" type="search" placeholder="Например, AirPods"
+                  value={filters.search} onChange={(event) => updateFilters({ search: event.target.value })} />
               </div>
-              {invalidPrice && <p className="catalog-filters__notice" id="catalog-price-notice" role="alert">Цена «от» должна быть меньше или равна цене «до».</p>}
-            </fieldset>
-            <fieldset className="catalog-filter-group">
-              <legend>Подборки</legend>
-              <div className="catalog-filters__toggles">
-                <label><input type="checkbox" checked={filters.hit} onChange={(event) => updateFilters({ hit: event.target.checked })} />Хиты</label>
-                <label><input type="checkbox" checked={filters.fresh} onChange={(event) => updateFilters({ fresh: event.target.checked })} />Новинки</label>
-              </div>
-            </fieldset>
-            {options.specs.map(({ id, label, options: values }) => (
-              <div className="field" key={id}>
-                <label htmlFor={`catalog-spec-${id}`}>{label}</label>
-                <select id={`catalog-spec-${id}`} value={filters.specs[id] ?? ''} onChange={(event) => {
-                  updateFilters({ specs: { ...filters.specs, [id]: event.target.value } });
-                }}>
-                  <option value="">Любое значение</option>
-                  {values.map((value) => <option key={value}>{value}</option>)}
+              <div className="field">
+                <label htmlFor="catalog-category">Категория</label>
+                <select id="catalog-category" value={filters.category} onChange={changeCategory}>
+                  <option value="all">Все категории</option>
+                  {categories.map(({ id, name }) => <option key={id} value={id}>{name}</option>)}
                 </select>
               </div>
-            ))}
+              <div className="field">
+                <label htmlFor="catalog-brand">Бренд</label>
+                <select id="catalog-brand" value={filters.brand} onChange={(event) => updateFilters({ brand: event.target.value })}>
+                  <option value="">Все бренды</option>
+                  {options.brands.map((brand) => <option key={brand}>{brand}</option>)}
+                </select>
+              </div>
+              <fieldset className="catalog-filter-group">
+                <legend>Цена, ₽</legend>
+                <div className="catalog-filters__price">
+                  <div className="field">
+                    <input aria-label="Цена от" id="catalog-price-from" type="number" min="0" inputMode="numeric" placeholder="От"
+                      aria-invalid={invalidPrice || undefined} aria-describedby={invalidPrice ? 'catalog-price-notice' : undefined}
+                      value={filters.from} onChange={(event) => updateFilters({ from: event.target.value })} />
+                  </div>
+                  <div className="field">
+                    <input aria-label="Цена до" id="catalog-price-to" type="number" min="0" inputMode="numeric" placeholder="До"
+                      aria-invalid={invalidPrice || undefined} aria-describedby={invalidPrice ? 'catalog-price-notice' : undefined}
+                      value={filters.to} onChange={(event) => updateFilters({ to: event.target.value })} />
+                  </div>
+                </div>
+                {invalidPrice && <p className="catalog-filters__notice" id="catalog-price-notice" role="alert">Цена «от» должна быть меньше или равна цене «до».</p>}
+              </fieldset>
+              <fieldset className="catalog-filter-group">
+                <legend>Подборки</legend>
+                <div className="catalog-filters__toggles">
+                  <label><input type="checkbox" checked={filters.hit} onChange={(event) => updateFilters({ hit: event.target.checked })} />Хиты</label>
+                  <label><input type="checkbox" checked={filters.fresh} onChange={(event) => updateFilters({ fresh: event.target.checked })} />Новинки</label>
+                </div>
+              </fieldset>
+              {options.specs.map(({ id, label, options: values }) => (
+                <div className="field" key={id}>
+                  <label htmlFor={`catalog-spec-${id}`}>{label}</label>
+                  <select id={`catalog-spec-${id}`} value={filters.specs[id] ?? ''} onChange={(event) => {
+                    updateFilters({ specs: { ...filters.specs, [id]: event.target.value } });
+                  }}>
+                    <option value="">Любое значение</option>
+                    {values.map((value) => <option key={value}>{value}</option>)}
+                  </select>
+                </div>
+              ))}
+            </div>
+            <button className="button button--outline" type="button" onClick={() => setFilters(defaultFilters)}>Сбросить фильтры</button>
           </div>
-          <button className="button button--outline" type="button" onClick={() => setFilters(defaultFilters)}>Сбросить фильтры</button>
         </aside>
         <div className="catalog-results">
           <div className="catalog-results__toolbar">
