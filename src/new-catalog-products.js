@@ -16,25 +16,28 @@ const giftCards = [5000, 10000, 25000, 50000].map((giftValue) => {
 const gtaScreens = [2, 3, 4, 5, 6, 8].map((index) => ({
   filename: `gta-vi-screen-${index}.jpg`, width: 1000, height: 1000, alt: 'Кадр из GTA VI',
 }));
+const standardEdition = { group: 'gta-vi-ps5', label: 'Standard Edition' };
+const ultimateEdition = { group: 'gta-vi-ps5', label: 'Ultimate Edition' };
 
 const games = [
   {
     id: gtaStandardId, categoryId: gamesAndGiftsId, brand: 'Rockstar Games',
-    name: 'GTA VI', price: 9999, summary: 'PlayStation 5 · Standard Edition · код в коробке',
+    name: 'GTA VI', edition: standardEdition, price: 9000, summary: 'PlayStation 5 · Standard Edition · код в коробке',
     description: 'В открытом мире штата Леонида история следует за Лусией Каминос и Джейсоном Дювалем. В показанной коробке Standard Edition находится код загрузки для аккаунта PlayStation Store региона ОАЭ. Диск в упаковку не входит.',
-    specs: [['Платформа', 'PlayStation 5'], ['Издание', 'Standard Edition'], ['Формат', 'Код в коробке'],
+    specs: [['Платформа', 'PlayStation 5'], ['Издание', standardEdition.label], ['Формат', 'Код в коробке'],
       ['Вид товара', 'Игра'], ['Регион активации', 'ОАЭ'], ['Издатель', 'Rockstar Games']],
     image: { filename: 'gta-vi-ps5-box.jpg', width: 1000, height: 1000, alt: 'Коробка GTA VI Standard Edition для PS5, регион ОАЭ' },
     gallery: gtaScreens,
   },
   {
     id: 'gta-vi-ultimate-ps5', categoryId: gamesAndGiftsId, brand: 'Rockstar Games',
-    name: 'GTA VI Ultimate Edition', price: 10660, summary: 'PlayStation 5 · цифровое издание · дополнительный контент',
+    name: 'GTA VI Ultimate Edition', edition: ultimateEdition, price: 12000, summary: 'PlayStation 5 · цифровое издание · дополнительный контент',
     description: 'Цифровое издание для PlayStation 5 включает основную игру и комплект Ultimate Edition Upgrade. В нём есть дополнительные автомобили и варианты одежды для героев, а также другие предметы, которые открываются по мере прохождения сюжета.',
-    specs: [['Платформа', 'PlayStation 5'], ['Издание', 'Ultimate Edition'], ['Формат', 'Цифровое издание'],
+    specs: [['Платформа', 'PlayStation 5'], ['Издание', ultimateEdition.label], ['Формат', 'Цифровое издание'],
       ['Вид товара', 'Игра'], ['Регион аккаунта', 'ОАЭ'], ['Издатель', 'Rockstar Games'],
       ['Состав', 'Основная игра и Ultimate Edition Upgrade']],
-    image: gtaScreens[0], gallery: gtaScreens.slice(1),
+    image: { filename: 'gta-vi-ultimate-cover.jpg', width: 631, height: 800, alt: 'Обложка GTA VI Ultimate Edition для PS5' },
+    gallery: gtaScreens,
   },
 ];
 

@@ -15,10 +15,10 @@ export const categories = [
   { id: 'power', name: 'Зарядки и питание' },
   { id: 'network', name: 'Сетевое оборудование' },
   { id: 'printers', name: 'Принтеры' },
-  { id: gamesAndGiftsId, name: 'Игры и подарочные карты', art: 'home-promo-gta.webp' },
-  { id: 'consoles', name: 'Консоли', illustration: 'console' },
-  { id: 'coffee-machines', name: 'Кофемашины', illustration: 'coffee' },
-  { id: 'mini-ovens', name: 'Мини-печи', illustration: 'oven' },
+  { id: gamesAndGiftsId, name: 'Игры и подарочные карты' },
+  { id: 'consoles', name: 'Консоли' },
+  { id: 'coffee-machines', name: 'Кофемашины' },
+  { id: 'mini-ovens', name: 'Мини-печи' },
 ];
 
 export const categoriesById = new Map(categories.map((category) => [category.id, category]));
@@ -53,8 +53,17 @@ export const popular = hitIds.map((id) => catalogById.get(id));
 export const newArrivals = newIds.map((id) => catalogById.get(id));
 export const featuredPhone = catalogById.get('iphone-18-pro');
 
-export function colorOptions(product) {
-  return product.colorGroup ? catalogProducts.filter(({ colorGroup }) => colorGroup === product.colorGroup) : [];
+export function productVariants(product) {
+  if (product.edition) {
+    return {
+      label: 'Издание',
+      options: catalogProducts.filter(({ edition }) => edition?.group === product.edition.group),
+    };
+  }
+  return {
+    label: 'Цвет',
+    options: product.colorGroup ? catalogProducts.filter(({ colorGroup }) => colorGroup === product.colorGroup) : [],
+  };
 }
 
 export const demoCategoryIds = {
