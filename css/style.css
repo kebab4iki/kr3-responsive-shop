@@ -294,6 +294,7 @@ button { cursor: pointer; }
 .promo__copy h1 { font-size: clamp(2rem, 4.5vw, 4.25rem); line-height: 1.03; }
 .promo--gta .promo__copy h1 { font-size: clamp(1.9rem, 3.7vw, 3.45rem); }
 .promo--gift .promo__copy { max-width: 25rem; }
+.promo--gift .promo__copy h1 { font-size: clamp(1.75rem, 4.5vw, 4.15rem); overflow-wrap: normal; }
 .promo__copy p { margin-block: .9rem 1.15rem; color: #f0e5ed; font-size: clamp(1rem, 1.7vw, 1.4rem); }
 .promo__logo {
   width: clamp(7rem, 12vw, 12rem);
@@ -302,7 +303,6 @@ button { cursor: pointer; }
   filter: grayscale(1) contrast(4);
   mix-blend-mode: screen;
 }
-.promo__dialog form { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.15rem; }
 .section-heading { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: .9rem; margin-bottom: 1.15rem; }
 .section-heading h2 { font-size: clamp(1.85rem, 4vw, 3.1rem); }
 .product-carousel { background: #111015; }
@@ -447,7 +447,7 @@ button { cursor: pointer; }
   display: grid;
   place-items: center;
 }
-.product-card__visual img, .product-detail__visual img {
+.product-card__visual picture img, .product-detail__visual picture img {
   width: 100%;
   height: 100%;
   min-height: 0;
@@ -456,7 +456,7 @@ button { cursor: pointer; }
 }
 .product-card__visual--keyboard { background: radial-gradient(ellipse at 48% 45%, #eaf1f2, #a7bec1); }
 .product-card__visual--notebook { background: radial-gradient(ellipse at 48% 45%, #f8edef, #ccaab4); }
-.product-card__visual--photo img { mix-blend-mode: normal; }
+.product-card__visual--photo picture img { mix-blend-mode: normal; }
 .product-card__visual--photo { position: relative; background: #fff; }
 .product-card__visual--photo picture { position: absolute; inset: 6%; width: auto; height: auto; }
 .product-badges { display: flex; flex-wrap: wrap; gap: .35rem; padding: 0; list-style: none; }
@@ -464,7 +464,40 @@ button { cursor: pointer; }
 .product-badge { border-radius: 999px; padding: .22rem .55rem; font-size: .74rem; font-weight: 700; line-height: 1.25; }
 .product-badge--hit { color: #4d2900; background: #ffd99c; }
 .product-badge--new { color: #4a1431; background: #f6d4e8; }
-.product-placeholder { color: #664457; font-size: clamp(4rem, 9vw, 7rem); line-height: 1; }
+.product-visual--empty { background: radial-gradient(ellipse at center, #342631, #211a23); }
+.product-placeholder { padding: .35rem .7rem; border: 1px solid #705b6a; border-radius: .45rem; color: #f1d9e7; font-size: .85rem; }
+.product-visual--gift { background: radial-gradient(ellipse at 50% 0%, #533248, #251d2a 76%); }
+.gift-card-art {
+  position: relative;
+  width: min(86%, 30rem);
+  aspect-ratio: 1.64;
+  overflow: hidden;
+  container-type: inline-size;
+  border: 1px solid rgb(255 239 245 / .48);
+  border-radius: clamp(.55rem, 1.5vw, 1.2rem);
+  background: linear-gradient(130deg, var(--gift-light, #a24461), var(--gift-dark, #2c1124) 77%);
+  color: #fff7fd;
+  box-shadow: 0 1.2rem 2rem #0e0a116e;
+}
+.gift-card-art[data-value="10000"] { --gift-light: #634b9b; --gift-dark: #221435; }
+.gift-card-art[data-value="25000"] { --gift-light: #326b79; --gift-dark: #0c2732; }
+.gift-card-art[data-value="50000"] { --gift-light: #94713c; --gift-dark: #301725; }
+.gift-card-art::before {
+  content: "";
+  position: absolute;
+  inset: -50% -20% 10% 40%;
+  rotate: -24deg;
+  border: 1px solid #ffe6f681;
+  border-radius: 34%;
+  background: repeating-linear-gradient(155deg, transparent 0 13%, #ffe9f324 13.2% 13.6%, transparent 14% 21%);
+  box-shadow: inset 0 0 2rem #fff5f444;
+}
+.gift-card-art__content { position: relative; height: 100%; padding: 8%; display: grid; align-content: space-between; }
+.gift-card-art__brand { display: flex; align-items: center; gap: 2.3cqi; }
+.gift-card-art__brand img:first-child { width: 11cqi; padding: 1.1cqi; border-radius: 2cqi; background: #f7edf2; }
+.gift-card-art__brand img:last-child { width: 26cqi; filter: brightness(0) invert(1); }
+.gift-card-art__content span { display: block; font-size: 4.2cqi; color: #ffe3f0; }
+.gift-card-art__content strong { display: block; font-size: 12cqi; line-height: 1.08; letter-spacing: -.035em; }
 .product-card__body { display: flex; flex-direction: column; flex: 1; gap: .33rem; padding: 1.05rem; }
 .product-card__category { color: #e1aebc; font-size: .81rem; font-weight: 600; }
 .product-card h2, .product-card h3 { font-size: 1.38rem; overflow-wrap: anywhere; }
@@ -520,6 +553,28 @@ button { cursor: pointer; }
   object-fit: cover;
   background: #4c303e;
 }
+.category-tile__art--illustration { display: grid; place-items: center; background: radial-gradient(ellipse at 55% 34%, #8d5a77, #362639 75%); }
+.category-tile__art--illustration span { position: relative; display: block; width: 51%; aspect-ratio: 1.55; }
+.category-tile__art--illustration span::before, .category-tile__art--illustration span::after { content: ""; position: absolute; }
+.category-tile__art--console span {
+  width: 50%; aspect-ratio: 2.1; border-radius: 28% 30% 17% 20%; rotate: -14deg;
+  border: .45rem solid #eee4ea; background: linear-gradient(150deg, #24212f, #100f17); box-shadow: .55rem .8rem 1rem #2117279c;
+}
+.category-tile__art--console span::after { inset: 25% 10% auto 57%; height: 3px; border-radius: 5px; background: #a7a5ff; box-shadow: 0 0 .8rem #a7a5ff; }
+.category-tile__art--coffee { background: radial-gradient(ellipse at 42% 35%, #a57b73, #392632 76%); }
+.category-tile__art--coffee span {
+  width: 38%; aspect-ratio: .93; border-radius: 14% 14% 10% 10%; border: .3rem solid #bca1a9;
+  background: linear-gradient(140deg, #534047, #1f1721); box-shadow: .55rem .65rem 1rem #2c1b22a6;
+}
+.category-tile__art--coffee span::before { inset: 28% 16% 11%; border-radius: 10%; background: #110d15; border-top: .25rem solid #a9807a; }
+.category-tile__art--coffee span::after { inset: 48% 33% 15% 31%; border-radius: 8% 8% 35% 35%; background: linear-gradient(105deg, #f0dcd6, #bba09f); }
+.category-tile__art--oven { background: radial-gradient(ellipse at 55% 31%, #8c6f88, #38283d 75%); }
+.category-tile__art--oven span {
+  width: 60%; aspect-ratio: 1.55; border-radius: 11%; border: .35rem solid #bba9b9;
+  background: linear-gradient(145deg, #4b3e4a, #1e1a24); box-shadow: .55rem .72rem 1rem #201727a6;
+}
+.category-tile__art--oven span::before { inset: 13% 23% 13% 8%; border-radius: 8%; border: 2px solid #907c8b; background: linear-gradient(155deg, #251a24, #40272d 72%, #e29059 114%); }
+.category-tile__art--oven span::after { inset: 30% 6% auto auto; width: 10%; aspect-ratio: 1; border-radius: 50%; background: #e7cbcd; box-shadow: 0 .95rem #c8aab6; }
 .catalog-filters { display: grid; gap: .9rem; padding: 1.1rem; min-width: 0; }
 .catalog-filters h2 { font-size: 1.26rem; }
 .catalog-filters__options { display: grid; gap: .8rem; }
@@ -570,7 +625,7 @@ button { cursor: pointer; }
 .product-overview { overflow: hidden; }
 .product-overview .product-detail__visual { aspect-ratio: 1.13; }
 .product-gallery { min-width: 0; align-self: stretch; background: var(--surface); }
-.product-gallery__thumbs { display: flex; justify-content: center; gap: .55rem; padding: .7rem; }
+.product-gallery__thumbs { display: flex; flex-wrap: wrap; justify-content: center; gap: .55rem; padding: .7rem; }
 .product-gallery__thumbs button {
   display: grid;
   place-items: center;
@@ -753,7 +808,7 @@ button { cursor: pointer; }
     transition: transform .28s var(--motion-ease), box-shadow .28s var(--motion-ease),
       color .22s, background-color .22s, border-color .22s;
   }
-  .product-card__visual img, .category-tile__art { transition: scale .48s var(--motion-ease); }
+  .product-card__visual picture img, .category-tile__art, .gift-card-art { transition: scale .48s var(--motion-ease); }
   .product-card__visual img[data-fade-in] { transition: opacity .22s ease-out, scale .48s var(--motion-ease); }
   .product-card__visual img[data-fade-in]:not([data-photo-ready]) { opacity: 0; }
   .back-to-top {
@@ -765,7 +820,7 @@ button { cursor: pointer; }
     .category-tile:hover, .products-grid .product-card:hover {
       box-shadow: 0 .75rem 1.45rem #0006;
     }
-    .product-card:hover .product-card__visual img,
+    .product-card:hover .product-card__visual picture img, .product-card:hover .gift-card-art,
     .category-tile:hover .category-tile__art { scale: 1.05; }
     .product-gallery__thumbs button:hover, .product-colors a:hover { transform: translateY(-2px); }
     .button:not(:disabled):hover { transform: translateY(-2px); box-shadow: 0 .35rem .9rem #0005; }

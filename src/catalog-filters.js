@@ -1,4 +1,5 @@
-import { catalogProducts } from './catalog-data';
+import { catalogProducts, findCategory } from './catalog-data';
+import { gamesAndGiftsId } from './new-catalog-products';
 
 const collation = new Intl.Collator('ru', { numeric: true, sensitivity: 'base' });
 const brandLabels = {
@@ -34,11 +35,19 @@ const categoryFields = {
     return generation && `Wi-Fi ${generation}`;
   }]],
   printers: [['print', 'Тип печати', (spec) => spec('Скорость цв. печати') ? 'Цветная' : spec('Печать')?.replace(/^ч/, 'Ч')]],
+  [gamesAndGiftsId]: [
+    ['type', 'Вид товара', bySpec('Вид товара')],
+    ['edition', 'Издание', bySpec('Издание')],
+    ['nominal', 'Номинал', bySpec('Номинал')],
+  ],
+  consoles: [['storage', 'Накопитель', bySpec('Накопитель')], ['drive', 'Дисковод', bySpec('Дисковод')]],
+  'coffee-machines': [['method', 'Способ приготовления', bySpec('Способ приготовления')], ['coffee', 'Используемый кофе', bySpec('Используемый кофе')]],
+  'mini-ovens': [['finish', 'Цвет', bySpec('Цвет')]],
 };
 
 const items = catalogProducts.map((product) => {
   const prefix = product.id.split('-')[0];
-  const brand = brandLabels[prefix] ?? prefix[0].toUpperCase() + prefix.slice(1);
+  const brand = product.brand ?? brandLabels[prefix] ?? prefix[0].toUpperCase() + prefix.slice(1);
   const specs = new Map(product.specs);
   const fields = (categoryFields[product.categoryId] ?? []).map(([id, , read]) => {
     const value = read((label) => specs.get(label));
@@ -63,6 +72,18 @@ export function catalogFilterOptions(category) {
     id, label, options: sortedUnique(relevant.flatMap(({ values }) => values[id])),
   })).filter(({ options }) => options.length > 0);
   return { brands, specs };
+}
+
+export function filtersFromUrl(query) {
+  const category = findCategory(query.get('category'))?.id ?? defaultFilters.category;
+  const options = catalogFilterOptions(category);
+  const requestedBrand = query.get('brand')?.trim().toLocaleLowerCase('ru');
+  const brand = options.brands.find((name) => name.toLocaleLowerCase('ru') === requestedBrand) ?? '';
+  const specs = Object.fromEntries(options.specs.flatMap(({ id, options: values }) => {
+    const value = query.get(id);
+    return values.includes(value) ? [[id, value]] : [];
+  }));
+  return { ...defaultFilters, category, brand, specs };
 }
 
 export function filterCatalog({ search, category, brand, from, to, hit, fresh, sort, specs }) {
