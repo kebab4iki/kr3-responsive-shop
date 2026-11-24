@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { featuredPhone } from './catalog-data';
 import { iphone18Finishes, iphone18Title } from './iphone-18-pro';
+import { gamesAndGiftsId, giftCardType, gtaStandardId } from './new-catalog-products';
 import { assetUrl, imageUrl, orderUrl, pageUrl, productUrl } from './shop';
 
 const wideScreen = '(min-width: 768px)';
@@ -13,21 +14,18 @@ const mobilePosters = posterSet([360, 656]);
 const promos = [
   {
     id: 'gta', name: 'GTA VI', title: 'Два героя, один штат, тысячи возможностей',
-    description: 'Игровая техника в Corekit',
-    details: 'Подбери монитор, наушники и другие аксессуары для своей игровой системы.',
-    action: 'Смотреть технику', destination: 'products',
+    description: 'Купить в Corekit',
+    action: 'Подробнее', destination: 'product', params: { id: gtaStandardId },
   },
   {
     id: 'gift', name: 'Подарочные карты', title: 'Подарочные карты',
     description: 'Свобода выбора в одном подарке',
-    details: 'Оставь заявку, чтобы узнать об условиях покупки и использования подарочной карты Corekit.',
-    action: 'Оставить заявку', destination: 'application',
+    action: 'Выбрать номинал', destination: 'products', params: { category: gamesAndGiftsId, type: giftCardType },
   },
   {
     id: 'bork', name: 'BORK', title: 'Технологии как искусство',
     description: 'Новинки для вас и вашего дома',
-    details: 'Оставь заявку, чтобы уточнить ассортимент техники BORK для дома.',
-    action: 'Оставить заявку', destination: 'application',
+    action: 'Смотреть товары', destination: 'products', params: { brand: 'BORK' },
   },
 ];
 const slideNames = [iphone18Title, ...promos.map(({ name }) => name)];
@@ -39,7 +37,6 @@ export function HomeShowcase() {
   const { active, previous } = slides;
   const [introComplete, setIntroComplete] = useState(() => matchMedia(reducedMotion).matches);
   const [contentFocused, setContentFocused] = useState(false);
-  const [dialogOpen, setDialogOpen] = useState(false);
   const viewport = useRef(null);
   const currentSlide = useRef(null);
   const finishIntro = useCallback(() => setIntroComplete(true), []);
@@ -67,7 +64,7 @@ export function HomeShowcase() {
   }, [introComplete]);
 
   useEffect(() => {
-    if (!introComplete || contentFocused || dialogOpen) return;
+    if (!introComplete || contentFocused) return;
 
     let timer;
     function schedule() {
@@ -82,7 +79,7 @@ export function HomeShowcase() {
       window.clearTimeout(timer);
       document.removeEventListener('visibilitychange', schedule);
     };
-  }, [active, contentFocused, dialogOpen, introComplete, showSlide]);
+  }, [active, contentFocused, introComplete, showSlide]);
 
   useEffect(() => {
     if (previous === null) return;
@@ -105,7 +102,7 @@ export function HomeShowcase() {
             <div key={index} className={`home-showcase__slide${transitionClass}`} ref={current ? currentSlide : undefined}
               aria-hidden={!current || undefined} inert={!current}>
               {index === 0 ? <PhoneHero intro={!introComplete} showPoster={finishIntro} />
-                : <PromoSlide promo={promos[index - 1]} onDialogChange={setDialogOpen} />}
+                : <PromoSlide promo={promos[index - 1]} />}
             </div>
           );
         })}
@@ -124,10 +121,7 @@ export function HomeShowcase() {
   );
 }
 
-function PromoSlide({ promo, onDialogChange }) {
-  const dialog = useRef(null);
-  const titleId = `promo-title-${promo.id}`;
-
+function PromoSlide({ promo }) {
   return (
     <div className={`promo promo--${promo.id}`}>
       <img className="promo__background" src={imageUrl(`home-promo-${promo.id}.webp`)} alt="" />
@@ -137,20 +131,9 @@ function PromoSlide({ promo, onDialogChange }) {
             width="427" height="79" alt="BORK" />}
           <h1>{promo.title}</h1>
           <p>{promo.description}</p>
-          <button className="button button--primary" type="button" onClick={() => {
-            dialog.current.showModal();
-            onDialogChange(true);
-          }}>Подробнее</button>
+          <a className="button button--primary" href={pageUrl(promo.destination, promo.params)}>{promo.action}</a>
         </div>
       </div>
-      <dialog className="order-dialog promo__dialog" ref={dialog} aria-labelledby={titleId} onClose={() => onDialogChange(false)}>
-        <h2 id={titleId}>{promo.name}</h2>
-        <p>{promo.details}</p>
-        <form method="dialog">
-          <a className="button button--primary" href={pageUrl(promo.destination)}>{promo.action}</a>
-          <button className="button button--outline" type="submit">Закрыть</button>
-        </form>
-      </dialog>
     </div>
   );
 }

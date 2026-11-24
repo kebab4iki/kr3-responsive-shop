@@ -117,8 +117,29 @@ function showLoadedPhoto({ currentTarget: photo }) {
   else show();
 }
 
+function GiftCardArtwork({ amount }) {
+  return (
+    <div className="gift-card-art" data-value={amount} aria-hidden="true">
+      <div className="gift-card-art__content">
+        <div className="gift-card-art__brand">
+          <img src={imageUrl('corekit-mark.png')} alt="" />
+          <img src={imageUrl('corekit-wordmark.png')} alt="" />
+        </div>
+        <div><span>Подарочная карта</span><strong>{formatPrice(amount)}</strong></div>
+      </div>
+    </div>
+  );
+}
+
+function productVisualStyle(product) {
+  if (product.giftValue) return ' product-visual--gift';
+  if (!product.image) return ' product-visual--empty';
+  return product.gallery?.length ? ' product-card__visual--photo' : '';
+}
+
 export function ProductImage({ product, image = product.image, kind = 'card', eager = false, decorative = false, fadeIn = false }) {
-  if (!image) return <span className="product-placeholder" aria-hidden="true">▧</span>;
+  if (product.giftValue) return <GiftCardArtwork amount={product.giftValue} />;
+  if (!image) return <span className="product-placeholder" aria-hidden={decorative || undefined}>Фото пока нет</span>;
   const sizes = kind === 'detail' ? detailSizes : kind === 'catalog' ? catalogSizes : cardSizes;
   const srcset = image.variants?.map(([file, width]) => `${imageUrl(file)} ${width}w`).join(', ');
   return (
@@ -134,11 +155,10 @@ export function ProductImage({ product, image = product.image, kind = 'card', ea
 export function ProductGallery({ product }) {
   const [selected, setSelected] = useState(0);
   const photos = [product.image, ...(product.gallery ?? [])];
-  const photoStyle = product.gallery?.length ? ' product-card__visual--photo' : '';
 
   return (
     <div className="product-gallery">
-      <div className={`product-detail__visual product-card__visual--${product.id}${photoStyle}`}>
+      <div className={`product-detail__visual product-card__visual--${product.id}${productVisualStyle(product)}`}>
         <ProductImage product={product} image={photos[selected]} kind="detail" eager />
       </div>
       {photos.length > 1 && (
@@ -170,7 +190,7 @@ export function ProductCard({ product, kind, titleTag = 'h3', fadePhoto = false 
   const Title = titleTag;
   return (
     <article className="product-card">
-      <a href={productUrl(product)} className={`product-card__visual product-card__visual--${product.id}${product.gallery?.length ? ' product-card__visual--photo' : ''}`}
+      <a href={productUrl(product)} className={`product-card__visual product-card__visual--${product.id}${productVisualStyle(product)}`}
         aria-label={`Подробнее о товаре «${product.name}»`}>
         <ProductImage product={product} kind={kind} decorative fadeIn={fadePhoto} />
         <ProductBadges product={product} />

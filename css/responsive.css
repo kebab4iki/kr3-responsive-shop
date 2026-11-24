@@ -100,7 +100,7 @@ img, video { display: block; max-width: 100%; height: auto; }
   }
   .promo__inner { display: flex; align-items: center; height: 100%; padding: 0 0 3.75rem clamp(1rem, 3vw, 3rem); }
   .promo__copy { max-width: min(35rem, 48%); }
-  .promo--gift .promo__copy { max-width: min(25rem, 36%); }
+  .promo--gift .promo__copy { max-width: min(27rem, 50%); }
   .product-carousel__track { --carousel-visible: 3; }
   html { --header-size: calc(4.45rem + 1px); }
   .site-header__inner {

@@ -1,5 +1,6 @@
 import inventory from './catalog-products.json';
 import { iphone18Products } from './iphone-18-pro';
+import { gamesAndGiftsId, newCatalogProducts } from './new-catalog-products';
 
 export const categories = [
   { id: 'phones', name: 'Смартфоны и планшеты' },
@@ -14,6 +15,10 @@ export const categories = [
   { id: 'power', name: 'Зарядки и питание' },
   { id: 'network', name: 'Сетевое оборудование' },
   { id: 'printers', name: 'Принтеры' },
+  { id: gamesAndGiftsId, name: 'Игры и подарочные карты', art: 'home-promo-gta.webp' },
+  { id: 'consoles', name: 'Консоли', illustration: 'console' },
+  { id: 'coffee-machines', name: 'Кофемашины', illustration: 'coffee' },
+  { id: 'mini-ovens', name: 'Мини-печи', illustration: 'oven' },
 ];
 
 export const categoriesById = new Map(categories.map((category) => [category.id, category]));
@@ -28,7 +33,7 @@ const newIds = [
   'apple-macbook-air-m3', 'jbl-go-4',
 ];
 
-const assortment = [...iphone18Products, ...inventory];
+const assortment = [...iphone18Products, ...inventory, ...newCatalogProducts];
 const groupsById = new Map(assortment.map(({ id, colorGroup }) => [id, colorGroup ?? id]));
 const hitGroups = new Set(hitIds.map((id) => groupsById.get(id)));
 const newGroups = new Set(newIds.map((id) => groupsById.get(id)));

@@ -3,7 +3,7 @@ import { Breadcrumbs, ProductBadges, ProductCard, ProductGallery } from './compo
 import {
   catalogProducts, categories, categoriesById, colorOptions, demoCategoryIds, featuredPhone, findCategory, newArrivals, popular,
 } from './catalog-data';
-import { catalogFilterOptions, defaultFilters, filterCatalog } from './catalog-filters';
+import { catalogFilterOptions, defaultFilters, filterCatalog, filtersFromUrl } from './catalog-filters';
 import { iphone18Title } from './iphone-18-pro';
 import { HomeFaq } from './home-faq';
 import { HomeReviews } from './home-reviews';
@@ -107,9 +107,11 @@ export function Catalog({ query }) {
       <Breadcrumbs current="Каталог" />
       <div className="page-heading"><h1>Каталог техники</h1></div>
       <div className="category-grid section" aria-label="Категории каталога">
-        {categories.map(({ id, name }) => (
+        {categories.map(({ id, name, art, illustration }) => (
           <a key={id} className="category-tile" href={categoryUrl(id)}>
-            <img className="category-tile__art" src={imageUrl(`category-${id}.webp`)} alt="" loading="lazy" decoding="async" />
+            {illustration ? (
+              <div className={`category-tile__art category-tile__art--illustration category-tile__art--${illustration}`} aria-hidden="true"><span /></div>
+            ) : <img className="category-tile__art" src={imageUrl(art ?? `category-${id}.webp`)} alt="" loading="lazy" decoding="async" />}
             <h2>{name}</h2>
           </a>
         ))}
@@ -148,9 +150,7 @@ export function Category({ query }) {
 }
 
 export function AllProducts({ query }) {
-  const [filters, setFilters] = useState(() => ({
-    ...defaultFilters, category: findCategory(query.get('category'))?.id ?? defaultFilters.category,
-  }));
+  const [filters, setFilters] = useState(() => filtersFromUrl(query));
   const options = catalogFilterOptions(filters.category);
   const filtered = filterCatalog(filters);
   const invalidPrice = filters.from !== '' && filters.to !== '' && Number(filters.from) > Number(filters.to);
