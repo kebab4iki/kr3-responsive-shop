@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { formatPrice, imageUrl, orderUrl, pageUrl, productUrl, storeContact } from './shop';
+import { responsiveSource, thumbnailUrl } from './responsive-image';
 
 const nav = [
   ['index', 'Главная'], ['catalog', 'Каталог'], ['products', 'Все товары'], ['contacts', 'Контакты'],
@@ -90,7 +91,7 @@ export function BackToTop({ visible }) {
         document.querySelector('.site-header .brand')?.focus({ preventScroll: true });
         window.scrollTo({ top: 0 });
       }}>
-      <span aria-hidden="true">↑</span>
+      <span className="back-to-top__arrow" aria-hidden="true" />
     </button>
   );
 }
@@ -107,9 +108,9 @@ export function Breadcrumbs({ links = [], current }) {
   );
 }
 
-const cardSizes = '(min-width: 1380px) 310px, (min-width: 1024px) 23vw, (min-width: 640px) 34vw, 69vw';
-const catalogSizes = '(min-width: 1380px) 240px, (min-width: 1280px) 18vw, (min-width: 1024px) 27vw, (min-width: 640px) 34vw, 69vw';
-const detailSizes = '(min-width: 1380px) 475px, (min-width: 900px) 34vw, 69vw';
+const cardSizes = '(min-width: 1380px) 214px, (min-width: 1120px) 17vw, (min-width: 960px) 21vw, (min-width: 768px) 28vw, (min-width: 480px) 42vw, 86vw';
+const catalogSizes = '(min-width: 1380px) 360px, (min-width: 1280px) 26vw, (min-width: 1024px) 39vw, (min-width: 640px) 43vw, 86vw';
+const detailSizes = '(min-width: 1380px) 590px, (min-width: 900px) 44vw, 86vw';
 
 function showLoadedPhoto({ currentTarget: photo }) {
   const show = () => photo.setAttribute('data-photo-ready', '');
@@ -119,7 +120,7 @@ function showLoadedPhoto({ currentTarget: photo }) {
 
 function GiftCardArtwork({ amount }) {
   return (
-    <div className="gift-card-art" data-value={amount} aria-hidden="true">
+    <div className="gift-card-art" data-value={amount}>
       <div className="gift-card-art__content">
         <div className="gift-card-art__brand">
           <img src={imageUrl('corekit-mark.png')} alt="" />
@@ -141,10 +142,10 @@ export function ProductImage({ product, image = product.image, kind = 'card', ea
   if (product.giftValue) return <GiftCardArtwork amount={product.giftValue} />;
   if (!image) return <span className="product-placeholder" aria-hidden={decorative || undefined}>Фото пока нет</span>;
   const sizes = kind === 'detail' ? detailSizes : kind === 'catalog' ? catalogSizes : cardSizes;
-  const srcset = image.variants?.map(([file, width]) => `${imageUrl(file)} ${width}w`).join(', ');
+  const srcset = responsiveSource(image.filename, image.variants);
   return (
     <picture>
-      {srcset && <source type="image/webp" srcSet={srcset} sizes={sizes} />}
+      {srcset && <source srcSet={srcset} sizes={sizes} />}
       <img src={imageUrl(image.filename)} alt={decorative ? '' : image.alt ?? product.name}
         width={image.width} height={image.height} loading={eager ? 'eager' : 'lazy'} decoding="async"
         data-fade-in={fadeIn ? '' : undefined} onLoad={fadeIn ? showLoadedPhoto : undefined} onError={fadeIn ? showLoadedPhoto : undefined} />
@@ -166,7 +167,7 @@ export function ProductGallery({ product }) {
           {photos.map((photo, index) => (
             <button key={photo.filename} type="button" aria-label={`Фото ${index + 1} из ${photos.length}`}
               aria-pressed={selected === index} onClick={() => setSelected(index)}>
-              <img src={imageUrl(photo.filename)} alt="" loading="lazy" decoding="async" />
+              <img src={thumbnailUrl(photo.filename)} alt="" loading="lazy" decoding="async" />
             </button>
           ))}
         </div>
@@ -179,7 +180,7 @@ export function ProductBadges({ product }) {
   if (!product.isHit && !product.isNew) return null;
 
   return (
-    <ul className="product-badges" aria-label="Отметки товара">
+    <ul className="product-badges">
       {product.isHit && <li className="product-badge product-badge--hit">Хит</li>}
       {product.isNew && <li className="product-badge product-badge--new">Новинка</li>}
     </ul>
@@ -191,10 +192,10 @@ export function ProductCard({ product, kind, titleTag = 'h3', fadePhoto = false 
   return (
     <article className="product-card">
       <a href={productUrl(product)} className={`product-card__visual product-card__visual--${product.id}${productVisualStyle(product)}`}
-        aria-label={`Подробнее о товаре «${product.name}»`}>
+        aria-label={product.giftValue ? undefined : `Подробнее о товаре «${product.name}»`}>
         <ProductImage product={product} kind={kind} decorative fadeIn={fadePhoto} />
-        <ProductBadges product={product} />
       </a>
+      <ProductBadges product={product} />
       <div className="product-card__body">
         <span className="product-card__category">{product.category}</span>
         <Title><a href={productUrl(product)}>{product.name}</a></Title>

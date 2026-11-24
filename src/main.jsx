@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Header, Footer, BackToTop } from './components';
+import { Header, Footer } from './components';
 import { Home, Catalog, Category, AllProducts, Product, Order, Contacts } from './pages';
 import { useScrollReveal } from './scroll-reveal';
-import { standalone } from './shop';
+import { FloatingTools } from './shop-assistant';
+import { gtaStandardId } from './new-catalog-products';
+import { showPracticeExample } from './product-tools';
+import { products, standalone } from './shop';
 
 const query = new URLSearchParams(window.location.search);
 const routes = {
@@ -20,6 +23,7 @@ const requestedPage = standalone ? query.get('page') : window.location.pathname.
 const entry = Object.hasOwn(routes, requestedPage) ? requestedPage : 'index';
 const [Content, title] = routes[entry];
 if (standalone) document.title = title;
+if (entry === 'index') showPracticeExample(products.find(({ id }) => id === gtaStandardId));
 
 function Site({ children }) {
   const [compact, setCompact] = useState(false);
@@ -43,7 +47,7 @@ function Site({ children }) {
         {children}
       </main>
       <Footer />
-      <BackToTop visible={showTop} />
+      <FloatingTools showTop={showTop} />
     </>
   );
 }
