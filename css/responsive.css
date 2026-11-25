@@ -152,6 +152,7 @@ img, video { display: block; max-width: 100%; height: auto; }
 }
 
 @media (min-width: 1024px) {
+  .header-favorites span { display: inline; }
   .category-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .products-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .catalog-layout { grid-template-columns: minmax(13rem, 16rem) minmax(0, 1fr); align-items: start; }

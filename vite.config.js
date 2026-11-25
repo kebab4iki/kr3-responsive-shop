@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import { fileURLToPath } from 'node:url';
 
-const pages = ['index', 'catalog', 'products', 'category', 'product', 'order', 'application', 'contacts'];
+const pages = ['index', 'catalog', 'products', 'favorites', 'category', 'product', 'order', 'application', 'contacts'];
 
 export default defineConfig({
   base: './',

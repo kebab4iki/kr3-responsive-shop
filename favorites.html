@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Избранные товары в магазине Corekit." />
+    <meta name="theme-color" content="#0c0b0f" />
+    <link rel="icon" href="./images/corekit-mark.png" type="image/png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <title>Избранное — Corekit</title>
+  </head>
+  <body>
+    <div id="root">
+      <section id="launch-hint" class="launch-hint" hidden>
+        <h1>Как открыть Corekit</h1>
+        <p>Из архива откройте файл Corekit.html.</p>
+        <p>Для запуска исходников выполните <code>npm ci</code>, затем <code>npm run dev</code> и откройте адрес из терминала.</p>
+      </section>
+    </div>
+    <script>
+      if (location.protocol === 'file:' && !document.documentElement.hasAttribute('data-corekit-standalone')) {
+        document.getElementById('launch-hint').hidden = false;
+      }
+    </script>
+    <noscript>Для работы магазина Corekit включите JavaScript.</noscript>
+    <script type="module" src="./src/main.jsx"></script>
+  </body>
+</html>

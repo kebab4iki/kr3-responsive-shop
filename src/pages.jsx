@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Breadcrumbs, ProductBadges, ProductCard, ProductGallery } from './components';
+import { FavoriteButton, useFavorites } from './favorites';
 import {
   catalogProducts, categories, categoriesById, demoCategoryIds, featuredPhone, findCategory, newArrivals, popular, productVariants,
 } from './catalog-data';
@@ -12,6 +13,8 @@ import { responsiveSource } from './responsive-image';
 import {
   categoryUrl, formatPrice, imageUrl, orderUrl, pageUrl, products, productUrl, storeContact,
 } from './shop';
+
+const productsById = new Map(products.map((product) => [product.id, product]));
 
 export function Home() {
   return (
@@ -150,6 +153,25 @@ export function Category({ query }) {
   );
 }
 
+export function Favorites() {
+  const { favoriteIds } = useFavorites();
+  const items = [...favoriteIds].reverse().map((id) => productsById.get(id)).filter(Boolean);
+  return (
+    <>
+      <Breadcrumbs current="Избранное" />
+      <div className="page-heading"><h1>Избранное</h1></div>
+      <div className="section">
+        {items.length ? <CatalogGrid items={items} /> : (
+          <div className="surface empty-state favorites-empty">
+            <p>Нажмите на сердечко рядом с товаром, чтобы сохранить его здесь.</p>
+            <a className="button button--primary" href={pageUrl('products')}>Все товары</a>
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
+
 export function AllProducts({ query }) {
   const [filters, setFilters] = useState(() => filtersFromUrl(query));
   const [filtersOpen, setFiltersOpen] = useState(() => query.has('category') || query.has('brand'));
@@ -281,7 +303,7 @@ function ProductVariants({ product }) {
 }
 
 export function Product({ query }) {
-  const product = products.find(({ id }) => id === query.get('id'));
+  const product = productsById.get(query.get('id'));
   const title = product?.name ?? 'Товар не найден';
   const category = product && categoriesById.get(product.categoryId ?? demoCategoryIds[product.id]);
   useEffect(() => { document.title = `${title} — Corekit`; }, [title]);
@@ -308,7 +330,10 @@ export function Product({ query }) {
                   <span>Цена</span>
                   <strong>{formatPrice(product.price)}</strong>
                 </div>
-                <a className="button button--primary" href={orderUrl(product)}>Оставить заявку</a>
+                <div className="product-purchase__actions">
+                  <FavoriteButton product={product} />
+                  <a className="button button--primary" href={orderUrl(product)}>Оставить заявку</a>
+                </div>
               </div>
             </div>
           </div>

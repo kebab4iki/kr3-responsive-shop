@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Header, Footer } from './components';
-import { Home, Catalog, Category, AllProducts, Product, Order, Contacts } from './pages';
+import { Home, Catalog, Category, AllProducts, Favorites, Product, Order, Contacts } from './pages';
+import { FavoritesProvider } from './favorites';
 import { useScrollReveal } from './scroll-reveal';
 import { FloatingTools } from './shop-assistant';
 import { gtaStandardId } from './new-catalog-products';
@@ -13,6 +14,7 @@ const routes = {
   index: [Home, 'Corekit — магазин техники'],
   catalog: [Catalog, 'Каталог — Corekit'],
   products: [AllProducts, 'Все товары — Corekit'],
+  favorites: [Favorites, 'Избранное — Corekit'],
   category: [Category, 'Категория — Corekit'],
   product: [Product, 'Товар — Corekit'],
   order: [Order, 'Заявка — Corekit'],
@@ -52,4 +54,8 @@ function Site({ children }) {
   );
 }
 
-createRoot(document.getElementById('root')).render(<Site><Content entry={entry} query={query} /></Site>);
+createRoot(document.getElementById('root')).render(
+  <FavoritesProvider>
+    <Site><Content entry={entry} query={query} /></Site>
+  </FavoritesProvider>,
+);

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { formatPrice, imageUrl, orderUrl, pageUrl, productUrl, storeContact } from './shop';
 import { responsiveSource, thumbnailUrl } from './responsive-image';
+import { FavoriteButton, HeartIcon } from './favorites';
 
 const nav = [
   ['index', 'Главная'], ['catalog', 'Каталог'], ['products', 'Все товары'], ['contacts', 'Контакты'],
@@ -32,10 +33,17 @@ export function Header({ page, compact }) {
               ))}
             </ul>
           </nav>
-          <a className="button button--outline header-action" href={pageUrl('order')}
-            aria-current={['order', 'application'].includes(page) ? 'page' : undefined}>
-            Заявка
-          </a>
+          <div className="header-actions">
+            <a className="button button--quiet header-favorites" href={pageUrl('favorites')} aria-label="Избранное"
+              aria-current={active === 'favorites' ? 'page' : undefined}>
+              <HeartIcon />
+              <span>Избранное</span>
+            </a>
+            <a className="button button--outline" href={pageUrl('order')}
+              aria-current={['order', 'application'].includes(page) ? 'page' : undefined}>
+              Заявка
+            </a>
+          </div>
         </div>
       </header>
     </div>
@@ -62,6 +70,7 @@ export function Footer() {
             <h2 id="footer-links">Разделы</h2>
             <ul className="site-footer__links">
               {nav.map(([id, label]) => <li key={id}><a href={pageUrl(id)}>{label}</a></li>)}
+              <li><a href={pageUrl('favorites')}>Избранное</a></li>
             </ul>
           </nav>
           <section aria-labelledby="footer-contacts">
@@ -196,6 +205,7 @@ export function ProductCard({ product, kind, titleTag = 'h3', fadePhoto = false 
         <ProductImage product={product} kind={kind} decorative fadeIn={fadePhoto} />
       </a>
       <ProductBadges product={product} />
+      <FavoriteButton product={product} />
       <div className="product-card__body">
         <span className="product-card__category">{product.category}</span>
         <Title><a href={productUrl(product)}>{product.name}</a></Title>
